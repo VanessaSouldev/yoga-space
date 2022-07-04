@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Just+Me+Again+Down+Here&display=swap');
+
+main    {
+    width: 100vw;
+    height: 120vh;
+}
+
+.rectangle-center  {
+    height: 550px;
+    width: 1050px;
+    top: 550px;
+    left: 550px;
+    object-fit: cover;
+    position: absolute;
+}

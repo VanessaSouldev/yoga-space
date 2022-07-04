@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Just+Me+Again+Down+Here&display=swap');
+main    {
+    width: 100vw;
+    height: 120vh;
+}
+h1  {
+    width: 100vw;
+    height: 120vh;
+    position: absolute;
+    font-family: Inter, sans-serif;
+    font-size: 350px;
+    text-align: left;
+    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    left: 10px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 450px;
+    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+h3  {
+    height: 368px;
+    left: 870px;
+    mix-blend-mode: luminosity;
+    position: absolute;
+    font-family: "just me again down here", cursive;
+    font-size: 95px;
+    font-weight: bolder;
+    text-align: center;
+    top: 381px;
+    width:705px;
+    line-height: auto;
+    background:linear-gradient(220deg,rgba(144, 242, 225,75),rgba(255, 255, 255, 75));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.rectangle-small  {
+    height: 145px;
+    left: 1250px;
+    object-fit: cover;
+    position: absolute;
+    top: 700px;
+    width: 25%;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-buttons  {
+    position: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rectangle-big  {
+    height: 175px;
+    left: 150px;
+    object-fit: cover;
+    position: absolute;
+    top: 870px;
+    width: 1800px;
+}
+
+.container .register-button    {
+    position: relative;
+    left: 670%;
+    top: 1880%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(144, 242, 225, 0.31);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container .sign-in-button    {
+    position: relative;
+    left: 70%;
+    top: 1880%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(144, 242, 225, 0.31);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
