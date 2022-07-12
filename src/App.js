@@ -4,11 +4,13 @@ import Homepage from './Pages/Homepage';
 import Profile from './Pages/Profile';
 import Signin from './Pages/Signin';
 import Signup from './Pages/Signup';
-import Videoresults from './Pages/Videoresults';
+import Videopage from './Pages/Videopage';
 import { Switch, Route } from 'react-router-dom';
 
+
 function App() {
-  return (
+
+    return (
 
                  <div className='App-angled-gradient'>
                  <div className='macbook-pro'>
@@ -26,11 +28,10 @@ function App() {
                      <Route Path="/profile">
                          <Profile />
                      </Route>
-                     <Route path="/videoresults">
-                         <Videoresults />
+                     <Route path="/videopage">
+                         <Videopage />
                      </Route>
                  </Switch>
-
                  </div>
                  </div>
   );

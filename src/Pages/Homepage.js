@@ -10,8 +10,7 @@ function Homepage() {
         history.push("/signup");
     }
 
-        function handleClickSignin(e) {
-        e.preventDefault()
+        function handleClickSignin() {
             history.push("/signin");
     }
 
