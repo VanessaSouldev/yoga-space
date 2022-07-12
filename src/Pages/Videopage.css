@@ -1,0 +1,38 @@
+main    {
+    width: 100vw;
+    height: 120vh;
+}
+
+.video-rectangle  {
+    width: 1250px;
+    height: 120px;
+    top:    37px;
+    left:   500px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.video-rectangle-container    {
+
+    text-align: center;
+    width: 1250px;
+    height: 120px;
+    top:    35px;
+    left:   575px;
+    object-fit: cover;
+    position: absolute;
+
+
+}
+
+h10  {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    align-content: center;
+    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    font-weight: 400;
+    line-height: 60px;
+    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

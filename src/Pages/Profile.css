@@ -1,0 +1,92 @@
+main    {
+    width: 100vw;
+    height: 120vh;
+}
+
+
+.rectangle  {
+    width: 950px;
+    height: 159px;
+    top:    37px;
+    left:   500px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.rectangle-container    {
+
+    text-align: center;
+    width: 823px;
+    height: 159px;
+    top:    35px;
+    left:   575px;
+    object-fit: cover;
+    position: absolute;
+
+
+}
+h7  {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    align-content: center;
+    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    font-weight: 400;
+    line-height: 60px;
+    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.questions {
+    width: 823px;
+    height: 159px;
+    top:    250px;
+    left:   575px;
+    object-fit: cover;
+    position: absolute;
+
+}
+
+h8  {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    align-content: normal;
+    color: aliceblue;
+    font-weight: 450;
+    line-height: 60px;
+}
+
+h9  {
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    align-content: center;
+    color: rgba(239, 175, 128, 0.75);
+    font-weight: 400;
+    line-height: 60px;
+}
+.radio {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    align-content: center;
+    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    font-weight: 400;
+    line-height: 60px;
+    background:linear-gradient(70deg,rgba(144,242,225,1),rgba(239, 175, 128,0.51));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.video-button  {
+    position:   absolute;
+    left: 50%;
+    top: 550%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 86px;
+    border-color: transparent;
+}

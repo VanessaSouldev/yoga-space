@@ -45,7 +45,7 @@ h3  {
     object-fit: cover;
     position: absolute;
     top: 700px;
-    width: 25%;
+    width: 32%;
 }
 
 .container {
@@ -62,16 +62,16 @@ h3  {
 
 .rectangle-big  {
     height: 175px;
-    left: 150px;
+    left: 90px;
     object-fit: cover;
     position: absolute;
-    top: 870px;
-    width: 1800px;
+    top: 878px;
+    width: 136%;
 }
 
-.container .register-button    {
+.container  .register-button {
     position: relative;
-    left: 670%;
+    left: 575%;
     top: 1880%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);

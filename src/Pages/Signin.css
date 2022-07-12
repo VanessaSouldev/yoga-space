@@ -5,11 +5,86 @@ main    {
     height: 120vh;
 }
 
+h4  {
+    top: -10%;
+    width: 100vw;
+    height: 120vh;
+    position: absolute;
+    font-family: Inter, sans-serif;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    left: 10px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 450px;
+    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .rectangle-center  {
     height: 550px;
     width: 1050px;
-    top: 550px;
-    left: 550px;
+    top: 250px;
+    left: 450px;
     object-fit: cover;
     position: absolute;
+}
+
+.input-container    {
+    height: 550px;
+    width: 1050px;
+    top: 250px;
+    left: 800px;
+    object-fit: cover;
+    position: absolute;
+}
+
+h5  {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    font-weight: 480;
+    line-height: 150px;
+    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.email  {
+    height: 10%;
+    width: 30%;
+    left: 25%;
+}
+
+.password  {
+    height: 10%;
+    width: 30%;
+    left: 25%;
+}
+
+h6  {
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    text-shadow: white;
+    font-weight: 550;
+    background:linear-gradient(70deg,rgba(144,242,225,1),rgba(239, 175, 128,0.51));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.submit-button  {
+    position:   absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 86px;
+    border-color: transparent;
 }
