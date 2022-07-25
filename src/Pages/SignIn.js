@@ -1,9 +1,9 @@
-import './Signin.css';
+import styles from './SignIn.module.css';
 import waters from '../Images/lilac-waters.jpeg';
 import { useHistory } from "react-router-dom";
 
 
-function Signin()   {
+function SignIn() {
 
     const history = useHistory();
 
@@ -21,9 +21,9 @@ function Signin()   {
         </header>
 
         <section>
-            <img className="rectangle-center" src={waters} alt="lilac waters"/>
+            <img className={styles["rectangle-center"]} src={waters} alt="lilac waters"/>
             <form>
-                <div className="input-container">
+                <div className={styles["input-container"]}>
                     <label htmlFor="signin-email">
                         <h5>
                             E-mail:
@@ -31,7 +31,7 @@ function Signin()   {
                         <input
                             type="email"
                             id="signin-email"
-                            className="email"
+                            className={styles.email}
                             placeholder="Enter your email-address"
                         />
                     </label>
@@ -42,14 +42,14 @@ function Signin()   {
                         <input
                             type="password"
                             id="signin-password"
-                            className="password"
+                            className={styles.password}
                         />
                     </label>
                 </div></form>
             <button
                 type="submit"
                 onClick={handleClickProfile}
-                className="submit-button">
+                className={styles["submit-button"]}>
                 <h6>
                     Click here to enter your yoga SPACE
                 </h6>
@@ -61,4 +61,4 @@ function Signin()   {
 
 }
 
-export default Signin;
+export default SignIn;

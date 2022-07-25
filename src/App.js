@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import Homepage from './Pages/Homepage';
 import Profile from './Pages/Profile';
-import Signin from './Pages/Signin';
-import Signup from './Pages/Signup';
-import Videopage from './Pages/Videopage';
+import SignIn from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
+import VideoPage from './Pages/VideoPage';
 import { Switch, Route } from 'react-router-dom';
 
 
@@ -15,26 +15,28 @@ function App() {
                  <div className='App-angled-gradient'>
                  <div className='macbook-pro'>
 
-                 <Switch>
+
+                     <Switch>
                      <Route exact path="/">
                          <Homepage />
                      </Route>
                      <Route path="/signup">
-                         <Signup />
+                         <SignUp />
                      </Route>
                      <Route path="/signin">
-                         <Signin />
+                         <SignIn />
                      </Route>
-                     <Route Path="/profile">
+                     <Route path="/profile">
                          <Profile />
                      </Route>
                      <Route path="/videopage">
-                         <Videopage />
+                         <VideoPage />
                      </Route>
                  </Switch>
+
                  </div>
                  </div>
-  );
-}
+             );
+        }
 
 export default App;

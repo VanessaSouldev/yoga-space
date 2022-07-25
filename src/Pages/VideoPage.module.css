@@ -25,7 +25,7 @@ main    {
 
 }
 
-h10  {
+.header {
     font-family: Inter, sans-serif;
     font-size: 40px;
     align-content: center;
@@ -35,4 +35,45 @@ h10  {
     background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.video-one  {
+    width: 538px;
+    height: 289px;
+    top:    200px;
+    left:   50px;
+    object-fit: cover;
+    position: absolute;
+
+
+}
+
+.video-two  {
+    width: 538px;
+    height: 289px;
+    top:    500px;
+    left:   50px;
+    object-fit: cover;
+    position: absolute;
+
+}
+
+.video-three  {
+    width: 538px;
+    height: 289px;
+    top:    800px;
+    left:   50px;
+    object-fit: cover;
+    position: absolute;
+
+}
+
+.video-main {
+    width: 838px;
+    height: 589px;
+    top:    250px;
+    left:   800px;
+    object-fit: cover;
+    position: absolute;
+
 }
