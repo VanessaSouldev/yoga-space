@@ -25,7 +25,8 @@ main    {
 
 
 }
-h7  {
+
+.header {
     font-family: Inter, sans-serif;
     font-size: 40px;
     align-content: center;
@@ -37,7 +38,7 @@ h7  {
     -webkit-text-fill-color: transparent;
 }
 
-.questions {
+.questions-container {
     width: 823px;
     height: 159px;
     top:    250px;
@@ -45,24 +46,25 @@ h7  {
     object-fit: cover;
     position: absolute;
 
+
 }
 
-h8  {
+.questions  {
     font-family: Inter, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     align-content: normal;
     color: aliceblue;
     font-weight: 450;
-    line-height: 60px;
+    line-height: 40px;
 }
 
-h9  {
+.answers    {
     font-family: Inter, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     align-content: center;
     color: rgba(239, 175, 128, 0.75);
     font-weight: 400;
-    line-height: 60px;
+    line-height: 40px;
 }
 .radio {
     font-family: Inter, sans-serif;
@@ -80,7 +82,7 @@ h9  {
 .video-button  {
     position:   absolute;
     left: 50%;
-    top: 550%;
+    top: 350%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     color: transparent;

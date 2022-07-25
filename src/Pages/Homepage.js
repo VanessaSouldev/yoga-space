@@ -1,4 +1,4 @@
-import './Homepage.css';
+import styles from './Homepage.module.css';
 import waters from '../Images/lilac-waters.jpeg';
 import { useHistory } from 'react-router-dom';
 
@@ -19,7 +19,9 @@ function Homepage() {
                 <main>
                     <header>
                         <h1>
-                            Yoga Space
+                            Yoga
+                            <br/>
+                            Space
                         </h1>
                         <h3>
                             The easy way to move
@@ -27,16 +29,16 @@ function Homepage() {
                     </header>
 
                     <section>
-                        <img className="rectangle-small" src={waters} alt="lilac waters"/>
+                        <img className={styles["rectangle-small"]} src={waters} alt="lilac waters"/>
 
-                        <div className="container">
-                            <img className="rectangle-big" src={waters} alt="lilac waters"/>
+                        <div className={styles.container}>
+                            <img className={styles["rectangle-big"]} src={waters} alt="lilac waters"/>
 
-                            <div className="container-buttons">
+                            <div className={styles["container-buttons"]}>
                                 <button
                                     type="button"
                                     onClick={handleClickRegister}
-                                    className="register-button">
+                                    className={styles["register-button"]}>
                                     <h2>
                                         Register
                                     </h2>
@@ -45,7 +47,7 @@ function Homepage() {
                                 <button
                                     type="button"
                                     onClick={handleClickSignin}
-                                    className="sign-in-button">
+                                    className={styles["sign-in-button"]}>
                                     <h2>
                                         Sign in
                                     </h2>

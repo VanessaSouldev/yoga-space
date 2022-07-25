@@ -1,4 +1,4 @@
-import './Profile.css';
+import styles from './Profile.module.css';
 import waters from '../Images/lilac-waters.jpeg';
 import { useHistory } from "react-router-dom";
 
@@ -13,55 +13,55 @@ function Profile() {
     return (
         <main>
             <section>
-                <img className="rectangle" src={waters} alt="lilac waters"/>
-                <div className="rectangle-container">
-                <h7>
+                <img className={styles.rectangle} src={waters} alt="lilac waters"/>
+                <div className={styles["rectangle-container"]}>
+                <p className={styles.header}>
                     Welcome Back Vanessa! Ready for your daily yoga moment?!
-                </h7>
+                </p>
             </div>
             </section>
-            <div className="questions">
                 <form>
-                    <h8>
+                    <div className={styles["questions-container"]}>
+                    <p className={styles.questions}>
                         How much time do you have today?
-                    </h8>
+                    </p>
                     <div>
-                        <input type="radio" value="10-20" name="time" /> <h9>10 - 20 minutes</h9>
+                        <input type="radio" value="10-20" name="time" /> <output className={styles.answers}>10 - 20 minutes</output>
                         <br/>
-                        <input type="radio" value="20-30" name="time" /> <h9>20 - 30 minutes</h9>
+                        <input type="radio" value="20-30" name="time" /> <output className={styles.answers}>20 - 30 minutes</output>
                         <br/>
-                        <input type="radio" value="30 or more" name="time" /> <h9> 30 minutes or more</h9>
+                        <input type="radio" value="30 or more" name="time" /> <output className={styles.answers}> 30 minutes or more</output>
                     </div>
-                    <h8>
+                    <p className={styles.questions}>
                         What kind of yoga are you up for?
-                    </h8>
+                    </p>
                     <div>
-                        <input type="radio" value="Beginners" name="intensity-level" /> <h9>Beginners</h9>
+                        <input type="radio" value="Beginners" name="intensity-level" /> <output className={styles.answers}>Beginners</output>
                         <br/>
-                        <input type="radio" value="Yin" name="intensity-level" /> <h9>Relaxing(yin yoga)</h9>
+                        <input type="radio" value="Yin" name="intensity-level" /> <output className={styles.answers}>Relaxing(yin yoga)</output>
                         <br/>
-                        <input type="radio" value="Intense" name="intensity-level" /> <h9>Intense I'm fired up!</h9>
+                        <input type="radio" value="Intense" name="intensity-level" /> <output className={styles.answers}>Intense I'm fired up!</output>
                     </div>
-                    <h8>
-                        Are there any areas you would like to focus on?
-                    </h8>
+                    <p className={styles.questions}>
+                        What would you like to focus on?
+                    </p>
                     <div>
-                        <input type="radio" value="back" name="focus" /> <h9>back pain</h9>
+                        <input type="radio" value="back" name="focus" /> <output className={styles.answers}>Back pain</output>
                         <br/>
-                        <input type="radio" value="stress" name="focus" /> <h9>stress reduction</h9>
+                        <input type="radio" value="stress" name="focus" /> <output className={styles.answers}>Stress reduction</output>
                         <br/>
-                        <input type="radio" value="none" name="focus" /> <h9>surprise me!</h9>
+                        <input type="radio" value="none" name="focus" /> <output className={styles.answers}>Surprise me!</output>
                     </div>
                     <button
                         type="submit"
                         onClick={handleClickVideos}
-                        className="video-button">
+                        className={styles["video-button"]}>
                         <h6>
                             Bring it on!
                         </h6>
                     </button>
+                    </div>
                 </form>
-            </div>
         </main>
         );
 }
