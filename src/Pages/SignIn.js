@@ -1,19 +1,37 @@
 import styles from './SignIn.module.css';
 import waters from '../Images/lilac-waters.jpeg';
-import { useHistory } from "react-router-dom";
+import React, {useContext, useState} from 'react';
+import { Link } from 'react-router-dom';
+import {AuthContext} from "../Context/AuthContext";
+import axios from "axios";
 
 
 function SignIn() {
 
-    const history = useHistory();
+    const { login } = useContext(AuthContext);
+    const [ username, setUsername ] = useState('');
+    const [ password, setPassword] = useState('');
 
-    function handleClickProfile() {
-        history.push("/profile");
+    async function handleSubmit(e) {
+        e.preventDefault();
+        try {
+            const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`, {
+                username: username,
+                password: password,
+            })
+
+            console.log(result.data.accessToken);
+            login(result.data);
+
+
+        } catch (e) {
+            console.error(e);
+        }
+
     }
-
     return(
 
-        <main>
+        <>
         <header>
             <h4>
                 sign in to enter your space
@@ -22,17 +40,19 @@ function SignIn() {
 
         <section>
             <img className={styles["rectangle-center"]} src={waters} alt="lilac waters"/>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className={styles["input-container"]}>
-                    <label htmlFor="signin-email">
+                    <label htmlFor="signin-username">
                         <h5>
-                            E-mail:
+                            Username:
                         </h5>
                         <input
-                            type="email"
-                            id="signin-email"
-                            className={styles.email}
-                            placeholder="Enter your email-address"
+                            type="user"
+                            id="signin-username"
+                            onChange={(e) => setUsername(e.target.value)}
+                            value={username}
+                            className={styles.username}
+                            placeholder="Enter your username"
                         />
                     </label>
                     <label htmlFor="signin-password">
@@ -42,23 +62,26 @@ function SignIn() {
                         <input
                             type="password"
                             id="signin-password"
+                            onChange={(e) => setPassword(e.target.value)}
+                            value={password}
                             className={styles.password}
                         />
                     </label>
-                </div></form>
-            <button
-                type="submit"
-                onClick={handleClickProfile}
-                className={styles["submit-button"]}>
-                <h6>
-                    Click here to enter your yoga SPACE
-                </h6>
-            </button>
+                    <button
+                        type="submit"
+                        onClick={handleSubmit}
+                        className={styles["submit-button"]}>
+                        <h6>
+                            Click here to enter your yoga SPACE
+                        </h6>
+                    </button>
+                </div>
+            </form>
 
+            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
         </section>
-        </main>
+        </>
     );
-
 }
 
 export default SignIn;

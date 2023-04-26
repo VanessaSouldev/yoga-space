@@ -1,91 +1,50 @@
+import React from 'react';
 import styles from "./SignUp.module.css";
+import axios from "axios";
 import waters from "../Images/lilac-waters.jpeg";
-import {useHistory} from "react-router-dom";
+import { useForm } from 'react-hook-form';
+import {Link, useHistory} from "react-router-dom";
 
 function SignUp()   {
 
+    const { register, handleSubmit } = useForm();
+
     const history = useHistory();
 
-    function handleClickProfile() {
-        history.push("/profile");
+    async function onFormSubmit(data) {
+        try {
+            await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signup`, {
+                username:data.username,
+                email:data.email,
+                password:data.password,
+            })
+
+            history.push('/signin')
+            ;
+            console.log(data);
+        } catch(e) {
+            console.error(e);
+        }
     }
 
+
     return (
-        <main>
+        <>
             <h4>At your own time in your own space</h4>
             <img className={styles["rectangle-signup"]} src={waters} alt="lilac waters"/>
-            <form>
-                <div className={styles["input-container"]}>
-                    <label htmlFor="first-name">
-                        <h5>
-                            First name
-                        </h5>
-                        <input
-                            type="text"
-                            id="first-name"
-                            className={styles.input}
-                            placeholder="first name"
-                        />
-                    </label>
-                    <br/>
-                    <label htmlFor="last-name">
-                        <h5>
-                            Last name
-                        </h5>
-                    <input
-                        type="text"
-                        id="last-name"
-                        className={styles.input}
-                        placeholder="last name"
-                    />
-                </label>
-                    <br/>
-                    <label htmlFor="username">
-                        <h5>
-                            Username
-                        </h5>
-                    <input
-                        type="text"
-                        id="username"
-                        className={styles.input}
-                        placeholder="username"
-                    />
-                    </label>
-                    <br/>
-                    <label htmlFor="signin-email">
-                        <h5>
-                            Email address
-                        </h5>
-                        <input
-                            type="email"
-                            id="signin-email"
-                            className={styles.input}
-                            placeholder="email"
-                        />
-                    </label>
-                    <br/>
-                    <label htmlFor="signin-password">
-                        <h5>
-                            Choose a password
-                        </h5>
-                        <input
-                            type="password"
-                            id="signin-password"
-                            className={styles.input}
-                            placeholder="password"
-                        />
-                    </label>
-                        </div>
-                <button
-                    type="submit"
-                    onClick={handleClickProfile}
-                    className={styles["signup-button"]}>
-                    <h6>
-                        Sign me up!
-                    </h6>
-                </button>
+            <form className={styles.form}     onSubmit={handleSubmit(onFormSubmit)}>
+                    <div className="input-container">
+                        <label htmlFor="email"><h5>E-mail</h5></label>
+                        <input className={styles.input} type="email" {...register("email")}/>
+                        <label htmlFor="username"><h5>Username</h5></label>
+                        <input className={styles.input} type="text" placeholder="Please choose a username"  {...register("username")}/>
+                        <label htmlFor="password"><h5>Password</h5> </label>
+                        <input className={styles.input} type="password" placeholder="Choose a password" {...register("password")}/>
+                        <button className={styles["signup-button"]} type="submit"><h6>Register to create your SPACE</h6></button>
+                    </div>
                 </form>
-        </main>
+            <p className={styles["account-link"]}>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+        </>
 
     );
 }

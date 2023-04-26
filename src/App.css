@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .App-angled-gradient {
@@ -8,6 +9,7 @@
   background:linear-gradient(70deg,rgba(239, 175, 128,0.51),rgba(144,242,225,1));
   width: 100vw;
   height: 120vh;
+  padding: 14px;
 }
 
 .macbook-pro {

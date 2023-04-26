@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './App.css';
 import Homepage from './Pages/Homepage';
 import Profile from './Pages/Profile';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
 import VideoPage from './Pages/VideoPage';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import {AuthContext} from "./Context/AuthContext";
 
 
 function App() {
+
+    const {isAuth} = useContext(AuthContext);
 
     return (
 
@@ -27,7 +30,7 @@ function App() {
                          <SignIn />
                      </Route>
                      <Route path="/profile">
-                         <Profile />
+                         {isAuth ? <Profile /> : <Redirect to='/'/>}
                      </Route>
                      <Route path="/videopage">
                          <VideoPage />
