@@ -6,7 +6,7 @@ main    {
 }
 
 h4  {
-    top: -10%;
+    top:    -100%;
     width: 100vw;
     height: 120vh;
     position: absolute;
@@ -27,19 +27,19 @@ h4  {
 .rectangle-center  {
     height: 550px;
     width: 1050px;
-    top: 250px;
-    left: 450px;
+    top: 200px;
+    left: 750px;
     object-fit: cover;
-    position: absolute;
+    position: relative;
 }
 
 .input-container    {
     height: 550px;
     width: 1050px;
-    top: 250px;
-    left: 800px;
+    top: -250px;
+    left: 1100px;
     object-fit: cover;
-    position: absolute;
+    position: relative;
 }
 
 h5  {
@@ -53,7 +53,7 @@ h5  {
     -webkit-text-fill-color: transparent;
 }
 
-.email  {
+.username  {
     height: 10%;
     width: 30%;
     left: 25%;
@@ -77,8 +77,8 @@ h6  {
 
 .submit-button  {
     position:   absolute;
-    left: 50%;
-    top: 100%;
+    left: 18%;
+    top: 95%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     color: transparent;

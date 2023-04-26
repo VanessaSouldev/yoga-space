@@ -1,25 +1,39 @@
 import styles from './Profile.module.css';
+import {useContext} from "react";
+import { Link, useHistory } from 'react-router-dom';
+import {AuthContext} from "../Context/AuthContext";
 import waters from '../Images/lilac-waters.jpeg';
-import { useHistory } from "react-router-dom";
+
+
+
 
 
 function Profile() {
 
+    const {user} = useContext(AuthContext);
     const history = useHistory();
 
-    function handleClickVideos() {
-        history.push("/videopage");
+    async function handleSubmit(e) {
+        e.preventDefault();
+        try {
+            history.push('/videopage')
+
+
+        } catch (e) {
+            console.error(e);
+        }
+
     }
+
+
     return (
-        <main>
-            <section>
+        <><main>
                 <img className={styles.rectangle} src={waters} alt="lilac waters"/>
                 <div className={styles["rectangle-container"]}>
-                <p className={styles.header}>
-                    Welcome Back Vanessa! Ready for your daily yoga moment?!
-                </p>
-            </div>
-            </section>
+                <section className={styles.header}>
+                        Welcome Back {user.username}
+                </section>
+                </div>
                 <form>
                     <div className={styles["questions-container"]}>
                     <p className={styles.questions}>
@@ -54,7 +68,7 @@ function Profile() {
                     </div>
                     <button
                         type="submit"
-                        onClick={handleClickVideos}
+                        onClick={handleSubmit}
                         className={styles["video-button"]}>
                         <h6>
                             Bring it on!
@@ -62,7 +76,8 @@ function Profile() {
                     </button>
                     </div>
                 </form>
-        </main>
+            <p>Terug naar de <Link to="/">Homepagina</Link></p>
+        </main></>
         );
 }
 

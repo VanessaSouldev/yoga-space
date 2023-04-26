@@ -4,10 +4,10 @@ main    {
 }
 
 .video-rectangle  {
-    width: 1250px;
+    width: 1650px;
     height: 120px;
     top:    37px;
-    left:   500px;
+    left:   200px;
     object-fit: cover;
     position: absolute;
 }
@@ -15,7 +15,7 @@ main    {
 .video-rectangle-container    {
 
     text-align: center;
-    width: 1250px;
+    width: 1050px;
     height: 120px;
     top:    35px;
     left:   575px;
@@ -29,7 +29,7 @@ main    {
     font-family: Inter, sans-serif;
     font-size: 40px;
     align-content: center;
-    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    text-shadow: 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
     font-weight: 400;
     line-height: 60px;
     background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
@@ -42,6 +42,7 @@ main    {
     height: 289px;
     top:    200px;
     left:   50px;
+    margin: 20px 20px;
     object-fit: cover;
     position: absolute;
 
@@ -53,6 +54,7 @@ main    {
     height: 289px;
     top:    500px;
     left:   50px;
+    margin: 20px 20px;
     object-fit: cover;
     position: absolute;
 
@@ -63,6 +65,7 @@ main    {
     height: 289px;
     top:    800px;
     left:   50px;
+    margin: 20px 20px;
     object-fit: cover;
     position: absolute;
 

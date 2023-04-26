@@ -20,7 +20,9 @@ h1  {
     -webkit-text-fill-color: transparent;
 
 }
-
+h3 + .rectangle-small {
+    margin-bottom: 50px;
+}
 h3  {
     height: 368px;
     left: 870px;
@@ -33,7 +35,7 @@ h3  {
     top: 375px;
     width:705px;
     border-color: antiquewhite;
-    background:linear-gradient(220deg,rgba(144, 242, 225,75),rgba(239, 175, 128,0.51));
+    background:linear-gradient(31deg,rgba(144, 242, 225,75),rgba(239, 175, 128,0.51));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -54,7 +56,7 @@ h3  {
 }
 
 .container-buttons  {
-    position: center;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
