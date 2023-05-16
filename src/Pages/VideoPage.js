@@ -1,11 +1,51 @@
 import styles from "./VideoPage.module.css";
 import waters from "../Images/lilac-waters.jpeg";
+import {useContext, useState, useEffect} from "react";
+import axios from "axios";
+import {AuthContext} from "../Context/AuthContext";
+
 
 
 
 function VideoPage() {
 
-    return (
+
+        const state = {
+            videosMetaInfo: [],
+            selectedVideoId: null
+        };
+        const {user} = useContext(AuthContext);
+        const [videoResults, setVideoResults] = useState('');
+        const KEY = "AIzaSyDZNUsEbGMjnP9fpBu-sCsIBxbYWAcQ8Jc";
+
+
+        useEffect(() => {
+
+            async function fetchData() {
+                try {
+                    const result = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
+                        part: "snippet",
+                        q: 'yoga',
+                        maxResults: 4,
+                        videoDuration: "short",
+                        key: KEY,
+                    })
+                    console.log(result.data);
+                    setVideoResults(result.data)
+                }
+                catch(e) {
+                    console.error(e);
+                }
+            };
+
+            fetchData();
+
+
+        }, []);
+
+        return (
+
+
 
                 <>
                     <img className={styles["video-rectangle"]} src={waters} alt="lilac waters"/>
