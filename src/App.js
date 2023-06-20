@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import './App.css';
 import Homepage from './Pages/Homepage';
-import Profile from './Pages/Profile';
+import YogaQuestionnaire from './Pages/YogaQuestionnaire';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
 import VideoPage from './Pages/VideoPage';
@@ -14,30 +14,32 @@ function App() {
     const {isAuth} = useContext(AuthContext);
 
     return (
+                 <div id={"MacBook-Pro-14"}>
+        <body id='outer-content-container'>
 
-                 <div className='App-angled-gradient'>
-                 <div className='macbook-pro'>
 
+        <Switch>
+            <Route exact path="/">
+                <Homepage/>
+            </Route>
+            <Route path="/signup">
+                <SignUp/>
+            </Route>
+            <Route path="/signin">
+                <SignIn/>
+            </Route>
+            <Route path="/profile">
+                {isAuth ? <profile/> : <Redirect to='/'/>}
+            </Route>
+            <Route path="/yogaquestionnaire">
+                <YogaQuestionnaire/>
+            </Route>
+            <Route path="/videopage">
+                <VideoPage/>
+            </Route>
+        </Switch>
+                     </body>
 
-                     <Switch>
-                     <Route exact path="/">
-                         <Homepage />
-                     </Route>
-                     <Route path="/signup">
-                         <SignUp />
-                     </Route>
-                     <Route path="/signin">
-                         <SignIn />
-                     </Route>
-                     <Route path="/profile">
-                         {isAuth ? <Profile /> : <Redirect to='/'/>}
-                     </Route>
-                     <Route path="/videopage">
-                         <VideoPage />
-                     </Route>
-                 </Switch>
-
-                 </div>
                  </div>
              );
         }

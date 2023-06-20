@@ -16,23 +16,32 @@ function VideoPage() {
         };
         const {user} = useContext(AuthContext);
         const [videoResults, setVideoResults] = useState('');
-        const KEY = "AIzaSyDZNUsEbGMjnP9fpBu-sCsIBxbYWAcQ8Jc";
+        const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
 
 
-        useEffect(() => {
+    useEffect(() => {
 
             async function fetchData() {
                 try {
-                    const result = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
-                        part: "snippet",
-                        q: 'yoga',
-                        maxResults: 4,
-                        videoDuration: "short",
-                        key: KEY,
+                    const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=yoga&key=${KEY}`,{
+                        headers:{
+                            // Authorization: `Bearer [YOUR_ACCESS_TOKEN]`,
+                            "Content-Type": "application/json"
+                        }
                     })
-                    console.log(result.data);
-                    setVideoResults(result.data)
+                    console.log(result)
                 }
+                // try {
+                //     const result = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
+                //         part: "snippet",
+                //         q: 'yoga',
+                //         maxResults: 4,
+                //         videoDuration: "short",
+                //         key: KEY,
+                //     })
+                //     console.log(result.data);
+                //     setVideoResults(result.data)
+                // }
                 catch(e) {
                     console.error(e);
                 }
