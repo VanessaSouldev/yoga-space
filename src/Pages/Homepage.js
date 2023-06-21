@@ -16,10 +16,9 @@ function Homepage() {
 
 
             return (
-                <main>
-                    <header className={styles["homepage-header outer-content-container"]}>
-                        <div className={styles["inner-content-container"]}>
-                            <div className={"header-container"}>
+                <main className={styles["outer-content-container"]}>
+                    <header className={styles["homepage-header"]}>
+                            <div className={styles["header-container inner-content-container"]}>
                         <h1>
                             Yoga Space
                         </h1>
@@ -28,37 +27,33 @@ function Homepage() {
                         </h3>
                             <img className={styles["rectangle-small"]} src={waters} alt="lilac waters"/>
                             </div>
-                        </div>
                     </header>
 
                     <section id={styles["sign-up-or-in"]}>
-
+                        <div className={styles["rectangle-container"]}>
                         <img className={styles["rectangle-big"]} src={waters} alt="lilac waters"/>
+                        </div>
+                        <div className={styles["register-container"]}>
+                            <button
+                                type="button"
+                                onClick={handleClickRegister}
+                                className={styles["register-button"]}>
+                                Register
+                            </button>
+                        </div>
 
+                        <p className={styles["under-register-text"]}>For daily yoga video's</p>
 
-                                <div className={styles["register-container"]}>
-                                <button
-                                    type="button"
-                                    onClick={handleClickRegister}
-                                    className={styles["register-button"]}>
-                                        Register
-                                </button>
-                                </div>
+                        <div className={styles["sign-in-container"]}>
+                            <button
+                                type="button"
+                                onClick={handleClickSignin}
+                                className={styles["sign-in-button"]}>
+                                Sign in
+                            </button>
+                        </div>
 
-                            <p className={styles["under-register-text"]}>For daily yoga video's</p>
-
-                                <div className={styles["sign-in-container"]}>
-                                <button
-                                    type="button"
-                                    onClick={handleClickSignin}
-                                    className={styles["sign-in-button"]}>
-                                        Sign in
-                                </button>
-                                    <p className={styles["under-sign-in-text"]}>To enter your yoga space</p>
-                                </div>
-
-
-
+                        <p className={styles["under-sign-in-text"]}>To enter your yoga space</p>
 
                     </section>
                 </main>

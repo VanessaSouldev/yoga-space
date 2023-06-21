@@ -110,7 +110,6 @@ p {
 
 .outer-content-container {
 
-  background:linear-gradient(70deg,rgba(239, 175, 128,0.51),rgba(144,242,225,1));
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -139,13 +138,11 @@ p {
 
 button {
   font-family: 'Inter', sans-serif;
+  text-align: center;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
-  line-height: 39px;
   cursor: pointer;
-  /* identical to box height */
-  text-align: center;
   color: #FFFFFF;
 
 }

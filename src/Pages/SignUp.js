@@ -30,7 +30,10 @@ function SignUp()   {
 
     return (
         <>
+            <header className={styles["sign-up-header outer-content-container"]}>
             <h4>At your own time in your own space</h4>
+            </header>
+            <section id={styles["sign-up-form inner-content-container"]}>
             <img className={styles["rectangle-signup"]} src={waters} alt="lilac waters"/>
             <form className={styles.form}     onSubmit={handleSubmit(onFormSubmit)}>
                     <div className="input-container">
@@ -43,7 +46,10 @@ function SignUp()   {
                         <button className={styles["signup-button"]} type="submit"><h6>Register to create your SPACE</h6></button>
                     </div>
                 </form>
-            <p className={styles["account-link"]}>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+                </section>
+            <footer>
+                <p className={styles["account-link"]}>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+            </footer>
         </>
 
     );

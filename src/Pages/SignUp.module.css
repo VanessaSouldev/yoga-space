@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Just+Me+Again+Down+Here&display=swap');
-
-main    {
-    width: 100vw;
-    height: 120vh;
+.sign-up-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 100px 0;
 }
+
 
 h4  {
     top: -125px;
@@ -22,14 +24,16 @@ h4  {
 
 
 .rectangle-signup  {
-    /*height: 700px;*/
-    /*width: 1050px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 150px 150px;
-    /*top: 170px;*/
-    /*left: 750px;*/
+    top: 170px;
+    left: 750px;
     object-fit: cover;
     position: relative;
-    align-items: center;
+
 }
 
 .form    {
