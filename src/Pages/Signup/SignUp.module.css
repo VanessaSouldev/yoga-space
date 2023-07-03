@@ -1,0 +1,108 @@
+.sign-up-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 100px 0;
+
+    /*display: flex;*/
+    /*width: 553px;*/
+    /*height: 145px;*/
+    /*margin: 0 0 100px 0;*/
+    /*flex-direction: column;*/
+    /*flex-shrink: 0;*/
+}
+
+
+.input-container    {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+
+
+
+.rectangle-signup  {
+    position: absolute;
+    width: 600px;
+    height: 550px;
+    top: 20px;
+    z-index: 0;
+
+}
+
+.form-container {
+    position:absolute;
+    z-index: 1;
+}
+
+.signup-form    {
+    position: absolute;
+    left: 700px;
+    width: 1050px;
+    z-index: 1;
+}
+
+
+
+h5  {
+    font-family: Inter, sans-serif;
+    font-size: 25px;
+    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    font-weight: 480;
+    line-height: 50px;
+    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+}
+
+.input {
+    top: 500px;
+    left: 650px;
+    height: 75px;
+    width: 475px;
+    z-index: 1;
+
+}
+
+
+.signup-button {
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: transparent;
+    /*font-size: 16px;*/
+    /*padding: 12px 24px;*/
+    cursor: pointer;
+    border-radius: 86px;
+    border-color: transparent;
+    /*font-size: 32px;*/
+    line-height: 1.5;
+    padding: 50px 24px;
+    background:linear-gradient(70deg,rgba(144,242,225,1),rgba(239, 175, 128,0.51));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: white;
+}
+
+a,
+a:visited,
+a:active {
+    color: #0d3b66;
+}
+
+a:hover {
+    color: #ea7e1f;
+}
+
+.account-link   {
+    position: absolute;
+    bottom: 70px;
+    left: 70px;
+}
+

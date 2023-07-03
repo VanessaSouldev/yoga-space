@@ -1,0 +1,121 @@
+.rectangles-headers-container {
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+    width: 1241px;
+    border: 3px dashed purple;
+    /*justify-content: space-evenly;*/
+    /*flex-wrap: wrap;*/
+    /*align-items: flex-start;*/
+}
+
+
+h1 {
+    align-self: flex-start;
+}
+
+h3 {
+    align-self: flex-end;
+    width: 450px;
+    z-index: 1;
+}
+
+
+.rectangle-small {
+    /*align-self: flex-end;*/
+    /*margin-right: 22px;*/
+    width: 200px;
+    height: 100px;
+    /*z-index: 0;*/
+}
+
+
+.rectangle-big {
+    /*!*flex-direction: row;*!*/
+    /*align-self: center;*/
+    width: 200px;
+    height: 170px;
+    /*z-index: 0;*/
+}
+
+#sign-up-or-in {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+}
+
+
+.register-container {
+
+    width: 437px;
+    left: 122px;
+    top: 561px;
+
+}
+
+.register-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 213px;
+    height: 48px;
+    padding: 12px 24px;
+    border: none;
+    right: 112px;
+    top: 155px;
+    background: rgba(144, 242, 225, 0.31);
+    border-radius: 8px;
+}
+
+.under-register-text {
+    position: absolute;
+    left: 175px;
+    top: 780px;
+    font-size: 33px;
+}
+
+
+.sign-in-container {
+
+    position: absolute;
+    width: 437px;
+    left: 843px;
+    top: 561px;
+
+}
+
+
+
+.sign-in-button    {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1px 24px;
+    border: none;
+    position: absolute;
+    width: 213px;
+    height: 48px;
+    left: 375px;
+    top: 150px;
+    background: rgba(144, 242, 225, 0.31);
+    border-radius: 8px;
+}
+
+.under-sign-in-text {
+    position: absolute;
+    right: 150px;
+    top: 780px;
+    font-size: 33px;
+}
+
+.register-button:hover {
+    color:#EFAF80;
+    border: 5px solid plum;
+}
+
+.sign-in-button:hover {
+    color: #EFAF80;
+    border: 5px solid plum;
+
+}

@@ -1,16 +1,14 @@
-import styles from './Profile.module.css';
+import styles from './YogaQuestionnaire.module.css';
 import {useContext} from "react";
 import { Link, useHistory } from 'react-router-dom';
-import {AuthContext} from "../Context/AuthContext";
-import waters from '../Images/lilac-waters.jpeg';
+import waters from '../../Images/lilac-waters.jpeg';
 
 
 
 
 
-function Profile() {
+function YogaQuestionnaire() {
 
-    const {user} = useContext(AuthContext);
     const history = useHistory();
 
     async function handleSubmit(e) {
@@ -27,13 +25,9 @@ function Profile() {
 
 
     return (
-        <><main>
+        <>
+            <main>
                 <img className={styles.rectangle} src={waters} alt="lilac waters"/>
-                <div className={styles["rectangle-container"]}>
-                <section className={styles.header}>
-                        Welcome Back {user.username}
-                </section>
-                </div>
                 <form>
                     <div className={styles["questions-container"]}>
                     <p className={styles.questions}>
@@ -77,8 +71,9 @@ function Profile() {
                     </div>
                 </form>
             <p>Terug naar de <Link to="/">Homepagina</Link></p>
-        </main></>
+            </main>
+</>
         );
 }
 
-export default Profile;
+export default YogaQuestionnaire;

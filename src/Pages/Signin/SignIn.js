@@ -1,8 +1,8 @@
 import styles from './SignIn.module.css';
-import waters from '../Images/lilac-waters.jpeg';
+import waters from '../../Images/lilac-waters.jpeg';
 import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
-import {AuthContext} from "../Context/AuthContext";
+import {AuthContext} from "../../Context/AuthContext";
 import axios from "axios";
 
 
