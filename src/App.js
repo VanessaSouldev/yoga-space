@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import './App.css';
-import Homepage from './Pages/Homepage';
-import YogaQuestionnaire from './Pages/YogaQuestionnaire';
-import SignIn from './Pages/SignIn';
-import SignUp from './Pages/SignUp';
-import VideoPage from './Pages/VideoPage';
+import Homepage from './Pages/Homepage/Homepage';
+import YogaQuestionnaire from './Pages/Questionnaire/YogaQuestionnaire';
+import SignIn from './Pages/Signin/SignIn';
+import SignUp from './Pages/Signup/SignUp';
+import VideoPage from './Pages/Videopage/VideoPage';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import {AuthContext} from "./Context/AuthContext";
 
@@ -14,8 +14,9 @@ function App() {
     const {isAuth} = useContext(AuthContext);
 
     return (
-                 <div id={"MacBook-Pro-14"}>
-        <body id='outer-content-container'>
+        <span id='outer-content-container'>
+        {/*<div className={"MacBook-Pro-14"}>*/}
+
 
 
         <Switch>
@@ -38,9 +39,10 @@ function App() {
                 <VideoPage/>
             </Route>
         </Switch>
-                     </body>
 
-                 </div>
+
+                 {/*</div>*/}
+        </span>
              );
         }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./SignUp.module.css";
 import axios from "axios";
-import waters from "../Images/lilac-waters.jpeg";
+import waters from "../../Images/lilac-waters.jpeg";
 import { useForm } from 'react-hook-form';
 import {Link, useHistory} from "react-router-dom";
 
@@ -34,18 +34,27 @@ function SignUp()   {
             <h4>At your own time in your own space</h4>
             </header>
             <section id={styles["sign-up-form inner-content-container"]}>
-            <img className={styles["rectangle-signup"]} src={waters} alt="lilac waters"/>
-            <form className={styles.form}     onSubmit={handleSubmit(onFormSubmit)}>
-                    <div className="input-container">
+                <div className={styles["input-container"]}>
+
+                    <img className={styles["rectangle-signup"]} src={waters} alt="lilac waters"/>
+
+                    <form className={styles["signup-form"]} onSubmit={handleSubmit(onFormSubmit)}>
+
+                        <div className={styles["form-container"]}>
+
                         <label htmlFor="email"><h5>E-mail</h5></label>
-                        <input className={styles.input} type="email" {...register("email")}/>
+                        <input className={styles.input} type="email" placeholder="Your e-mail address" {...register("email")}/>
                         <label htmlFor="username"><h5>Username</h5></label>
                         <input className={styles.input} type="text" placeholder="Please choose a username"  {...register("username")}/>
                         <label htmlFor="password"><h5>Password</h5> </label>
                         <input className={styles.input} type="password" placeholder="Choose a password" {...register("password")}/>
-                        <button className={styles["signup-button"]} type="submit"><h6>Register to create your SPACE</h6></button>
-                    </div>
-                </form>
+                        <button className={styles["signup-button"]} type="submit">
+                            <h6>Register to create your SPACE</h6>
+                        </button>
+
+                        </div>
+                    </form>
+                </div>
                 </section>
             <footer>
                 <p className={styles["account-link"]}>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>

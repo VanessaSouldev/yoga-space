@@ -6,25 +6,24 @@
   box-sizing: border-box;
 }
 
-h1, h2, h4 {
+h1, h2, h4, h5 {
   font-style: normal;
   font-family: "Inter",sans-serif;
-
-
 }
 
 h1 {
-  position: absolute;
+
+  display: flex;
+  width: 1194px;
+  height: 738px;
+  /*flex-direction: column;*/
+  flex-shrink: 0;
   background: radial-gradient(94.84% 94.84% at 50% 5.16%, #90F2E1 0%, #FFFFFF 100%),
   linear-gradient(0deg, #000000, #000000);
   text-decoration: 4px solid rgba(0, 0, 0, 1);
-  width: 1194px;
-  height: 738px;
-  left: 86px;
-  top: -18px;
-  font-family: "Inter", sans-serif;
+  padding: 0 50px;
   font-weight: 300;
-  font-size: 300px;
+  font-size: 200px;
   line-height: 117%;
   opacity: 100%;
   mix-blend-mode: luminosity;
@@ -38,14 +37,13 @@ h1 {
 }
 
 h2 {
-  position: absolute;
   width: 108px;
   height: 39px;
   left: 165px;
   top: 159px;
   font-style: normal;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 39px;
   /* identical to box height */
   text-align: center;
@@ -55,43 +53,34 @@ h2 {
 }
 
 h3 {
-  position: absolute;
-  width: 582px;
-  height: 272px;
-  left: 850px;
-  top: 270px;
   font-family: 'Just Me Again Down Here', cursive;
   font-weight: 400;
   font-size: 95px;
-  line-height: 142px;
-  text-align: center;
+  align-self: flex-end;
+  width: 650px;
+  margin-right: 16px;
   background: conic-gradient(from 180deg at 50% 50%, #F0EDFA 0deg, #E8E4F9 290.63deg, #F0EDFA 360deg);
   opacity: 0.75;
-  border-color: antiquewhite;
-  /*background:linear-gradient(0deg,rgba(144, 242, 225,75),rgba(239, 175, 128,0.51));*/
   mix-blend-mode: luminosity;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  z-index: 2;
+  z-index: 1;
 
 }
 
 h4 {
-  font-size: 32px;
-  padding: 12px 0;
-  margin: 24px 0;
+  color: rgba(255, 255, 255, 0.50);
+  text-align: center;
+  font-size: 65px;
+  line-height: 24px;
 }
 
 h5 {
-  font-size: 32px;
+  font-size: 65px;
   padding: 12px 0;
+
 }
 
-h6 {
-  font-size: 32px;
-  line-height: 1.5;
-  padding: 12px 0;
-}
 
 p {
   font-family: "italiana", sans-serif;
@@ -99,19 +88,16 @@ p {
   color: #FFFFFF;
 }
 
-#MacBook-Pro-14 {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.MacBook-Pro-14 {
+  display: flex;
   background: #90F2E1;
-  /*background: linear-gradient(227.65deg, #90F2E1 31%, #EFAF804F)*/
   background:linear-gradient(70deg,rgba(239, 175, 128,0.51),rgba(144,242,225,1));
 }
 
 .outer-content-container {
 
   display: flex;
-  width: 100%;
+  height: 100%;
   flex-direction: row;
   justify-content: center;
 }

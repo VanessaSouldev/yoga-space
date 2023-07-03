@@ -1,8 +1,7 @@
 import styles from './YogaQuestionnaire.module.css';
 import {useContext} from "react";
 import { Link, useHistory } from 'react-router-dom';
-
-import waters from '../Images/lilac-waters.jpeg';
+import waters from '../../Images/lilac-waters.jpeg';
 
 
 

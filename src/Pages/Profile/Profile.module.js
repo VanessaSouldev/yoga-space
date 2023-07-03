@@ -1,9 +1,11 @@
-import styles from './Homepage.module.css';
-import waters from '../Images/lilac-waters.jpeg';
+import styles from '../Profile/Profile.module.css';
+import waters from '../../Images/lilac-waters.jpeg';
 import { useHistory } from 'react-router-dom';
 import {useContext, useEffect} from "react";
-import {AuthContext} from "../Context/AuthContext";
+import {AuthContext} from "../../Context/AuthContext";
 import axios from "axios";
+
+
 
 function Profile() {
 
@@ -43,7 +45,7 @@ function Profile() {
     function handleClickSignin() {
         history.push("/signin");
     }
-
+//
     useEffect(() => {
 
         // async function fetchData() {
@@ -63,22 +65,28 @@ function Profile() {
         // };
 
     //     fetchData();
-    //
-    //
-    // }, []);
-
+//     //
+//     //
+//     // }, []);
+//
     return (
         <>
             <main>
-                <img className={styles.headerbox} src={waters} alt="lilac waters"/>
-                <div className={styles["rectangle-container"]}>
-                    <section className={styles.header}>
-                        Welcome Back {user.username}
-                    </section>
+                <div>
+                    <article>1</article>
+                    <article>2</article>
+                    <article>3</article>
                 </div>
-            </main>
-        </>
+               <img className={styles.headerbox} src={waters} alt="lilac waters"/>
+                <div className={styles["rectangle-container"]}>
+                   <section className={styles.header}>
+                         Welcome Back {user.username}
+                   </section>
+                </div>
+                </main>
 
-    );
-}
-export default Profile;
+            );
+            }
+
+            export default Homepage;
+

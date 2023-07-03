@@ -1,8 +1,8 @@
 import styles from "./VideoPage.module.css";
-import waters from "../Images/lilac-waters.jpeg";
+import waters from "../../Images/lilac-waters.jpeg";
 import {useContext, useState, useEffect} from "react";
 import axios from "axios";
-import {AuthContext} from "../Context/AuthContext";
+import {AuthContext} from "../../Context/AuthContext";
 
 
 

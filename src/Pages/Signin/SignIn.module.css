@@ -1,27 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Just+Me+Again+Down+Here&display=swap');
 
-main    {
-    width: 100vw;
-    height: 120vh;
-}
 
-h4  {
-    top:    -100%;
-    width: 100vw;
-    height: 120vh;
-    position: absolute;
-    font-family: Inter, sans-serif;
-    font-size: 100px;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
-    left: 10px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 450px;
-    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 
 .rectangle-center  {
@@ -63,16 +41,6 @@ h5  {
     height: 10%;
     width: 30%;
     left: 25%;
-}
-
-h6  {
-    font-family: Inter, sans-serif;
-    font-size: 30px;
-    text-shadow: white;
-    font-weight: 550;
-    background:linear-gradient(70deg,rgba(144,242,225,1),rgba(239, 175, 128,0.51));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .submit-button  {
