@@ -12,24 +12,15 @@ h1, h2, h4, h5 {
 }
 
 h1 {
-
   display: flex;
-  width: 1194px;
-  height: 738px;
-  /*flex-direction: column;*/
-  flex-shrink: 0;
-  background: radial-gradient(94.84% 94.84% at 50% 5.16%, #90F2E1 0%, #FFFFFF 100%),
-  linear-gradient(0deg, #000000, #000000);
-  text-decoration: 4px solid rgba(0, 0, 0, 1);
-  padding: 0 50px;
+  -webkit-text-stroke:2px rgba(0, 0, 0, 1);
+  font-size: 300px;
+  font-size: 20vw;
   font-weight: 300;
-  font-size: 200px;
-  line-height: 117%;
-  opacity: 100%;
-  mix-blend-mode: luminosity;
-  -webkit-border-radius: 0 4px;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: rgba(255, 255, 255, 0.2);
+  -webkit-background-clip: text;
+  padding: 0 50px;
+  margin: 0;
   z-index: 1;
 
 
@@ -55,17 +46,15 @@ h2 {
 h3 {
   font-family: 'Just Me Again Down Here', cursive;
   font-weight: 400;
-  font-size: 95px;
-  align-self: flex-end;
-  width: 650px;
-  margin-right: 16px;
+  font-size: 100px;
+  text-align: center;
+  -webkit-text-stroke:2px rgba(0, 0, 0, 1);
   background: conic-gradient(from 180deg at 50% 50%, #F0EDFA 0deg, #E8E4F9 290.63deg, #F0EDFA 360deg);
-  opacity: 0.75;
+  opacity: 0.65;
   mix-blend-mode: luminosity;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 1;
-
 }
 
 h4 {
@@ -106,10 +95,10 @@ p {
   flex-basis: 1400px;
   flex-shrink: 1;
   flex-grow: 0;
-  margin: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /*margin: 0 20px;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
 
 }
 

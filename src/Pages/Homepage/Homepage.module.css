@@ -1,121 +1,157 @@
 .rectangles-headers-container {
     display: flex;
     flex-direction: column;
-    height: 1100px;
-    width: 1241px;
+    height: calc(100vh - 600px);
     border: 3px dashed purple;
-    /*justify-content: space-evenly;*/
-    /*flex-wrap: wrap;*/
-    /*align-items: flex-start;*/
+
+
 }
 
 
-h1 {
-    align-self: flex-start;
-}
-
-h3 {
-    align-self: flex-end;
-    width: 450px;
+.easy-way-to-move {
+    justify-content: flex-end;
+    position: absolute;
+    top: 500px;
+    width: 500px;
+    right: 50px;
+    word-wrap: break-word;
+    margin-right: 80px;
     z-index: 1;
 }
 
+.rectangle-small-container {
+    display: flex;
+    /*height: calc(100vh - 150px);*/
+    justify-content: flex-end;
+    position: relative;
+    border: 3px dashed greenyellow;
+}
 
 .rectangle-small {
-    /*align-self: flex-end;*/
-    /*margin-right: 22px;*/
-    width: 200px;
+    position: relative;
+    top:700px;
+    right:180px;
+    width: 700px;
     height: 100px;
-    /*z-index: 0;*/
+    margin: 0 25px 50px 0;
+    z-index: 0;
 }
 
+
+
+.yoga-space-container {
+    display: flex;
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
+    column-gap: 16px;
+    /*height: calc(100vh - 770px);*/
+    border: 3px dashed blue;
+}
+
+
+.yoga {
+    align-self: flex-start;
+    margin-left: 20px;
+    height: 380px;
+    z-index: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.space {
+    align-self: flex-start;
+    flex-wrap: wrap;
+    height: 390px;
+    z-index: 1;
+}
+
+.rectangle-big-container{
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 220px);
+    border: 3px dashed orangered;
+}
 
 .rectangle-big {
-    /*!*flex-direction: row;*!*/
-    /*align-self: center;*/
-    width: 200px;
+    width: 1000px;
+    width: 90vw;
     height: 170px;
-    /*z-index: 0;*/
-}
-
-#sign-up-or-in {
-    display: flex;
-    flex-direction: row;
-    height: 100px;
-    width: 100%;
-}
-
-
-.register-container {
-
-    width: 437px;
-    left: 122px;
-    top: 561px;
+    margin: 0 0 50px 0;
+    z-index: 0;
 
 }
 
 .register-button {
-    display: flex;
-    flex-direction: row;
+    z-index: 1;
     align-items: center;
     width: 213px;
     height: 48px;
-    padding: 12px 24px;
     border: none;
-    right: 112px;
-    top: 155px;
     background: rgba(144, 242, 225, 0.31);
     border-radius: 8px;
 }
+/*.sign-up-or-in {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    height: 100px;*/
+/*    width: 100%;*/
+/*}*/
 
-.under-register-text {
-    position: absolute;
-    left: 175px;
-    top: 780px;
-    font-size: 33px;
-}
 
-
-.sign-in-container {
-
-    position: absolute;
-    width: 437px;
-    left: 843px;
-    top: 561px;
-
-}
+/*.register-container {*/
+/*    width: 437px;*/
+/*    left: 122px;*/
+/*    top: 561px;*/
+/*}*/
 
 
 
-.sign-in-button    {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1px 24px;
-    border: none;
-    position: absolute;
-    width: 213px;
-    height: 48px;
-    left: 375px;
-    top: 150px;
-    background: rgba(144, 242, 225, 0.31);
-    border-radius: 8px;
-}
+/*.under-register-text {*/
+/*    !*position: absolute;*!*/
+/*    left: 175px;*/
+/*    top: 780px;*/
+/*    font-size: 33px;*/
+/*}*/
 
-.under-sign-in-text {
-    position: absolute;
-    right: 150px;
-    top: 780px;
-    font-size: 33px;
-}
 
-.register-button:hover {
-    color:#EFAF80;
-    border: 5px solid plum;
-}
+/*.sign-in-container {*/
 
-.sign-in-button:hover {
-    color: #EFAF80;
-    border: 5px solid plum;
+/*    !*position: absolute;*!*/
+/*    width: 437px;*/
+/*    left: 843px;*/
+/*    top: 561px;*/
 
-}
+/*}*/
+
+/*.sign-in-button {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    padding: 1px 24px;*/
+/*    border: none;*/
+/*    !*position: absolute;*!*/
+/*    width: 213px;*/
+/*    height: 48px;*/
+/*    left: 375px;*/
+/*    top: 150px;*/
+/*    background: rgba(144, 242, 225, 0.31);*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*.under-sign-in-text {*/
+/*    !*position: absolute;*!*/
+/*    right: 150px;*/
+/*    top: 780px;*/
+/*    font-size: 33px;*/
+/*}*/
+
+/*.register-button:hover {*/
+/*    color:#EFAF80;*/
+/*    border: 5px solid plum;*/
+/*}*/
+
+/*.sign-in-button:hover {*/
+/*    color: #EFAF80;*/
+/*    border: 5px solid plum;*/
+
+/*}*/
