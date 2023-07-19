@@ -33,7 +33,7 @@ function SignIn() {
 
         <>
         <header>
-            <h4>
+            <h4 className={styles["sign-in-header"]}>
                 sign in to enter your space
             </h4>
         </header>
@@ -70,7 +70,7 @@ function SignIn() {
                     <button
                         type="submit"
                         onClick={handleSubmit}
-                        className={styles["submit-button"]}>
+                        className={styles["sign-in-submit-button"]}>
                         <h6>
                             Click here to enter your yoga SPACE
                         </h6>
@@ -78,7 +78,7 @@ function SignIn() {
                 </div>
             </form>
 
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+            <p>Don't have an account? <Link to="/signup">Sign up</Link> first</p>
         </section>
         </>
     );

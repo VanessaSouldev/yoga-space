@@ -1,8 +1,8 @@
 import styles from "./VideoPage.module.css";
 import waters from "../../Images/lilac-waters.jpeg";
-import {useContext, useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import axios from "axios";
-import {AuthContext} from "../../Context/AuthContext";
+
 
 
 
@@ -10,11 +10,6 @@ import {AuthContext} from "../../Context/AuthContext";
 function VideoPage() {
 
 
-        const state = {
-            videosMetaInfo: [],
-            selectedVideoId: null
-        };
-        const {user} = useContext(AuthContext);
         const [videoResults, setVideoResults] = useState('');
         const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
 
@@ -23,38 +18,49 @@ function VideoPage() {
 
             async function fetchData() {
                 try {
-                    const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=yoga&key=${KEY}`,{
-                        headers:{
+                    const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=4&q=yoga&key=${KEY}`, {
+                        headers: {
                             // Authorization: `Bearer [YOUR_ACCESS_TOKEN]`,
                             "Content-Type": "application/json"
                         }
                     })
-                    console.log(result)
+                    console.log(result.data)
+                    setVideoResults(result.data.items)
                 }
-                // try {
-                //     const result = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
-                //         part: "snippet",
-                //         q: 'yoga',
-                //         maxResults: 4,
-                //         videoDuration: "short",
-                //         key: KEY,
-                //     })
-                //     console.log(result.data);
-                //     setVideoResults(result.data)
-                // }
-                catch(e) {
+                    // try {
+                    //     const result = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {params: {
+                    //             part: "snippet",
+                    //             q: 'yoga',
+                    //             maxResults: 4,
+                    //             type: "video",
+                    //             videoDuration: "short",
+                    //             key: KEY,
+                    //         },headers:{}})
+                    //     console.log(result.data);
+                    //     setVideoResults(result.data)
+                    // }
+                catch (e) {
                     console.error(e);
                 }
-            };
+            }
 
-            fetchData();
+            fetchData()
 
 
         }, []);
 
+    useEffect(() => {
+
+            console.log(videoResults)
+            console.log(videoResults[0].id.videoId)
+
+    }, [videoResults]
+
+
+    )
+
+
         return (
-
-
 
                 <>
                     <img className={styles["video-rectangle"]} src={waters} alt="lilac waters"/>
@@ -64,16 +70,15 @@ function VideoPage() {
                         </p>
                     </div>
 
-                    <video className={styles["video-one"]} controls width="450">
-                {/*        async function fetchData() {*/}
-                {/*        try {*/}
-                {/*        const result = await <insert-request-here>;*/}
-                {/*        console.log(result.data);*/}
-                {/*        } catch(e) {*/}
-                {/*        console.error(e);*/}
-                {/*    }*/}
-                {/*} */}
-                    </video>
+                    {(videoResults !== undefined) && <>
+
+                    <iframe width="420"
+                            height="315"
+                            className={styles["video-one"]}
+                            title={"video-one"}
+                            src={`https://www.youtube.com/embed/${videoResults[1].id.videoId}`}>
+
+                    </iframe>
 
                     <video className={styles["video-two"]} controls width="450">
                     </video>
@@ -81,6 +86,7 @@ function VideoPage() {
                     </video>
                     <video className={styles["video-main"]} controls width="450">
                     </video>
+                    </>}
                 </>
 
     );
