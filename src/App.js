@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import './App.css';
 import Homepage from './Pages/Homepage/Homepage';
-import YogaQuestionnaire from './Pages/Questionnaire/YogaQuestionnaire';
+import WelcomePageAndQuestionnaire from './Pages/Questionnaire/WelcomePageAndQuestionnaire';
 import SignIn from './Pages/Signin/SignIn';
 import SignUp from './Pages/Signup/SignUp';
 import VideoPage from './Pages/Videopage/VideoPage';
@@ -29,11 +29,8 @@ function App() {
             <Route path="/signin">
                 <SignIn/>
             </Route>
-            <Route path="/profile">
-                {isAuth ? <profile/> : <Redirect to='/'/>}
-            </Route>
-            <Route path="/yogaquestionnaire">
-                <YogaQuestionnaire/>
+            <Route path="/welcomepage">
+                 {isAuth ? <WelcomePageAndQuestionnaire/> : <Redirect to='/'/>}
             </Route>
             <Route path="/videopage">
                 <VideoPage/>

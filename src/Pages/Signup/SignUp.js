@@ -30,9 +30,7 @@ function SignUp()   {
 
     return (
         <>
-            <header className={styles["sign-up-header outer-content-container"]}>
-            <h4>At your own time in your own space</h4>
-            </header>
+            <h4 className={styles["register-header"]}>At your own time in your own space</h4>
             <section id={styles["sign-up-form inner-content-container"]}>
                 <div className={styles["input-container"]}>
 
@@ -48,11 +46,11 @@ function SignUp()   {
                         <input className={styles.input} type="text" placeholder="Please choose a username"  {...register("username")}/>
                         <label htmlFor="password"><h5>Password</h5> </label>
                         <input className={styles.input} type="password" placeholder="Choose a password" {...register("password")}/>
+
+                        </div>
                         <button className={styles["signup-button"]} type="submit">
                             <h6>Register to create your SPACE</h6>
                         </button>
-
-                        </div>
                     </form>
                 </div>
                 </section>

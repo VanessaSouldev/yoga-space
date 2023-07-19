@@ -1,46 +1,42 @@
-.sign-up-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 100px 0;
+.register-header {
 
-    /*display: flex;*/
-    /*width: 553px;*/
-    /*height: 145px;*/
-    /*margin: 0 0 100px 0;*/
-    /*flex-direction: column;*/
-    /*flex-shrink: 0;*/
-}
-
-
-.input-container    {
-    display: flex;
-    align-items: center;
+    width: 703px;
+    height: 145px;
     justify-content: center;
-    position: relative;
-    z-index: 0;
-}
+    flex-shrink: 0;
+    position: absolute;
+    left: 700px;
+    color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: normal;
+    backdrop-filter: blur(2px);
+    z-index: 1;
 
+}
 
 
 .rectangle-signup  {
     position: absolute;
-    width: 600px;
-    height: 550px;
-    top: 20px;
+    /*justify-content: center;*/
+    margin: 190px 0 156px 0;
+    left: 600px;
+    width: 942px;
+    height: 640px;
     z-index: 0;
 
 }
 
-.form-container {
-    position:absolute;
-    z-index: 1;
-}
+/*.form-container {*/
+/*    position:absolute;*/
+/*    z-index: 1;*/
+/*}*/
 
 .signup-form    {
     position: absolute;
-    left: 700px;
+    left: 830px;
+    top: 300px;
     width: 1050px;
     z-index: 1;
 }
@@ -70,24 +66,23 @@ h5  {
 
 
 .signup-button {
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    color: transparent;
-    /*font-size: 16px;*/
-    /*padding: 12px 24px;*/
-    cursor: pointer;
-    border-radius: 86px;
-    border-color: transparent;
-    /*font-size: 32px;*/
-    line-height: 1.5;
-    padding: 50px 24px;
-    background:linear-gradient(70deg,rgba(144,242,225,1),rgba(239, 175, 128,0.51));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Open Sans", sans-serif;
+
+    display: flex;
+    width: 527px;
+    height: 83px;
+    margin: 96px 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color:rgba(92, 185, 102, 1);
+    font-family: Open Sans, sans-serif;
+    font-size: 36px;
+    font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    text-shadow: white;
+    line-height: 16px; /* 44.444% */
+    opacity: 32%;
+
 }
 
 a,
