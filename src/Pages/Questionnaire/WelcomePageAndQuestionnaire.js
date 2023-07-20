@@ -73,7 +73,7 @@
 //
 
 import styles from './WelcomePageandYogaQuestionnaire.module.css';
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import { Link, useHistory } from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
 import waters from '../../Images/lilac-waters.jpeg';
@@ -87,6 +87,7 @@ function WelcomePageAndQuestionnaire() {
 
     async function handleSubmit(e) {
         e.preventDefault();
+
         try {
             history.push('/videopage')
 
@@ -96,6 +97,12 @@ function WelcomePageAndQuestionnaire() {
         }
 
     }
+
+
+    useEffect(() => {
+        console.log(user.timeQuestion)
+
+},[])
 
 
     return (
