@@ -7,7 +7,7 @@ import axios from "axios";
 
 function AuthContextProvider({children}) {
 
-    const [auth, toggleAuth] = useState({isAuth: false, user: null, status:'pending'});
+    const [auth, toggleAuth] = useState({isAuth: false, user: null, status:'pending', timeQuestion:''});
     const history = useHistory();
 
     useEffect(() => {
@@ -34,6 +34,7 @@ function AuthContextProvider({children}) {
                     username:result.data.username,
                     email:result.data.email,
                     id:result.data.id,
+                    timeQuestion:'',
                 }, status:'done'
             })
             console.log(result.data)
@@ -73,12 +74,14 @@ function AuthContextProvider({children}) {
         login: signIn,
     };
 
+
     return (
         <AuthContext.Provider value={data}>
             {auth.status==='done' ?
             children : <p>Loading...</p> }
         </AuthContext.Provider>
     );
+
 }
 
 export default AuthContextProvider;
