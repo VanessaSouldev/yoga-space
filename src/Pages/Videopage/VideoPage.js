@@ -1,19 +1,15 @@
 import styles from "./VideoPage.module.css";
-import waters from "../../Images/lilac-waters.jpeg";
+import  waters from "../../Components/assets/images/lilac-waters.jpg";
 import {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
-
-
-
-
-
 
 function VideoPage() {
 
         const {user} = useContext(AuthContext);
         const [videoResults, setVideoResults] = useState([]);
         const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
+
 
 
     useEffect(() => {

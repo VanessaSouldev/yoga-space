@@ -64,7 +64,9 @@ h5  {
     justify-content: center;
     width: 527px;
     height: 82px;
-    margin: 96px 5px;
+    margin: 250px 5px;
+    right: 50px;
+    position: relative;
     color: #FFF;
     text-align: center;
     font-size: 36px;
@@ -73,8 +75,8 @@ h5  {
     line-height: 16px; /* 44.444% */
     flex-shrink: 0;
     border: 2px solid #90F2E1;
-    border-radius: 8px;
-    background: linear-gradient(180deg, #90F2E1 0%, rgba(239, 175, 128, 0.31) 100%);
+    border-radius: 16px;
+    background: linear-gradient(180deg,rgba(239, 175, 128, 0.31) 0%,#90F2E1 100%);
 
     /*position:   absolute;*/
     /*left: 18%;*/

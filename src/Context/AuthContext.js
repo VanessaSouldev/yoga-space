@@ -2,12 +2,13 @@ import React, {useEffect, useState} from 'react';
 import {createContext} from "react";
 import {useHistory} from "react-router-dom";
 import axios from "axios";
+import styles from "../Pages/Questionnaire/WelcomePageandYogaQuestionnaire.module.css";
 
     export const AuthContext = createContext({});
 
 function AuthContextProvider({children}) {
 
-    const [auth, toggleAuth] = useState({isAuth: false, user: null, status:'pending', timeQuestion:''});
+    const [auth, toggleAuth] = useState({isAuth: false, user: null, status:'pending'});
     const history = useHistory();
 
     useEffect(() => {
@@ -34,7 +35,9 @@ function AuthContextProvider({children}) {
                     username:result.data.username,
                     email:result.data.email,
                     id:result.data.id,
-                    timeQuestion:'',
+                    // time:result.data.time,
+                    // intensity:result.data.intensity,
+                    // focus:result.data.time
                 }, status:'done'
             })
             console.log(result.data)
@@ -45,6 +48,7 @@ function AuthContextProvider({children}) {
                 user: null,
                 status: 'done',
             });
+            // {toggleAuth(false) && <p> please try again! </p>}
         }
     }
 
@@ -73,6 +77,7 @@ function AuthContextProvider({children}) {
         logout: signOut,
         login: signIn,
     };
+
 
 
     return (

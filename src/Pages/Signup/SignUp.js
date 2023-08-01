@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./SignUp.module.css";
 import axios from "axios";
-import waters from "../../Images/lilac-waters.jpeg";
+import waters from "../../Components/assets/images/lilac-waters.jpg";
 import { useForm } from 'react-hook-form';
 import {Link, useHistory} from "react-router-dom";
 
@@ -55,7 +55,7 @@ function SignUp()   {
                 </div>
                 </section>
             <footer>
-                <p className={styles["account-link"]}>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+                <p className={styles["account-link"]}>Already have an account? You can <Link to="/signin">Login</Link> here.</p>
             </footer>
         </>
 

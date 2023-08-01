@@ -1,5 +1,5 @@
 import styles from './SignIn.module.css';
-import waters from '../../Images/lilac-waters.jpeg';
+import waters from '../../Components/assets/images/lilac-waters.jpg';
 import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
@@ -75,6 +75,7 @@ function SignIn() {
                             Click here to enter your yoga SPACE
                         </h6>
                     </button>
+
                 </div>
             </form>
 

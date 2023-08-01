@@ -15,9 +15,6 @@ function App() {
 
     return (
         <span id='outer-content-container'>
-        {/*<div className={"MacBook-Pro-14"}>*/}
-
-
 
         <Switch>
             <Route exact path="/">
@@ -37,9 +34,9 @@ function App() {
             </Route>
         </Switch>
 
-
-                 {/*</div>*/}
         </span>
+
+
              );
         }
 
