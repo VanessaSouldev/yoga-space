@@ -1,5 +1,5 @@
 import styles from './Homepage.module.css';
-import waters from '../../Images/lilac-waters.jpeg';
+import waters from '../../Components/assets/images/lilac-waters.jpg';
 import {useHistory} from 'react-router-dom';
 
 function Homepage() {

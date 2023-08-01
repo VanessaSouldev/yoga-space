@@ -1,36 +1,46 @@
+.rectangle-container    {
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 823px;
+    height: 159px;
+    /*top:    35px;*/
+    /*left:   575px;*/
+    object-fit: cover;
+    position: absolute;
+
+
+}
+
 
 .rectangle  {
+    display: flex;
     width: 950px;
     height: 159px;
     top:    37px;
-    left:   500px;
+    left:   800px;
     object-fit: cover;
     position: absolute;
+    z-index: 0;
 }
 
-.rectangle-container    {
-
-    text-align: center;
-    width: 823px;
-    height: 159px;
-    top:    35px;
-    left:   575px;
-    object-fit: cover;
-    position: absolute;
-
-
-}
 
 .header {
-    font-family: Inter, sans-serif;
+    display: flex;
+    position: relative;
+    left: 890px;
     font-size: 40px;
+    justify-content: center;
     align-content: center;
-    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
-    font-weight: 400;
+    text-shadow: 0 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    font-weight: 600;
     line-height: 60px;
-    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    background:linear-gradient(280.97deg,rgba(239, 175, 128,0.51), rgba(144, 242, 225,1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 100%;
+    z-index: 1;
 }
 
 .questions-container {

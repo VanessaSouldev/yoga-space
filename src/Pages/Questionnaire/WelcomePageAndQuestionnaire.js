@@ -73,90 +73,156 @@
 //
 
 import styles from './WelcomePageandYogaQuestionnaire.module.css';
-import {useContext, useEffect} from "react";
+import {useContext, useEffect, useState} from "react";
 import { Link, useHistory } from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
-import waters from '../../Images/lilac-waters.jpeg';
+import waters from '../../Components/assets/images/lilac-waters.jpg';
+import AnswersInput from "../../Components/AnswersInput";
+import axios from "axios";
+
 
 function WelcomePageAndQuestionnaire() {
 
-
-
     const {user} = useContext(AuthContext);
     const history = useHistory();
+    const [time, setTime] = useState('');
+    const [intensity, setIntensity] = useState('');
+    const [focus, setFocus] = useState('');
+
+
+
+
 
     async function handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault(e)
 
         try {
-            history.push('/videopage')
+            history.push("/videopage");
 
 
         } catch (e) {
-            console.error(e);
-        }
+            console.error(e)
 
-    }
+        }}
+        useEffect(() => {
+            console.log(time, intensity, focus)
 
+        }, [time, intensity, focus]);
 
-    useEffect(() => {
-        console.log(user.timeQuestion)
-
-},[])
-
-
-    return (
-        <><main>
-            <img className={styles.rectangle} src={waters} alt="lilac waters"/>
-            <div className={styles["rectangle-container"]}>
-                <section className={styles.header}>
-                    Welcome Back {user.username}
-                </section>
-            </div>
-            <form>
-                <div className={styles["questions-container"]}>
-                    <p className={styles.questions}>
-                        How much time do you have today?
-                    </p>
-                    <div>
-                        <input type="radio" value="10-20" name="time" /> <output className={styles.answers}>10 - 20 minutes</output>
-                        <br/>
-                        <input type="radio" value="20-30" name="time" /> <output className={styles.answers}>20 - 30 minutes</output>
-                        <br/>
-                        <input type="radio" value="30 or more" name="time" /> <output className={styles.answers}> 30 minutes or more</output>
-                    </div>
-                    <p className={styles.questions}>
-                        What kind of yoga are you up for?
-                    </p>
-                    <div>
-                        <input type="radio" value="Beginners" name="intensity-level" /> <output className={styles.answers}>Beginners</output>
-                        <br/>
-                        <input type="radio" value="Yin" name="intensity-level" /> <output className={styles.answers}>Relaxing(yin yoga)</output>
-                        <br/>
-                        <input type="radio" value="Intense" name="intensity-level" /> <output className={styles.answers}>Intense I'm fired up!</output>
-                    </div>
-                    <p className={styles.questions}>
-                        What would you like to focus on?
-                    </p>
-                    <div>
-                        <input type="radio" value="back" name="focus" /> <output className={styles.answers}>Back pain</output>
-                        <br/>
-                        <input type="radio" value="stress" name="focus" /> <output className={styles.answers}>Stress reduction</output>
-                        <br/>
-                        <input type="radio" value="none" name="focus" /> <output className={styles.answers}>Surprise me!</output>
-                    </div>
-                    <button
-                        type="submit"
-                        onClick={handleSubmit}
-                        className={styles["video-button"]}>
-                        <h6>
-                            Bring it on!
-                        </h6>
-                    </button>
+        return (
+            <>
+                <div className={styles["rectangle-container"]}>
+                    <img className={styles.rectangle} src={waters} alt="lilac waters"/>
+                    <h4 className={styles.header}>
+                        Welcome Back {user.username}
+                    </h4>
                 </div>
-            </form>
-            <p>Terug naar de <Link to="/">Homepagina</Link></p>
-        </main></>
-    );
-}
+                <form onSubmit={() => handleSubmit()}>
+                    <div className={styles["questions-container"]}>
+                        <p className={styles.questions}>
+                            How much time do you have today?
+                        </p>
+                        <div>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="time"
+                                nameAttribute="time"
+                                stateValue={'time'}
+                                stateSetter={() => setTime('10-20')}
+                                className={styles.answers}
+                                labelText= "10 - 20 minutes"/>
+                            <br/>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="time"
+                                nameAttribute="time"
+                                stateValue={'time'}
+                                stateSetter={() => setTime('20-30')}
+                                className={styles.answers}
+                                labelText= "20 - 30 minutes"/>
+                            <br/>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="time"
+                                nameAttribute="time"
+                                stateValue={'time'}
+                                stateSetter={() => setTime('30+')}
+                                className={styles.answers}
+                                labelText= "30 minutes or more"/>
+                            <br/>
+
+                        </div>
+                        <p className={styles.questions}>
+                            What kind of yoga are you up for?
+                        </p>
+                        <div>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="intensity"
+                                nameAttribute="intensity"
+                                stateValue={'intensity'}
+                                stateSetter={() => setIntensity('beginner')}
+                                className={styles.answers}
+                                labelText= "Beginner"/>
+                            <br/>
+                            <AnswersInput
+                            type="radio"
+                            idAttribute="intensity"
+                            nameAttribute="intensity"
+                            stateValue={'intensity'}
+                            stateSetter={() => setIntensity('yin')}
+                            className={styles.answers}
+                            labelText= "Yin yoga (relaxing)"/>
+                            <br/>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="intensity"
+                                nameAttribute="intensity"
+                                stateValue={'intensity'}
+                                stateSetter={() => setIntensity('advanced')}
+                                className={styles.answers}
+                                labelText= "Advanced"/>
+                        </div>
+                        <p className={styles.questions}>
+                            What would you like to focus on?
+                        </p>
+                        <div>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="focus"
+                                nameAttribute="focus"
+                                stateValue={'focus'}
+                                stateSetter={() => setFocus('backpain')}
+                                className={styles.answers}
+                                labelText= "Back pain"/>
+                            <br/>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="focus"
+                                nameAttribute="focus"
+                                stateValue={'focus'}
+                                stateSetter={() => setFocus('stress')}
+                                className={styles.answers}
+                                labelText= "Stress relief"/>
+                            <br/>
+                            <AnswersInput
+                                type="radio"
+                                idAttribute="focus"
+                                nameAttribute="focus"
+                                stateValue={'focus'}
+                                stateSetter={() => setFocus('depression')}
+                                className={styles.answers}
+                                labelText= "Depression / Yoga to feel to uplift"/>
+                        </div>
+                        <button
+                            type="submit"
+                            className={styles["video-button"]}>
+                            Bring it on!
+                        </button>
+                    </div>
+                </form>
+                <p>Back to <Link to="/">Homepage</Link></p>
+                </>
+        );
+    }
 export default WelcomePageAndQuestionnaire;
