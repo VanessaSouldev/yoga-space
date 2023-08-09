@@ -112,7 +112,8 @@
 
     width: 213px;
     height: 48px;
-    top: 10px;
+    top: 250px;
+    left: 150px;
     padding: 21px 32px;
     align-items: center;
     border: none;
@@ -166,8 +167,8 @@
     display: flex;
     position: relative;
     /*bottom: 275px;*/
-    left: 1420px;
-    top: 51px;
+    left: 1820px;
+    top: 300px;
     width: 213px;
     height: 48px;
     /*padding: 21px 24px;*/

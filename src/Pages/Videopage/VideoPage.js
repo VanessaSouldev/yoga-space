@@ -9,59 +9,39 @@ function VideoPage() {
         const {user} = useContext(AuthContext);
         const [videoResults, setVideoResults] = useState([]);
         const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
+        let q="";
 
 
 
     useEffect(() => {
+    q = `yoga,${user.focus}, ${user.intensity}`;
 
-            async function fetchData() {
+        console.log(q);
+        console.log(user);
+
+        async function fetchData() {
                 try {
-                    const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=4&q=yoga&key=${KEY}`, {
+                    const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=4&q=${q}&videoDuration=${user.time}&key=${KEY}`
+                        , {
                         headers: {
-                        // params: {
-                        //         snippet:"title",
-                        //         videoDuration: "short",
-                        //         q: 'beginners',
-                        //     }
-
 
                         }
+
+
                     })
                     console.log(result.data)
                     setVideoResults(result.data.items)
-                    setVideoResults(result.data.snippet.title)
                 }
-    //                 // try {
-    //                 //     const result = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {params: {
-    //                 //             part: "snippet",
-    //                 //             q: 'yoga',
-    //                 //             maxResults: 4,
-    //                 //             type: "video",
-    //                 //             videoDuration: "short",
-    //                 //             key: KEY,
-    //                 //         },headers:{}})
-    //                 //     console.log(result.data);
-    //                 //     setVideoResults(result.data)
-    //                 // }
-                catch (e) {
+                    catch (e) {
                     console.error(e);
                 }
             }
 
-            fetchData()
+            fetchData();
+
 
 
         }, [])
-
-    // useEffect(() => {
-    //
-    //         console.log(videoResults)
-    //         console.log(videoResults[0].id.videoId)
-    //
-    // }, [videoResults]
-
-
-    // )
 
 
         return (

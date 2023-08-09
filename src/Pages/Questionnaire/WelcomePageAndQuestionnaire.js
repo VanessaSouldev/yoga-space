@@ -73,7 +73,7 @@
 //
 
 import styles from './WelcomePageandYogaQuestionnaire.module.css';
-import {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Link, useHistory } from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
 import waters from '../../Components/assets/images/lilac-waters.jpg';
@@ -89,7 +89,23 @@ function WelcomePageAndQuestionnaire() {
     const [intensity, setIntensity] = useState('');
     const [focus, setFocus] = useState('');
 
-
+    // const quotes = ({ q, a }) => {
+    //
+    //
+    // async function getQuote() {
+    //     try {
+    //         const response = await axios.get(`https://zenquotes.io/api/[mode]/[key]?option1=value&option2=value`,)
+    //         { const response = await fetch(getQuote());
+    //             var data = await response.json();
+    //             console.log(data);
+    //         }
+    //
+    //     }
+    //     catch (e) {
+    //         console.error(e);
+    //     }
+    // }
+    //
 
 
 
@@ -105,7 +121,9 @@ function WelcomePageAndQuestionnaire() {
 
         }}
         useEffect(() => {
-            console.log(time, intensity, focus)
+            user.time = time;
+            user.intensity = intensity;
+            user.focus = focus;
 
         }, [time, intensity, focus]);
 
@@ -115,9 +133,12 @@ function WelcomePageAndQuestionnaire() {
                     <img className={styles.rectangle} src={waters} alt="lilac waters"/>
                     <h4 className={styles.header}>
                         Welcome Back {user.username}
+      {/*                  <span>*/}
+      {/*  <strong>{quotes(q)}</strong> &nbsp; <span>{quotes(a)}</span>*/}
+      {/*</span>)*/}
                     </h4>
                 </div>
-                <form onSubmit={() => handleSubmit()}>
+                <form onSubmit={handleSubmit}>
                     <div className={styles["questions-container"]}>
                         <p className={styles.questions}>
                             How much time do you have today?
@@ -128,27 +149,27 @@ function WelcomePageAndQuestionnaire() {
                                 idAttribute="time"
                                 nameAttribute="time"
                                 stateValue={'time'}
-                                stateSetter={() => setTime('10-20')}
+                                stateSetter={() => setTime('short')}
                                 className={styles.answers}
-                                labelText= "10 - 20 minutes"/>
+                                labelText= "less than 5 minutes"/>
                             <br/>
                             <AnswersInput
                                 type="radio"
                                 idAttribute="time"
                                 nameAttribute="time"
                                 stateValue={'time'}
-                                stateSetter={() => setTime('20-30')}
+                                stateSetter={() => setTime('medium')}
                                 className={styles.answers}
-                                labelText= "20 - 30 minutes"/>
+                                labelText= "5 - 20 minutes"/>
                             <br/>
                             <AnswersInput
                                 type="radio"
                                 idAttribute="time"
                                 nameAttribute="time"
                                 stateValue={'time'}
-                                stateSetter={() => setTime('30+')}
+                                stateSetter={() => setTime('long')}
                                 className={styles.answers}
-                                labelText= "30 minutes or more"/>
+                                labelText= "20 minutes or more"/>
                             <br/>
 
                         </div>
@@ -210,7 +231,7 @@ function WelcomePageAndQuestionnaire() {
                                 idAttribute="focus"
                                 nameAttribute="focus"
                                 stateValue={'focus'}
-                                stateSetter={() => setFocus('depression')}
+                                stateSetter={() => setFocus('depression' && 'positvity')}
                                 className={styles.answers}
                                 labelText= "Depression / Yoga to feel to uplift"/>
                         </div>
@@ -221,7 +242,7 @@ function WelcomePageAndQuestionnaire() {
                         </button>
                     </div>
                 </form>
-                <p>Back to <Link to="/">Homepage</Link></p>
+                <p className={styles["account-link"]}>Tor return to the Homepage click  <Link to="/">here</Link>.</p>
                 </>
         );
     }
