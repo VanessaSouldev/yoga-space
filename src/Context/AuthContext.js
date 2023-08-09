@@ -35,9 +35,9 @@ function AuthContextProvider({children}) {
                     username:result.data.username,
                     email:result.data.email,
                     id:result.data.id,
-                    // time:result.data.time,
-                    // intensity:result.data.intensity,
-                    // focus:result.data.time
+                    time:result.data.time,
+                    intensity:result.data.intensity,
+                    focus:result.data.time
                 }, status:'done'
             })
             console.log(result.data)

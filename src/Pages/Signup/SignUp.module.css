@@ -5,7 +5,7 @@
     justify-content: center;
     flex-shrink: 0;
     position: absolute;
-    left: 700px;
+    left: 760px;
     color: rgba(255, 255, 255, 0.50);
     text-align: center;
     font-size: 85px;
@@ -21,7 +21,7 @@
     position: absolute;
     /*justify-content: center;*/
     margin: 190px 0 156px 0;
-    left: 600px;
+    left: 625px;
     width: 942px;
     height: 640px;
     z-index: 0;
@@ -35,7 +35,7 @@
 
 .signup-form    {
     position: absolute;
-    left: 830px;
+    left: 870px;
     top: 300px;
     width: 1050px;
     z-index: 1;
@@ -47,7 +47,7 @@ h5  {
     font-family: Inter, sans-serif;
     font-size: 25px;
     text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
-    font-weight: 480;
+    font-weight: 600;
     line-height: 50px;
     background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
     -webkit-background-clip: text;
@@ -68,9 +68,12 @@ h5  {
 .signup-button {
 
     display: flex;
+    position: relative;
+    right: 30px;
     width: 527px;
     height: 83px;
     margin: 96px 10px;
+    border-radius: 50px 50px 50px 50px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -88,11 +91,11 @@ h5  {
 a,
 a:visited,
 a:active {
-    color: #0d3b66;
+    color:plum;
 }
 
 a:hover {
-    color: #ea7e1f;
+    color: rgba(144, 242, 225,1);
 }
 
 .account-link   {
