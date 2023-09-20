@@ -1,124 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&family=Italiana&family=Just+Me+Again+Down+Here&family=Open+Sans:wght@600&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1, h2, h4, h5 {
-  font-style: normal;
-  font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-family: "Inter", sans-serif;
 }
 
 h1 {
-  display: flex;
-  font-weight: 300;
-  font-size: 200px;
-  font-size: 18vw;
-  line-height: 116.667%;
-  -webkit-text-stroke:2px rgba(0, 0, 0, 0.5);
-  background: radial-gradient(94.84% 94.84% at 50% 5.16%, #90F2E1 0%, #FFF 100%);
-  mix-blend-mode: luminosity;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 1;
+    display: flex;
+    font-weight: 300;
+    font-size: 200px;
+    font-size: 18vw;
+    line-height: 116.667%;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+    background: radial-gradient(94.84% 94.84% at 50% 5.16%, #90F2E1 0%, #FFF 100%);
+    mix-blend-mode: luminosity;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
 }
 
 
 h3 {
-  font-family: 'Just Me Again Down Here', cursive;
-  font-weight: 400;
-  font-style: normal;
-  line-height: normal;
-  font-size: 95px;
-  text-align: center;
-  -webkit-text-stroke:2px rgba(0, 0, 0, 0.5);
-  opacity: 0.75;
-  background: conic-gradient(from 180deg at 50% 50.00%, #F0EDFA 0deg, #E8E4F9 290.6250071525574deg);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  mix-blend-mode: luminosity;
-  z-index: 1;
+    font-family: 'Just Me Again Down Here', cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    font-size: 95px;
+    text-align: center;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+    opacity: 0.75;
+    background: conic-gradient(from 180deg at 50% 50.00%, #F0EDFA 0deg, #E8E4F9 290.6250071525574deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: luminosity;
+    z-index: 1;
 }
 
 h2 {
-  width: 108px;
-  height: 39px;
-  left: 165px;
-  top: 159px;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 39px;
-  /* identical to box height */
-  text-align: center;
-  color: #FFFFFF;
+    width: 108px;
+    height: 39px;
+    left: 165px;
+    top: 159px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 
 h5 {
-  font-size: 65px;
-  padding: 12px 0;
+    font-size: 65px;
+    padding: 12px 0;
 
 }
 
 p {
-  font-family: "italiana", sans-serif;
-  font-weight: bold;
-  margin: 12px 0;
-  color: #FFFFFF;
+    font-family: "italiana", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 12px 0 0 20px;
+    color: #FFFFFF;
 }
 
 
-.MacBook-Pro-14 {
-  width: 1293px;
-  height: 885px;
-  display: flex;
-  background: #90F2E1;
-  background:linear-gradient(70deg,rgba(239, 175, 128,0.51),rgba(144,242,225,1));
-  /*background: linear-gradient(207deg, #90F2E1 0%, rgba(239, 175, 128, 0.31) 100%);*/
-  background-repeat: no-repeat;
-  margin: 0;
-  background-attachment: fixed;
+.background {
+    width: 1293px;
+    height: 885px;
+    display: flex;
+    background: #90F2E1;
+    background: linear-gradient(70deg, rgba(239, 175, 128, 0.51), rgba(144, 242, 225, 1));
+    background-repeat: no-repeat;
+    margin: 0;
+    background-attachment: fixed;
 
 }
 
 .outer-content-container {
 
-  display: flex;
-  height: 100%;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .inner-content-container {
-  flex-basis: 1400px;
-  flex-shrink: 1;
-  flex-grow: 0;
-  /*margin: 0 20px;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
-
+    flex-basis: 1400px;
+    flex-shrink: 1;
+    flex-grow: 0;
 }
 
 .default-text-restriction {
-  max-width: 850px;
-  text-align: center;
+    max-width: 850px;
+    text-align: center;
 }
 
 .default-area-padding {
-  padding: 100px 0;
-}
-
-
-.signup-button {
-  font-family: Open Sans, sans-serif;
-  font-size: 85px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 16px; /* 44.444% */
-
+    padding: 100px 0;
 }

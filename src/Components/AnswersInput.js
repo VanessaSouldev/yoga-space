@@ -4,6 +4,7 @@ import styles from "../Pages/Questionnaire/WelcomePageandYogaQuestionnaire.modul
 
 function AnswersInput({idAttribute,
                       nameAttribute,
+                      required,
                       stateValue,
                       stateSetter,
                       labelText}) {
@@ -12,11 +13,12 @@ function AnswersInput({idAttribute,
     <>
 
     <input
-        type="radio"
+
+           type="radio"
            id={idAttribute}
            name={nameAttribute}
-           value={stateValue}
-           onClick={() => stateSetter('')}/>
+           value={stateValue} required={required}
+           onClick={(enable) => stateSetter('')}/>
         <label
             htmlFor={idAttribute}
             className={styles.answers}>

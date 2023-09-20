@@ -1,76 +1,87 @@
-
-.video-rectangle  {
+.video-rectangle {
     width: 1650px;
     height: 120px;
-    top:    37px;
-    left:   200px;
+    top: 37px;
+    left: 400px;
     object-fit: cover;
     position: absolute;
 }
 
-.video-rectangle-container    {
-
+.video-rectangle-container {
     text-align: center;
     width: 1050px;
     height: 120px;
-    top:    35px;
-    left:   575px;
+    top: 35px;
+    left: 575px;
     object-fit: cover;
     position: absolute;
-
-
 }
 
 .header {
     font-family: Inter, sans-serif;
     font-size: 40px;
     align-content: center;
-    text-shadow: 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
-    font-weight: 400;
+    justify-content: center;
+    text-shadow: 4px 4px rgba(144, 242, 225, 1), rgba(255, 255, 255, 1);
+    font-weight: 600;
     line-height: 60px;
-    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    background: linear-gradient(280.97deg, rgba(144, 242, 225, 1), rgba(255, 255, 255, 1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.video-one  {
+.video-one {
     width: 538px;
     height: 289px;
-    top:    200px;
-    left:   50px;
+    top: 200px;
+    left: 50px;
+    margin: 50px 50px 100px 50px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.video-two {
+    width: 538px;
+    height: 289px;
+    top: 500px;
+    left: 50px;
     margin: 50px;
     object-fit: cover;
     position: absolute;
 }
 
-.video-two  {
+.video-three {
     width: 538px;
     height: 289px;
-    top:    500px;
-    left:   50px;
+    top: 800px;
+    left: 50px;
     margin: 50px;
     object-fit: cover;
     position: absolute;
-
-}
-
-.video-three  {
-    width: 538px;
-    height: 289px;
-    top:    800px;
-    left:   50px;
-    margin: 50px;
-    object-fit: cover;
-    position: absolute;
-
 }
 
 .video-main {
-    width: 838px;
-    height: 589px;
-    top:    250px;
-    left:   800px;
+    width: 1338px;
+    height: 789px;
+    top: 250px;
+    left: 800px;
     object-fit: cover;
     position: absolute;
+}
 
+a,
+a:visited,
+a:active {
+    color: plum;
+}
+
+a:hover {
+    color: rgb(238, 182, 148);
+}
+
+.welcome-page-link {
+    font-size: 35px;
+    position: absolute;
+    top: 1050px;
+    left: 1100px;
 }

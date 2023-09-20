@@ -5,7 +5,7 @@ import WelcomePageAndQuestionnaire from './Pages/Questionnaire/WelcomePageAndQue
 import SignIn from './Pages/Signin/SignIn';
 import SignUp from './Pages/Signup/SignUp';
 import VideoPage from './Pages/Videopage/VideoPage';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 import {AuthContext} from "./Context/AuthContext";
 
 
@@ -13,8 +13,7 @@ function App() {
 
     const {isAuth} = useContext(AuthContext);
 
-    return (
-        <span id='outer-content-container'>
+    return (<span id='outer-content-container'>
 
         <Switch>
             <Route exact path="/">
@@ -34,10 +33,7 @@ function App() {
             </Route>
         </Switch>
 
-        </span>
-
-
-             );
-        }
+        </span>);
+}
 
 export default App;
