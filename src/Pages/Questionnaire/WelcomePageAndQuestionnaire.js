@@ -1,4 +1,4 @@
-import styles from './WelcomePageandYogaQuestionnaire.module.css';
+import styles from './WelcomePageandQuestionnaire.module.css';
 import React, {useContext, useEffect, useState} from "react";
 import {Link, useHistory} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
@@ -65,7 +65,6 @@ function WelcomePageAndQuestionnaire() {
         user.time = time;
         user.intensity = intensity;
         user.focus = focus;
-
 
     }, [user, time, intensity, focus]);
 
