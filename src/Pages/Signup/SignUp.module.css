@@ -1,5 +1,4 @@
 .register-header {
-
     width: 703px;
     height: 145px;
     justify-content: center;
@@ -13,11 +12,9 @@
     line-height: normal;
     backdrop-filter: blur(2px);
     z-index: 1;
-
 }
 
-
-.rectangle-signup  {
+.rectangle-signup {
     position: absolute;
     /*justify-content: center;*/
     margin: 190px 0 156px 0;
@@ -25,15 +22,9 @@
     width: 942px;
     height: 640px;
     z-index: 0;
-
 }
 
-/*.form-container {*/
-/*    position:absolute;*/
-/*    z-index: 1;*/
-/*}*/
-
-.signup-form    {
+.signup-form {
     position: absolute;
     left: 870px;
     top: 300px;
@@ -41,15 +32,13 @@
     z-index: 1;
 }
 
-
-
-h5  {
+h5 {
     font-family: Inter, sans-serif;
     font-size: 25px;
-    text-shadow: 0px 4px 4px rgba(144, 242, 225,1),rgba(255, 255, 255, 1);
+    text-shadow: 0px 4px 4px rgba(144, 242, 225, 1), rgba(255, 255, 255, 1);
     font-weight: 600;
     line-height: 50px;
-    background:linear-gradient(280.97deg,rgba(144, 242, 225,1),rgba(255, 255, 255, 1));
+    background: linear-gradient(280.97deg, rgba(144, 242, 225, 1), rgba(255, 255, 255, 1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 1;
@@ -61,12 +50,10 @@ h5  {
     height: 75px;
     width: 475px;
     z-index: 1;
-
 }
 
 
 .signup-button {
-
     display: flex;
     position: relative;
     right: 30px;
@@ -78,29 +65,27 @@ h5  {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color:rgba(92, 185, 102, 1);
+    color: rgba(92, 185, 102, 1);
     font-family: Open Sans, sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: 16px; /* 44.444% */
     opacity: 32%;
-
 }
 
 a,
 a:visited,
 a:active {
-    color:plum;
+    color: plum;
 }
 
 a:hover {
-    color: rgba(144, 242, 225,1);
+    color: rgba(144, 242, 225, 1);
 }
 
-.account-link   {
+.account-link {
     position: absolute;
     bottom: 70px;
-    left: 70px;
 }
 
