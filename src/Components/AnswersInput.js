@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../Pages/Questionnaire/WelcomePageandYogaQuestionnaire.module.css";
+import styles from "../Pages/Questionnaire/WelcomePageandQuestionnaire.module.css";
 
 
 function AnswersInput({idAttribute,

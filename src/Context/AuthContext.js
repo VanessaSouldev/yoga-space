@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {createContext} from "react";
 import {useHistory} from "react-router-dom";
 import axios from "axios";
-import styles from "../Pages/Questionnaire/WelcomePageandYogaQuestionnaire.module.css";
+
 
     export const AuthContext = createContext({});
 
