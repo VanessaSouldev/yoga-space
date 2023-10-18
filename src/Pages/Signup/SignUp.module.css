@@ -74,6 +74,14 @@ h5 {
     opacity: 32%;
 }
 
+.error-message {
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    color: #8b0000;
+
+}
+
+
 a,
 a:visited,
 a:active {

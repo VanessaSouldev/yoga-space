@@ -4,7 +4,7 @@ import {useHistory} from "react-router-dom";
 import axios from "axios";
 
 
-    export const AuthContext = createContext({});
+export const AuthContext = createContext({});
 
 function AuthContextProvider({children}) {
 
@@ -83,7 +83,7 @@ function AuthContextProvider({children}) {
     return (
         <AuthContext.Provider value={data}>
             {auth.status==='done' ?
-            children : <p>Loading...</p> }
+                children : <p>Loading...</p> }
         </AuthContext.Provider>
     );
 

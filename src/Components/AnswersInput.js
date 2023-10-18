@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../Pages/Questionnaire/WelcomePageandQuestionnaire.module.css";
+
 
 
 function AnswersInput({idAttribute,
@@ -20,8 +20,7 @@ function AnswersInput({idAttribute,
            value={stateValue} required={required}
            onClick={(enable) => stateSetter('')}/>
         <label
-            htmlFor={idAttribute}
-            className={styles.answers}>
+            htmlFor={idAttribute}>
             {labelText}
     </label>
     </>
