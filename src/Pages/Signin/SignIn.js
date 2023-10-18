@@ -11,6 +11,7 @@ function SignIn() {
     const {login} = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('false')
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -25,7 +26,7 @@ function SignIn() {
 
 
         } catch (e) {
-            console.error(e);
+           setError(true);
         }
 
     }
@@ -67,6 +68,7 @@ function SignIn() {
                                 value={password}
                                 className={styles.password}
                             />
+
                         </label>
                         <button
                             type="submit"
