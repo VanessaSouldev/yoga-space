@@ -1,18 +1,17 @@
 import styles from './Homepage.module.css';
 import waters from '../../Components/assets/images/lilac-waters.jpg';
 import {useHistory} from 'react-router-dom';
-
+import RegisterButton from "../../Components/RegisterButton";
+import SignInButton from "../../Components/SignInButton";
 function Homepage() {
 
     const history = useHistory();
 
-    function handleClickRegister() {
-        history.push("/signup");
-    }
-
     function handleClickSignin() {
         history.push("/signin");
     }
+
+
 
 
     return (
@@ -44,22 +43,15 @@ function Homepage() {
             </section>
             <section>
                 <div className={styles["inner-content-container sign-up-or-in"]}>
-                    <div className={styles["register-container"]}>
-                        <button
-                            type="button"
-                            onClick={handleClickRegister}
-                            className={styles["register-button"]}>
+
+                        <RegisterButton>
                             Register
-                        </button>
-                    </div>
-                    <div className={styles["sign-in-container"]}>
-                        <button
-                            type="button"
-                            onClick={handleClickSignin}
-                            className={styles["sign-in-button"]}>
+                        </RegisterButton>
+
+                        <SignInButton>
                             Sign in
-                        </button>
-                    </div>
+                        </SignInButton>
+
                 </div>
             </section>
             <p className={styles["under-register-text"]}>For daily yoga video's</p>

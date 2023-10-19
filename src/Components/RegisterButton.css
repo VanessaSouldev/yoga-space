@@ -1,0 +1,29 @@
+.register-button {
+    display: flex;
+    position: absolute;
+    width: 213px;
+    height: 48px;
+    bottom: 105px;
+    left: 300px;
+    padding: 21px 32px;
+    align-items: center;
+    border: none;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(144, 242, 225, 0.31);
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.register-button:hover {
+    color: #EFAF80;
+    border: 5px solid plum;
+}
+

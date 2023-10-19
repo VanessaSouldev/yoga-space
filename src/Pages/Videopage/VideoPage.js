@@ -4,7 +4,8 @@ import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
 import {Link} from "react-router-dom";
-import VideoFrame from "../../Components/VideoFrame";
+import VideoFrameMain from "../../Components/VideoFrameMain";
+
 
 
 function VideoPage() {
@@ -13,6 +14,7 @@ function VideoPage() {
     const [videoResults, setVideoResults] = useState([]);
     const [loading, toggleLoading] = useState(false);
     const [error, toggleError] = useState(false);
+    const [items, setItems] = useState([]);
     const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
     let q = "";
 
@@ -64,11 +66,25 @@ function VideoPage() {
 
         return function cleanup() {
             controller.abort();
+
+            unMount();
         }
-        unMount();
 
-    }, [ ]);
+    }, [q, user.time]);
 
+
+    // async function handleSubmit(e) {
+    //
+    //     const [favourite, setFavourite] = useState(videoResults[1].id.videoId);
+    //
+    //     useEffect(() => {
+    //         localStorage.setfavorite('Favorites', JSON.stringify(favourite));
+    //
+    //
+    //     }, [favourite]);
+    //
+    //
+    //
 
     return (
 
@@ -82,42 +98,49 @@ function VideoPage() {
 
             {videoResults && videoResults.length > 0 && (
                 <>
-                        <VideoFrame
-                            widthAttribute="420"
-                            heightAttribute="315"
-                            classNameAttribute="styles[video-one]"
-                            titleAttribute={videoResults.title}
-                            sourceValue={`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`}
-                            fullScreenAttribute="allowFullscreen"
-                        />
 
-                        <VideoFrame
-                            widthAttribute="420"
-                            heightAttribute="315"
-                            classNameAttribute="styles[video-two]"
-                            titleAttribute={videoResults.title}
-                            sourceValue={`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`}
-                            fullScreenAttribute="allowFullscreen"
-                        />
+                    <iframe
+                        className={styles["video-one"]}
+                        title={videoResults.title}
+                        src={`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`}
+                        allowFullScreen
+                    >
 
-                        <VideoFrame
-                            widthAttribute="420"
-                            heightAttribute="315"
-                            classNameAttribute="styles[video-three]"
-                            titleAttribute={videoResults.title}
-                            sourceValue={`https://www.youtube.com/embed/${videoResults[3].id.videoId}/?controls=0/autoplay=1`}
-                            fullScreenAttribute="allowFullscreen"
-                        />
-                        <VideoFrame
-                            widthAttribute="420"
-                            heightAttribute="315"
-                            classNameAttribute="styles[video-main]"
-                            titleAttribute={videoResults.title}
-                            sourceValue={`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`}
-                            fullScreenAttribute="allowFullscreen"
-                        />
+                    </iframe>
 
+                    <button>click  type="submit"
+                        {/*onClick={handleSubmit}*/}
+                        className={styles["favorites-button"]}>
+                        here to add this video to your Favourites on your profile-page </button>
 
+                    <iframe width="420"
+                            height="315"
+                            className={styles["video-two"]}
+                            title={"video-two"}
+                            src={`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`}
+                            allowFullScreen
+                    >
+
+                    </iframe>
+
+                    <iframe width="420"
+                            height="315"
+                            className={styles["video-three"]}
+                            title={"video-three"}
+                            src={`https://www.youtube.com/embed/${videoResults[3].id.videoId}/?controls=0/autoplay=1`}
+                            allowFullScreen
+                    >
+
+                    </iframe>
+
+                    <VideoFrameMain
+                        width={"420"}
+                        height={"315"}
+                        title={"video-main"}
+                        src={`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`}
+                        allowFullScreen>
+
+                    </VideoFrameMain>
                 </>
             )}
 

@@ -31,6 +31,9 @@
 }
 
 .video-one {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-align: start;
     width: 538px;
     height: 289px;
     top: 200px;

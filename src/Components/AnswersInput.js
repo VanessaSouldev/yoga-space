@@ -1,4 +1,5 @@
 import React from 'react';
+import './AnswersInput.css';
 
 
 
@@ -17,6 +18,7 @@ function AnswersInput({idAttribute,
            type="radio"
            id={idAttribute}
            name={nameAttribute}
+           className="answers-input"
            value={stateValue} required={required}
            onClick={(enable) => stateSetter('')}/>
         <label

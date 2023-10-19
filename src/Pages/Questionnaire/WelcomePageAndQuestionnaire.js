@@ -95,7 +95,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="time"
                             stateValue={'time'}
                             stateSetter={() => setTime('short')}
-                            className={styles["answers-input"]}
                             labelText="less than 5 minutes"/>
                         <AnswersInput
                             required={true}
@@ -104,7 +103,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="time"
                             stateValue={'time'}
                             stateSetter={() => setTime('medium')}
-                            className={styles["answers-input"]}
                             labelText="5 - 20 minutes"/>
                         <AnswersInput
                             required={true}
@@ -113,7 +111,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="time"
                             stateValue={'time'}
                             stateSetter={() => setTime('long')}
-                            className={styles["answers-input"]}
                             labelText="20 minutes or more"/>
                     </div>
                     <p className={styles.questions}>
@@ -127,7 +124,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="intensity"
                             stateValue={'intensity'}
                             stateSetter={() => setIntensity('beginner')}
-                            className={styles["answers-input"]}
                             labelText="Beginner"/>
                         <AnswersInput
                             required={true}
@@ -136,7 +132,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="intensity"
                             stateValue={'intensity'}
                             stateSetter={() => setIntensity('yin')}
-                            className={styles["answers-input"]}
                             labelText="Yin yoga (relaxing)"/>
                         <AnswersInput
                             required={true}
@@ -145,7 +140,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="intensity"
                             stateValue={'intensity'}
                             stateSetter={() => setIntensity('advanced')}
-                            className={styles["answers-input"]}
                             labelText="Advanced"/>
                     </div>
                     <p className={styles.questions}>
@@ -159,7 +153,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="focus"
                             stateValue={'focus'}
                             stateSetter={() => setFocus('backpain')}
-                            className={styles.answers}
                             labelText="Back pain"/>
                         <AnswersInput
                             required={true}
@@ -177,7 +170,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="focus"
                             stateValue={'focus'}
                             stateSetter={() => setFocus('depression' && 'positvity')}
-                            className={styles.answers}
                             labelText="Depression / Yoga to uplift"/>
                     </div>
                     <button
