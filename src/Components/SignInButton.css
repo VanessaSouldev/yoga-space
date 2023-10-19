@@ -1,0 +1,33 @@
+.sign-in-container {
+    position: absolute;
+    width: 437px;
+    height: 214px;
+    flex-shrink: 0;
+    margin: 43px 531px 114px 122px;
+}
+
+.sign-in-button {
+    display: flex;
+    position: absolute;
+    left: 1720px;
+    top: 250px;
+    width: 213px;
+    height: 48px;
+    border: none;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(239, 175, 128, 0.31);
+    flex-shrink: 0;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.sign-in-button:hover {
+    color: #EFAF80;
+    border: 5px solid plum;
+}

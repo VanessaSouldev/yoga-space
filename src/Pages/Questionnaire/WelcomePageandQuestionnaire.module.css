@@ -77,17 +77,17 @@
     margin: 25px 0 25px;
 }
 
-.answers-input {
-    display: flex;
-    flex-direction: row;
-    font-family: Inter, sans-serif;
-    position: relative;
-    bottom: 32px;
-    font-size: 35px;
-    color: sandybrown;
-    font-weight: 400;
-    margin-left: 20px;
-}
+/*.answers-input {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    font-family: Inter, sans-serif;*/
+/*    position: relative;*/
+/*    bottom: 32px;*/
+/*    font-size: 35px;*/
+/*    color: sandybrown;*/
+/*    font-weight: 800;*/
+/*    margin-left: 20px;*/
+/*}*/
 
 
 .video-button {
