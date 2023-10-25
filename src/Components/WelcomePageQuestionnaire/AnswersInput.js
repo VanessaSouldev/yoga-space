@@ -3,7 +3,11 @@ import './AnswersInput.css';
 
 
 
-function AnswersInput({idAttribute,
+
+
+function AnswersInput({
+                      children,
+                      idAttribute,
                       nameAttribute,
                       required,
                       stateValue,
@@ -12,19 +16,24 @@ function AnswersInput({idAttribute,
 
     return  (
     <>
-
+        <p className="questions">
+            {children}
+        </p>
+<div className="answers-input">
     <input
 
            type="radio"
            id={idAttribute}
            name={nameAttribute}
-           className="answers-input"
+           // className="answers-input"
            value={stateValue} required={required}
            onClick={(enable) => stateSetter('')}/>
         <label
             htmlFor={idAttribute}>
             {labelText}
+            {/*className="answers-input"*/}
     </label>
+    </div>
     </>
 
 );

@@ -4,7 +4,7 @@ import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
 import {Link} from "react-router-dom";
-import VideoFrameMain from "../../Components/VideoFrameMain";
+import VideoFrameMain from "../../Components/VideoPage/VideoFrameMain";
 
 
 
@@ -14,7 +14,7 @@ function VideoPage() {
     const [videoResults, setVideoResults] = useState([]);
     const [loading, toggleLoading] = useState(false);
     const [error, toggleError] = useState(false);
-    const [items, setItems] = useState([]);
+    // const [items, setItems] = useState([]);
     const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
     let q = "";
 
@@ -108,10 +108,10 @@ function VideoPage() {
 
                     </iframe>
 
-                    <button>click  type="submit"
-                        {/*onClick={handleSubmit}*/}
-                        className={styles["favorites-button"]}>
-                        here to add this video to your Favourites on your profile-page </button>
+                    {/*<button>click  type="submit"*/}
+                    {/*    /!*onClick={handleSubmit}*!/*/}
+                    {/*    className={styles["favorites-button"]}>*/}
+                    {/*    here to add this video to your Favourites on your profile-page </button>*/}
 
                     <iframe width="420"
                             height="315"
@@ -121,7 +121,10 @@ function VideoPage() {
                             allowFullScreen
                     >
 
+
                     </iframe>
+                    {/*{videoResults.results && videoResults.results.map((videoresults) => {*/}
+                    {/*    return <videoFrame key={videoresults.name} endpoint={videoresults.url/>*/}
 
                     <iframe width="420"
                             height="315"

@@ -1,14 +1,16 @@
-import React from 'react';
-import './SignInButton.css';
+import './SignInPageButton.css';
 import {useHistory} from "react-router-dom";
 
-function SignInButton({   type = "button",
+
+function SignInPageButton({   type = "button",
                             children
                         }) {
 
+
     const history = useHistory();
 
-    function handleClickSignin() {
+
+    function handleClickSignIn() {
         history.push("/signin");
     }
 
@@ -17,7 +19,7 @@ function SignInButton({   type = "button",
 
             <button
                 type={type}
-                onClick={handleClickSignin}
+                onClick={handleClickSignIn}
                 className="sign-in-button">
                 {children}
             </button>
@@ -25,4 +27,4 @@ function SignInButton({   type = "button",
 
     );
 }
-export default SignInButton;
+export default SignInPageButton;

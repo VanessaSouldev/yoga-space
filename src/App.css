@@ -84,15 +84,6 @@ p {
 
 }
 
-
-.outer-content-container {
-
-    display: flex;
-    height: 100%;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .inner-content-container {
     flex-basis: 1400px;
     flex-shrink: 1;

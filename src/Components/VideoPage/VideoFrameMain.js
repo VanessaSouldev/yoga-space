@@ -51,7 +51,7 @@ function VideoFrameMain({
             controller.abort();
         }
 
-    }, []);
+    }, [endpoint]);
 
 
     return (

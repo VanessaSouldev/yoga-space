@@ -3,6 +3,7 @@ import waters from '../../Components/assets/images/lilac-waters.jpg';
 import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
+import AccountSignInButton from "../../Components/Buttons/SignInPage/AccountSignInButton";
 import axios from "axios";
 
 
@@ -11,7 +12,10 @@ function SignIn() {
     const {login} = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('false')
+    // const [loading, toggleLoading] = useState(false);
+    // const [error, toggleError] = useState(false);
+
+
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -26,7 +30,7 @@ function SignIn() {
 
 
         } catch (e) {
-           setError(true);
+
         }
 
     }
@@ -63,6 +67,7 @@ function SignIn() {
                             </h5>
                             <input
                                 type="password"
+
                                 id="signin-password"
                                 onChange={(e) => setPassword(e.target.value)}
                                 value={password}
@@ -70,16 +75,18 @@ function SignIn() {
                             />
 
                         </label>
-                        <button
-                            type="submit"
-                            onClick={handleSubmit}
-                            className={styles["sign-in-submit-button"]}>
+                        <AccountSignInButton
+                            clickHandler={(handleSubmit)}
+                            >
                             <h6>
                                 Click here to enter your yoga SPACE
                             </h6>
-                        </button>
+                        </AccountSignInButton>
                     </div>
                 </form>
+
+                {/*{loading && <p>Loading...</p>}*/}
+                {/*{error === true && error && <p>Username or Password incorrect, please try again</p>}*/}
 
                 <p>Don't have an account? <Link to="/signup">Sign up</Link> first</p>
             </section>

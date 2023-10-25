@@ -1,14 +1,16 @@
-import React from 'react';
-import './RegisterButton.css';
+import './RegisterPageButton.css';
 import {useHistory} from "react-router-dom";
 
 
 
-function RegisterButton({   type = "button",
+
+function RegisterPageButton({  clickHandler, type = "button",
                             children
                         }) {
 
+
     const history = useHistory();
+
 
     function handleClickRegister() {
         history.push("/signup");
@@ -28,4 +30,4 @@ function RegisterButton({   type = "button",
 
     );
 }
-export default RegisterButton;
+export default RegisterPageButton;
