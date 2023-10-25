@@ -1,0 +1,14 @@
+.profile-page-heading {
+    position: absolute;
+    left: 40%;
+    font-size: 80px;
+    color: sandybrown;
+    font-weight: lighter;
+
+}
+
+.profile-page-welcome-paragraph {
+    position: relative;
+    top: 20%;
+    left: 40%;
+}

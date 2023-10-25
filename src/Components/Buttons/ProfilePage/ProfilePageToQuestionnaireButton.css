@@ -1,0 +1,22 @@
+.profile-page-to-questionnaire-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 527px;
+    height: 92px;
+    margin: 250px 5px;
+    left: 70%;
+    bottom: 50px;
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px; /* 44.444% */
+    flex-shrink: 0;
+    border: 2px solid #90F2E1;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(239, 175, 128, 0.31) 0%, #90F2E1 100%);
+}

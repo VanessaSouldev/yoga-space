@@ -3,8 +3,9 @@ import React, {useContext, useEffect, useState} from "react";
 import {Link, useHistory} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
 import waters from '../../Components/assets/images/lilac-waters.jpg';
-import AnswersInput from "../../Components/AnswersInput";
+import AnswersInput from "../../Components/WelcomePageQuestionnaire/AnswersInput";
 import axios from "axios";
+import QuestionnaireSubmitButton from "../../Components/Buttons/WelcomePageToVideoPageButton/QuestionnaireSubmitButton";
 
 
 function WelcomePageAndQuestionnaire() {
@@ -83,7 +84,6 @@ function WelcomePageAndQuestionnaire() {
                 </div>
             </div>
             <form onSubmit={handleSubmit}>
-                <div className={styles["questions-container"]}>
                     <p className={styles.questions}>
                         How much time do you have today?
                     </p>
@@ -113,7 +113,7 @@ function WelcomePageAndQuestionnaire() {
                             stateSetter={() => setTime('long')}
                             labelText="20 minutes or more"/>
                     </div>
-                    <p className={styles.questions}>
+                    <p>
                         What kind of yoga are you up for?
                     </p>
                     <div>
@@ -145,7 +145,7 @@ function WelcomePageAndQuestionnaire() {
                     <p className={styles.questions}>
                         What would you like to focus on?
                     </p>
-                    <div>
+
                         <AnswersInput
                             required={true}
                             type="radio"
@@ -171,13 +171,9 @@ function WelcomePageAndQuestionnaire() {
                             stateValue={'focus'}
                             stateSetter={() => setFocus('depression' && 'positvity')}
                             labelText="Depression / Yoga to uplift"/>
-                    </div>
-                    <button
-                        type="submit"
-                        className={styles["video-button"]}>
+                    <QuestionnaireSubmitButton>
                         Bring it on!
-                    </button>
-                </div>
+                    </QuestionnaireSubmitButton>
             </form>
             <p className={styles["account-link"]}>To return to the Homepage click <Link to="/">here</Link>.</p>
         </>

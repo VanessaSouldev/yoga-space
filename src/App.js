@@ -3,7 +3,7 @@ import './App.css';
 import Homepage from './Pages/Homepage/Homepage';
 import WelcomePageAndQuestionnaire from './Pages/Questionnaire/WelcomePageAndQuestionnaire';
 import SignIn from './Pages/Signin/SignIn';
-import ProfilePage from "./Pages/ProfilePage";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import SignUp from './Pages/Signup/SignUp';
 import VideoPage from './Pages/Videopage/VideoPage';
 import {Switch, Route, Redirect} from 'react-router-dom';
@@ -27,10 +27,8 @@ function App() {
                 <SignIn/>
             </Route>
             <Route path="/profile">
-                    {isAuth ? <ProfilePage/> : <Redirect to='/'/>}
-
+                {isAuth ? <ProfilePage/> : <Redirect to='/'/>}
             </Route>
-
             <Route path="/welcomepage">
                  <WelcomePageAndQuestionnaire/>
             </Route>

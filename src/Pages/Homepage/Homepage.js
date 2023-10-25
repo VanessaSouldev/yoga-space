@@ -1,18 +1,8 @@
 import styles from './Homepage.module.css';
 import waters from '../../Components/assets/images/lilac-waters.jpg';
-import {useHistory} from 'react-router-dom';
-import RegisterButton from "../../Components/RegisterButton";
-import SignInButton from "../../Components/SignInButton";
+import RegisterPageButton from "../../Components/Buttons/HomePage/RegisterPageButton";
+import SignInPageButton from "../../Components/Buttons/HomePage/SignInPageButton";
 function Homepage() {
-
-    const history = useHistory();
-
-    function handleClickSignin() {
-        history.push("/signin");
-    }
-
-
-
 
     return (
         <>
@@ -44,13 +34,13 @@ function Homepage() {
             <section>
                 <div className={styles["inner-content-container sign-up-or-in"]}>
 
-                        <RegisterButton>
+                        <RegisterPageButton>
                             Register
-                        </RegisterButton>
+                        </RegisterPageButton>
 
-                        <SignInButton>
+                        <SignInPageButton>
                             Sign in
-                        </SignInButton>
+                        </SignInPageButton>
 
                 </div>
             </section>

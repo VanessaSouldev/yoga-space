@@ -41,7 +41,7 @@ function AuthContextProvider({children}) {
                 }, status:'done'
             })
             console.log(result.data)
-            history.push('/welcomepage');
+            history.push('/profile');
         } catch (error) {
             console.error();
             toggleAuth({...auth, isAuth: false,

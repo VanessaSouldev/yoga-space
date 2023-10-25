@@ -4,6 +4,7 @@ import axios from "axios";
 import waters from "../../Components/assets/images/lilac-waters.jpg";
 import {useForm} from 'react-hook-form';
 import {Link, useHistory} from "react-router-dom";
+import RegisterSignUpButton from "../../Components/Buttons/RegisterSignUpPage/RegisterSignUpButton";
 
 function SignUp() {
 
@@ -87,9 +88,9 @@ function SignUp() {
                                 />
                                 {errors.password && <p className={styles["error-message"]}>{errors.password.message}</p>}
                             </div>
-                            <button className={styles["signup-button"]} type="submit">
+                            <RegisterSignUpButton>
                                 <h6>Register to create your SPACE</h6>
-                            </button>
+                            </RegisterSignUpButton>
                         </form>
                     </div>
                 </section>
