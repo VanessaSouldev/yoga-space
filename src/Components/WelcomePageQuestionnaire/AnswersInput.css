@@ -1,33 +1,15 @@
-/*.questions-container {*/
-/*    width: 823px;*/
-/*    height: 159px;*/
-/*    top: 220px;*/
-/*    left: 875px;*/
-/*    object-fit: cover;*/
-/*    position: absolute;*/
-/*}*/
-
-.questions {
-    position: absolute;
-    font-family: Inter, sans-serif;
-    font-size: 48px;
-    align-content: center;
-    color: mediumpurple;
-    font-weight: 450;
-
-}
 .answers-input {
     width: 823px;
-    height: 19px;
-    top: 220px;
-    left: 875px;
+    top: 120px;
+    left: 975px;
     display: flex;
     flex-direction: row;
     font-family: Inter, sans-serif;
     position: relative;
     bottom: 32px;
-    font-size: 15px;
+    font-size: 20px;
     color: sandybrown;
-    font-weight: 800;
-    margin-left: 20px;
+    font-weight: 600;
+    /*margin-left: 20px;*/
+    margin: 0 10% 0 5%;
 }

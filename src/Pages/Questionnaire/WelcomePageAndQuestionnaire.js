@@ -6,6 +6,7 @@ import waters from '../../Components/assets/images/lilac-waters.jpg';
 import AnswersInput from "../../Components/WelcomePageQuestionnaire/AnswersInput";
 import axios from "axios";
 import QuestionnaireSubmitButton from "../../Components/Buttons/WelcomePageToVideoPageButton/QuestionnaireSubmitButton";
+import Questions from "../../Components/WelcomePageQuestionnaire/Questions";
 
 
 function WelcomePageAndQuestionnaire() {
@@ -83,11 +84,13 @@ function WelcomePageAndQuestionnaire() {
                     <br/> {quoteA}
                 </div>
             </div>
-            <form onSubmit={handleSubmit}>
-                    <p className={styles.questions}>
+            <form onSubmit={handleSubmit} className={styles["questionnaire-form"]}>
+                <div className={styles["questions-container-1"]}>
+                    <Questions>
                         How much time do you have today?
-                    </p>
-                    <div>
+                    </Questions>
+                        </div>
+                    <div className={styles["answers-container-1"]}>
                         <AnswersInput
                             required={true}
                             type="radio"
@@ -113,10 +116,12 @@ function WelcomePageAndQuestionnaire() {
                             stateSetter={() => setTime('long')}
                             labelText="20 minutes or more"/>
                     </div>
-                    <p>
+                <div className={styles["questions-container-2"]}>
+                    <Questions>
                         What kind of yoga are you up for?
-                    </p>
-                    <div>
+                    </Questions>
+                    </div>
+                    <div className={styles["answers-container-2"]}>
                         <AnswersInput
                             required={true}
                             type="radio"
@@ -142,10 +147,12 @@ function WelcomePageAndQuestionnaire() {
                             stateSetter={() => setIntensity('advanced')}
                             labelText="Advanced"/>
                     </div>
-                    <p className={styles.questions}>
+                <div className={styles["questions-container-3"]}>
+                    <Questions>
                         What would you like to focus on?
-                    </p>
-
+                    </Questions>
+                </div>
+                        <div className={styles["answers-container-3"]}>
                         <AnswersInput
                             required={true}
                             type="radio"
@@ -171,6 +178,7 @@ function WelcomePageAndQuestionnaire() {
                             stateValue={'focus'}
                             stateSetter={() => setFocus('depression' && 'positvity')}
                             labelText="Depression / Yoga to uplift"/>
+                        </div>
                     <QuestionnaireSubmitButton>
                         Bring it on!
                     </QuestionnaireSubmitButton>

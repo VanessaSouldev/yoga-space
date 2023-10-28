@@ -76,7 +76,7 @@ function SignIn() {
 
                         </label>
                         <AccountSignInButton
-                            clickHandler={(handleSubmit)}
+                            clickHandler={handleSubmit}
                             >
                             <h6>
                                 Click here to enter your yoga SPACE
