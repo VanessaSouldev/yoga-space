@@ -14,7 +14,7 @@ function App() {
 
     const {isAuth} = useContext(AuthContext);
 
-    return (<span id='outer-content-container'>
+    return (<span>
 
         <Switch>
             <Route exact path="/">
