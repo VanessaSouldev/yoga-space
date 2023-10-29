@@ -5,10 +5,10 @@
     justify-content: center;
     width: 527px;
     height: 92px;
-    margin: 250px 5px;
-    left: 70%;
-    bottom: 50px;
-    position: relative;
+    margin: 20px 10px;
+    left: 40%;
+    top: 87%;
+    position: absolute;
     color: #FFF;
     text-align: center;
     font-size: 34px;
@@ -18,5 +18,5 @@
     flex-shrink: 0;
     border: 2px solid #90F2E1;
     border-radius: 16px;
-    background: linear-gradient(180deg, rgba(239, 175, 128, 0.31) 0%, #90F2E1 100%);
+    background: rgba(239, 175, 128, 0.31)
 }

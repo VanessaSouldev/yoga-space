@@ -2,13 +2,84 @@
     position: absolute;
     left: 40%;
     font-size: 80px;
-    color: sandybrown;
+    margin: 25px 25px;
+    color: rgba(239, 175, 128) ;
     font-weight: lighter;
 
 }
 
 .profile-page-welcome-paragraph {
-    position: relative;
-    top: 20%;
-    left: 40%;
+    position: absolute;
+    width: 1050px;
+    text-align: center;
+    font-size: 35px;
+    word-wrap: inherit;
+    line-height: 50px;
+    top: 8%;
+    left: 28%;
+}
+
+
+.yogapose-video-one {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*-ms-flex-align: start;*/
+    top: 450px;
+    left: 1050px;
+    /*margin: 50px 50px 100px 50px;*/
+    object-fit: cover;
+    position: absolute;
+}
+
+.yogapose-video-two {
+    top: 650px;
+    left: 1050px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.yogapose-video-three {
+    top: 850px;
+    left: 1050px;
+    object-fit: cover;
+    position: absolute;
+}
+
+/*.heading-yogapose-search-bar {*/
+/*    position: absolute;*/
+/*    text-align: center;*/
+/*    font-family: Open Sans, sans-serif;*/
+/*    font-size: 60px;*/
+/*    top: 25%;*/
+/*    left: 40%;*/
+/*    margin: 25px 25px;*/
+/*}*/
+
+/*.input-search-bar {*/
+/*    position: absolute;*/
+/*    height: 50px;*/
+/*    width: 500px;*/
+/*    top: 35%;*/
+/*    left: 40%;*/
+/*    font-size: large;*/
+/*    margin: 25px 25px;*/
+
+/*}*/
+
+.profile-page-favorites-heading{
+    position: absolute;
+    /*left: 1%;*/
+    top: 22%;
+    margin: 10px 25px;
+    font-size: 35px;
+    color: plum;
+    font-weight: normal;
+
+
+}
+
+.favorite-one {
+    position: absolute;
+    left: 5%;
+    top: 30%
 }

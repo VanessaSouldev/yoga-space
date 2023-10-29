@@ -4,8 +4,6 @@ import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
 import {Link} from "react-router-dom";
-import VideoFrameMain from "../../Components/VideoPage/VideoFrameMain";
-
 
 
 function VideoPage() {
@@ -136,14 +134,13 @@ function VideoPage() {
 
                     </iframe>
 
-                    <VideoFrameMain
-                        width={"420"}
-                        height={"315"}
-                        title={"video-main"}
+                    <iframe
+                        width="420"
+                        height="315"
+                        title={styles["video-main"]}
                         src={`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`}
                         allowFullScreen>
-
-                    </VideoFrameMain>
+                    </iframe>
                 </>
             )}
 
