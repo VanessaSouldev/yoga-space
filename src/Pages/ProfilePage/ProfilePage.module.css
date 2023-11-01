@@ -15,7 +15,7 @@
     font-size: 35px;
     word-wrap: inherit;
     line-height: 50px;
-    top: 8%;
+    top: 10%;
     left: 28%;
 }
 
@@ -83,3 +83,23 @@
     left: 5%;
     top: 30%
 }
+
+.favorite-two {
+    position: absolute;
+    left: 5%;
+    top: 43%
+}
+
+.favorite-three {
+    position: absolute;
+    left: 5%;
+    top: 56%
+}
+
+.favorite-four {
+    position: absolute;
+    left: 5%;
+    top: 69%
+}
+
+

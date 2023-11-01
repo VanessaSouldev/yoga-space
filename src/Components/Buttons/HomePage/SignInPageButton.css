@@ -1,23 +1,18 @@
-.sign-in-container {
-    position: absolute;
-    width: 437px;
-    height: 214px;
-    flex-shrink: 0;
-    margin: 43px 531px 114px 122px;
-}
-
 .sign-in-button {
     display: flex;
     position: absolute;
-    left: 1720px;
-    top: 250px;
     width: 213px;
     height:48px;
+    bottom: 105px;
+    right: 380px;
+    padding: 21px 32px;
+    align-items: center;
     border: none;
     justify-content: center;
+    flex-shrink: 0;
     border-radius: 8px;
     background: rgba(239, 175, 128, 0.31);
-    flex-shrink: 0;
+    z-index: 1;
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-style: normal;
