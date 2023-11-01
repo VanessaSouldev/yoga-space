@@ -12,6 +12,11 @@ function Profile() {
 
     const {user} = useContext(AuthContext);
     const history = useHistory();
+    const favoriteOne = localStorage.getItem('favoriteOne');
+    const favoriteTwo = localStorage.getItem('favoriteTwo');
+    const favoriteThree = localStorage.getItem('favoriteThree');
+    const favoriteFour = localStorage.getItem('favoriteFour');
+
     // const [videoResultsYogaPose, setVideoResultsYogaPose] = useState([]);
     const [yogaPose, setYogaPose] =useState(['']);
     // const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
@@ -53,7 +58,7 @@ function Profile() {
             <h4 className={styles["profile-page-heading"]}>
                 Profile Page
             </h4>
-                <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username}, here you can find your favorite yoga video's and explore different yogaposes by entering the yogapose you'd like to explore in the search engine below:</p>
+                <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username}, here you can find your favorite yoga video's and explore different yogaposes by entering the yogapose you'd like to explore in the search bar below:</p>
 
             </heading>
 
@@ -97,12 +102,36 @@ function Profile() {
 
             <section>
 
-            <h6 className={styles["profile-page-favorites-heading"]}>{user.username}'s favorite yoga video's:</h6>
+            <h6 className={styles["profile-page-favorites-heading"]}>{user.username}'s latest favorite yoga video's:</h6>
 
                 <iframe
                     className={styles["favorite-one"]}
                     title="favoritevideo"
-                    src={localStorage.getItem('')}
+                    src={favoriteOne}
+                    allowFullScreen
+                >
+                </iframe>
+
+                <iframe
+                    className={styles["favorite-two"]}
+                    title="favoritevideo"
+                    src={favoriteTwo}
+                    allowFullScreen
+                >
+                </iframe>
+
+                <iframe
+                    className={styles["favorite-three"]}
+                    title="favoritevideo"
+                    src={favoriteThree}
+                    allowFullScreen
+                >
+                </iframe>
+
+                <iframe
+                    className={styles["favorite-four"]}
+                    title="favoritevideo"
+                    src={favoriteFour}
                     allowFullScreen
                 >
                 </iframe>
