@@ -23,7 +23,7 @@ function SignUp() {
                 history.push('/signin')
                 ;
             } catch (e) {
-                console.error("ERRORS",errors);
+                console.error('ERRORS',errors);
             }
         }
 

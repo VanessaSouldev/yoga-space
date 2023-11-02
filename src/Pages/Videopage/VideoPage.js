@@ -12,8 +12,7 @@ function VideoPage() {
     const [videoResults, setVideoResults] = useState([]);
     const [loading, toggleLoading] = useState(false);
     const [error, toggleError] = useState(false);
-    // const [favoriteAddedMessage, setFavoriteAddedMessage] = useState(false);
-    const KEY = "AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4";
+    const [favoriteAddedMessage, setFavoriteAddedMessage] = useState(false);
     const controller = new AbortController();
     let q = "";
 
@@ -28,7 +27,7 @@ function VideoPage() {
 
 
             try {
-                const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=4&q=${q}&videoDuration=${user.time}&key=${KEY}`
+                const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=4&q=${q}&videoDuration=${user.time}&key=${process.env.REACT_APP_API_KEY}`
                     , {
                         signal: controller.signal,
                     })
@@ -55,24 +54,20 @@ function VideoPage() {
 
     }, [q, user.time])
 
-    async function handleSubmit(e) {
-        // setFavoriteAddedMessage(false);
+   function handleSubmit(e) {
+       setFavoriteAddedMessage(false);
 
-        localStorage.setItem('favoriteOne', `https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
-        localStorage.setItem('favoriteTwo', `https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
-        localStorage.setItem('favoriteThree', `https://www.youtube.com/embed/${videoResults[3].id.videoId}/?controls=0/autoplay=1`)
-        localStorage.setItem('favoriteFour', `https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
+       localStorage.setItem('favoriteOne', `https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
+       localStorage.setItem('favoriteTwo', `https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
+       localStorage.setItem('favoriteThree', `https://www.youtube.com/embed/${videoResults[3].id.videoId}/?controls=0/autoplay=1`)
+       localStorage.setItem('favoriteFour', `https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`);
 
-    // } catch(e) {
-    //
-    //     if (localStorage) {
-    //         console.favoriteAddedMessage('This video has been added to your Favorites');
-    //         setFavoriteAddedMessage(true);
-    //     } else {
-    //
-    //     }
-    }
-
+       // if (localStorage.setItem) {
+       //     setFavoriteAddedMessage(true);
+       // } else {
+       //
+       // }
+   }
 
 
     return (
@@ -156,6 +151,7 @@ function VideoPage() {
 
             {loading && <p>Loading...</p>}
             {videoResults.length === 0 && error && <p>Whoops! An error occurred whilst loading your video's...</p>}
+            {favoriteAddedMessage && <p>This video has been added to your Favorites</p>}
 
         </>
 
