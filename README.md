@@ -18,13 +18,15 @@ Voor de type.fit quotes API is geen API key nodig voor YouTube is de API Key: AI
 
 ## Stappenplan installatie instructie
 
-1. Download de folder naar jouw PC of laptop en open je IDE of download het project direct vanuit github via de volgende link: https://github.com/VanessaSouldev/yoga-space in je IDE.
+1.Download de folder naar jouw PC of laptop en open je IDE of download het project direct vanuit github via de volgende link: https://github.com/VanessaSouldev/yoga-space in je IDE.
 2. Open je IDE en open het project en kies voor npm install.
 3. Installeer ook de dependencies.
 4. open de terminal en type npm start, de applicatie opent nu in je browser op de homepagina, waar je kunt inloggen of registreren op de Yoga Space applicatie.
 5. Je kunt een eigen account aanmaken door op de "Register" knop te drukken, hierna kom je vanzelf op de login-pagina terecht, waar je met je gekozen username en wachtwoord kunt inloggen.
 6. Door de vragen op de Questionnaire welkomstpagina in te vullen, zul je gepresenteerd worden met de voor jou geselecteerde video's die je individueel kunt afspelen door op de "play button" te drukken.
 7. Je kunt je gekozen video, als je deze laat afspelen, vergroten, door op het fullscreen icoon rechtsonder in de video te drukken.
+8. Maak een eigen .env bestand aan en vul deze met de variabele-naam zoals beschreven in env.dist en de API Key die hierboven wordt aangegeven. 
+9. In de terminal maak je een build d.m.v. gebruik van het commando run npm build, vervolgens kun je het commando npm start gebruiken om de applicatie te starten.
 
 
 

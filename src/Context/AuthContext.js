@@ -48,7 +48,6 @@ function AuthContextProvider({children}) {
                 user: null,
                 status: 'done',
             });
-            // {toggleAuth(false) && <p> please try again! </p>}
         }
     }
 
