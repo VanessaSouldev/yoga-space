@@ -41,7 +41,8 @@ function AuthContextProvider({children}) {
                 }, status:'done'
             })
             console.log(result.data)
-            history.push('/profile');
+            // DEZE HEBBEN WE UITGEZET ZODAT JE NIET AUTOMATISCH WORDT DOORGELINKT NAAR PROFILE
+            // history.push('/profile');
         } catch (error) {
             console.error();
             toggleAuth({...auth, isAuth: false,

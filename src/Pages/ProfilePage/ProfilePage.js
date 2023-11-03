@@ -27,28 +27,30 @@ function Profile() {
 
     }, []);
 
-        useEffect(() => {async function fetchData() {
+        useEffect(() => {
+            
+            async function fetchData() {
 
-        toggleLoading(true);
-        toggleError(false);
+                toggleLoading(true);
+                toggleError(false);
 
-        try {
-            const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&p=${p}&videoDuration&key=${process.env.REACT_APP_API_KEY}`
-                , {
-                    signal: controller.signal,
-                })
-            console.log(result.data);
-            setVideoResultsYogaPose(result.data);
-        } catch (e) {
-            console.error(e);
-            toggleError(true);
-            toggleLoading(false);
-        }
-    }
-        if (yogaPose) {
-            fetchData();
-        }
-    },[yogaPose]);
+                try {
+                    const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&p=${p}&videoDuration&key=${process.env.REACT_APP_API_KEY}`
+                        , {
+                            signal: controller.signal,
+                        })
+                    console.log(result.data);
+                    setVideoResultsYogaPose(result.data);
+                } catch (e) {
+                    console.error(e);
+                    toggleError(true);
+                    toggleLoading(false);
+                }
+                }
+                    if (yogaPose) {
+                        fetchData();
+                    }
+                },[yogaPose]);
 
         useEffect(() => {
             history.push(user);
@@ -73,30 +75,33 @@ function Profile() {
                 {error &&<span className="wrong-location-error">
                     Oops! this yogapose is rare! we can't find it...
                 </span>}
-
-            <iframe
-                    className={styles["yogapose-video-one"]}
-                    title={"video-one"}
-                    src={`https://www.youtube.com/embed/${videoResultsYogaPose[1].id.videoId}/?controls=0/autoplay=1`}
-                    allowFullScreen>
-
-            </iframe>
-
-            <iframe
-                    className={styles["yogapose-video-two"]}
-                    title={"video-two"}
-                    src={`https://www.youtube.com/embed/${videoResultsYogaPose[2].id.videoId}/?controls=0/autoplay=1`}
-                    allowFullScreen>
-
-            </iframe>
-
-            <iframe
-                    className={styles["yogapose-video-three"]}
-                    title={"video-three"}
-                    src={`https://www.youtube.com/embed/${videoResultsYogaPose[3].id.videoId}/?controls=0/autoplay=1`}
-                    allowFullScreen>
-
-            </iframe>
+                
+                
+                {/*{videoResultsYogaPose &&*/}
+                {/*    <iframe*/}
+                {/*    className={styles["yogapose-video-one"]}*/}
+                {/*    title={"video-one"}*/}
+                {/*    src={`https://www.youtube.com/embed/${videoResultsYogaPose[1].id.videoId}/?controls=0/autoplay=1`}*/}
+                {/*    allowFullScreen>}*/}
+           
+            
+            {/*</iframe>*/}
+            
+            {/*<iframe*/}
+            {/*        className={styles["yogapose-video-two"]}*/}
+            {/*        title={"video-two"}*/}
+            {/*        src={`https://www.youtube.com/embed/${videoResultsYogaPose[2].id.videoId}/?controls=0/autoplay=1`}*/}
+            {/*        allowFullScreen>*/}
+            
+            {/*</iframe>*/}
+            
+            {/*<iframe*/}
+            {/*        className={styles["yogapose-video-three"]}*/}
+            {/*        title={"video-three"}*/}
+            {/*        src={`https://www.youtube.com/embed/${videoResultsYogaPose[3].id.videoId}/?controls=0/autoplay=1`}*/}
+            {/*        allowFullScreen>*/}
+            
+            {/*</iframe>*/}
 
             </section>
 
@@ -104,37 +109,37 @@ function Profile() {
 
             <h6 className={styles["profile-page-favorites-heading"]}>{user.username}'s latest favorite yoga video's:</h6>
 
-                <iframe
-                    className={styles["favorite-one"]}
-                    title="favoritevideo"
-                    src={favoriteOne}
-                    allowFullScreen
-                >
-                </iframe>
-
-                <iframe
-                    className={styles["favorite-two"]}
-                    title="favoritevideo"
-                    src={favoriteTwo}
-                    allowFullScreen
-                >
-                </iframe>
-
-                <iframe
-                    className={styles["favorite-three"]}
-                    title="favoritevideo"
-                    src={favoriteThree}
-                    allowFullScreen
-                >
-                </iframe>
-
-                <iframe
-                    className={styles["favorite-four"]}
-                    title="favoritevideo"
-                    src={favoriteFour}
-                    allowFullScreen
-                >
-                </iframe>
+                {/*<iframe*/}
+                {/*    className={styles["favorite-one"]}*/}
+                {/*    title="favoritevideo"*/}
+                {/*    src={favoriteOne}*/}
+                {/*    allowFullScreen*/}
+                {/*>*/}
+                {/*</iframe>*/}
+                
+                {/*<iframe*/}
+                {/*    className={styles["favorite-two"]}*/}
+                {/*    title="favoritevideo"*/}
+                {/*    src={favoriteTwo}*/}
+                {/*    allowFullScreen*/}
+                {/*>*/}
+                {/*</iframe>*/}
+                
+                {/*<iframe*/}
+                {/*    className={styles["favorite-three"]}*/}
+                {/*    title="favoritevideo"*/}
+                {/*    src={favoriteThree}*/}
+                {/*    allowFullScreen*/}
+                {/*>*/}
+                {/*</iframe>*/}
+                
+                {/*<iframe*/}
+                {/*    className={styles["favorite-four"]}*/}
+                {/*    title="favoritevideo"*/}
+                {/*    src={favoriteFour}*/}
+                {/*    allowFullScreen*/}
+                {/*>*/}
+                {/*</iframe>*/}
             </section>
             {loading && <p>Loading...</p>}
 <div>
