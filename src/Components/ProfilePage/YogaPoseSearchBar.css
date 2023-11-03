@@ -1,4 +1,4 @@
-.heading-yogapose-search-bar {
+.searchbar header {
         position: absolute;
         left: 40%;
         font-size: 50px;
@@ -11,7 +11,7 @@
 }
 
 
-.input-search-bar {
+.searchbar input {
     position: absolute;
     height: 50px;
     width: 500px;
@@ -20,4 +20,19 @@
     font-size: large;
     margin: 25px 25px;
 
+}
+
+.searchbar button {
+    border-radius: 0 2px 2px 0;
+    border: none;
+    padding: 8px 16px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.searchbar input,
+.searchbar button {
+    font-family: 'Core Sans G', Arial, sans-serif;
 }
