@@ -7,14 +7,18 @@ import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import SignUp from './Pages/Signup/SignUp';
 import VideoPage from './Pages/Videopage/VideoPage';
 import {Switch, Route, Redirect} from 'react-router-dom';
+import Navigate from "./Components/Navigation/Navigate";
+
 import {AuthContext} from "./Context/AuthContext";
 
 
 function App() {
 
+
     const {isAuth} = useContext(AuthContext);
 
     return (<span>
+<Navigate/>
 
         <Switch>
             <Route exact path="/">
@@ -26,9 +30,9 @@ function App() {
             <Route path="/signin">
                 <SignIn/>
             </Route>
-            <Route path="/profile">
-                {isAuth ? <ProfilePage/> : <Redirect to='/'/>}
-            </Route>
+            {/*<Route path="/profile">*/}
+            {/*    {isAuth ? <ProfilePage/> : <Redirect to='/'/>}*/}
+            {/*</Route>*/}
             <Route path="/welcomepage">
                  <WelcomePageAndQuestionnaire/>
             </Route>

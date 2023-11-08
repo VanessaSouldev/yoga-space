@@ -1,9 +1,9 @@
 import styles from './SignIn.module.css';
-import waters from '../../Components/assets/images/lilac-waters.jpg';
+import waters from '../../assets/images/lilac-waters.jpg';
 import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
-import AccountSignInButton from "../../Components/Buttons/SignInPage/AccountSignInButton";
+import Button from "../../Components/Button/Button";
 import axios from "axios";
 
 
@@ -12,13 +12,14 @@ function SignIn() {
     const {login} = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    // const [loading, toggleLoading] = useState(false);
-    // const [error, toggleError] = useState(false);
+    const [loading, toggleLoading] = useState(false);
+    const [error, toggleError] = useState(false);
 
 
 
     async function handleSubmit(e) {
-        e.preventDefault();
+        toggleError(false);
+        toggleLoading(true);
         try {
             const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`, {
                 username: username,
@@ -30,7 +31,16 @@ function SignIn() {
 
 
         } catch (e) {
+            console.error(e);
+            if (axios.isCancel(e)) {
+                console.error('Request is canceled...');
+            } else {
+                console.error(e);
+                toggleError(true);
+            }
 
+        }finally {
+            toggleLoading(false);
         }
 
     }
@@ -75,18 +85,20 @@ function SignIn() {
                             />
 
                         </label>
-                        <AccountSignInButton
+                        <Button
+                            type={"submit"}
                             clickHandler={handleSubmit}
+                            className={"account-sign-in-submit-button"}
                             >
                             <h6>
                                 Click here to enter your yoga SPACE
                             </h6>
-                        </AccountSignInButton>
+                        </Button>
                     </div>
                 </form>
 
-                {/*{loading && <p>Loading...</p>}*/}
-                {/*{error === true && error && <p>Username or Password incorrect, please try again</p>}*/}
+                {loading && <p>Loading...</p>}
+                {error === true && error && <p>Username or Password incorrect, please try again</p>}
 
                 <p>Don't have an account? <Link to="/signup">Sign up</Link> first</p>
             </section>

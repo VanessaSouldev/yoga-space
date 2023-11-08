@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "./SignUp.module.css";
 import axios from "axios";
-import waters from "../../Components/assets/images/lilac-waters.jpg";
+import waters from "../../assets/images/lilac-waters.jpg";
 import {useForm} from 'react-hook-form';
 import {Link, useHistory} from "react-router-dom";
-import RegisterSignUpButton from "../../Components/Buttons/RegisterSignUpPage/RegisterSignUpButton";
+import Button from "../../Components/Button/Button";
 
 function SignUp() {
 
@@ -88,9 +88,11 @@ function SignUp() {
                                 />
                                 {errors.password && <p className={styles["error-message"]}>{errors.password.message}</p>}
                             </div>
-                            <RegisterSignUpButton>
+                            <Button
+                            type={"submit"}
+                            className={"register-sign-up-submit-button"}>
                                 <h6>Register to create your SPACE</h6>
-                            </RegisterSignUpButton>
+                            </Button>
                         </form>
                     </div>
                 </section>

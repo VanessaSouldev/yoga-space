@@ -1,0 +1,149 @@
+.register-button {
+    display: flex;
+    position: absolute;
+    width: 213px;
+    height: 48px;
+    bottom: 105px;
+    left: 300px;
+    padding: 21px 32px;
+    align-items: center;
+    border: none;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(144, 242, 225, 0.31);
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.register-button:hover {
+    color: #EFAF80;
+    border: 5px solid plum;
+}
+.sign-in-button {
+    display: flex;
+    position: absolute;
+    width: 213px;
+    height:48px;
+    bottom: 105px;
+    right: 380px;
+    padding: 21px 32px;
+    align-items: center;
+    border: none;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(239, 175, 128, 0.31);
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.sign-in-button:hover {
+    color: #EFAF80;
+    border: 5px solid plum;
+}
+
+.register-sign-up-submit-button {
+    display: flex;
+    position: absolute;
+    right: 50%;
+    width: 527px;
+    height: 83px;
+    margin: 22px;
+    border-radius: 50px 50px 50px 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgba(92, 185, 102, 1);
+    font-family: Open Sans, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 44.444% */
+    opacity: 52%;
+}
+
+.register-sign-up-submit-button:hover {
+    color: plum;
+    border: 10px solid #EFAF80;
+}
+
+.account-sign-in-submit-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 527px;
+    height: 82px;
+    margin: 250px 5px;
+    right: 10%;
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 44.444% */
+    flex-shrink: 0;
+    border: 2px solid #90F2E1;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(239, 175, 128, 0.31) 0%, #90F2E1 100%);
+}
+
+.account-sign-in-submit-button:hover {
+    color: plum;
+    border: 10px solid #EFAF80;
+}
+
+.profile-page-to-questionnaire-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 527px;
+    height: 92px;
+    margin: 20px 10px;
+    left: 40%;
+    top: 87%;
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px; /* 44.444% */
+    flex-shrink: 0;
+    border: 2px solid #90F2E1;
+    border-radius: 16px;
+    background: rgba(239, 175, 128, 0.31)
+}
+
+.questionnaire-submit-button    {
+    position: absolute;
+    margin: 1px;
+    vertical-align: middle;
+    left: 50%;
+    top: 80%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background: rgba(239, 175, 128, 0.31);
+    font-size: 36px;
+    color: mediumpurple;
+    padding: 12px 24px;
+    border-radius: 86px;
+    border-color: transparent;
+}

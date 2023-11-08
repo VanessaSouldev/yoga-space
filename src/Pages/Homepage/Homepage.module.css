@@ -78,9 +78,9 @@
 }
 
 .under-register-text {
-    position: relative;
-    top: 350px;
-    left: 250px;
+    position: absolute;
+    bottom: 63px;
+    left: 10%;
     font-size: 33px;
     font-style: normal;
     font-weight: 400;
@@ -88,9 +88,9 @@
 }
 
 .under-sign-in-text {
-    position: relative;
-    top: 310px;
-    left: 1770px;
+    position: absolute;
+    bottom: 58px;
+    right: 12%;
     font-size: 33px;
     font-style: normal;
     font-weight: 400;

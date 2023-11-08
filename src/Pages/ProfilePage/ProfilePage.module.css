@@ -19,6 +19,17 @@
     left: 28%;
 }
 
+.error-message-yogapose-search {
+    position: absolute;
+    height: 50px;
+    width: 500px;
+    top: 35%;
+    left: 39%;
+    font-size: large;
+    margin: 25px 25px;
+
+}
+
 
 .yogapose-video-one {
     /*display: flex;*/
@@ -38,34 +49,14 @@
     position: absolute;
 }
 
+
+
 .yogapose-video-three {
     top: 850px;
     left: 1050px;
     object-fit: cover;
     position: absolute;
 }
-
-/*.heading-yogapose-search-bar {*/
-/*    position: absolute;*/
-/*    text-align: center;*/
-/*    font-family: Open Sans, sans-serif;*/
-/*    font-size: 60px;*/
-/*    top: 25%;*/
-/*    left: 40%;*/
-/*    margin: 25px 25px;*/
-/*}*/
-
-/*.input-search-bar {*/
-/*    position: absolute;*/
-/*    height: 50px;*/
-/*    width: 500px;*/
-/*    top: 35%;*/
-/*    left: 40%;*/
-/*    font-size: large;*/
-/*    margin: 25px 25px;*/
-
-/*}*/
-
 .profile-page-favorites-heading{
     position: absolute;
     /*left: 1%;*/
@@ -75,31 +66,34 @@
     color: plum;
     font-weight: normal;
 
-
 }
 
 .favorite-one {
     position: absolute;
     left: 5%;
-    top: 30%
+    top: 30%;
+    margin: 30px;
 }
 
 .favorite-two {
     position: absolute;
     left: 5%;
-    top: 43%
+    top: 43%;
+    margin: 30px;
 }
 
 .favorite-three {
     position: absolute;
     left: 5%;
-    top: 56%
+    top: 56%;
+    margin: 30px;
 }
 
 .favorite-four {
     position: absolute;
     left: 5%;
-    top: 69%
+    top: 69%;
+    margin: 30px;
 }
 
 
