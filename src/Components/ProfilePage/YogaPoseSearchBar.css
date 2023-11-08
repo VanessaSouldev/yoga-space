@@ -23,10 +23,22 @@
 }
 
 .searchbar button {
-    border-radius: 0 2px 2px 0;
+    display: flex;
+    position: absolute;
+    top: 385px;
+    right: 830px;
+    padding: 21px 32px;
+    align-items: center;
     border: none;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-style: normal;
     padding: 8px 16px;
-    background-color: orange;
+    background-color: plum;
     color: white;
     cursor: pointer;
     outline: none;

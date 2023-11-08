@@ -1,5 +1,5 @@
 import styles from "./VideoPage.module.css";
-import waters from "../../Components/assets/images/lilac-waters.jpg";
+import waters from "../../assets/images/lilac-waters.jpg";
 import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
@@ -10,7 +10,6 @@ function VideoPage() {
 
     const {user} = useContext(AuthContext);
     const [videoResults, setVideoResults] = useState([]);
-    // const [loading, toggleLoading] = useState(false);
     const [error, toggleError] = useState(false);
     const [favoriteAddedMessage, setFavoriteAddedMessage] = useState(false);
     const controller = new AbortController();
@@ -23,7 +22,7 @@ function VideoPage() {
 
         async function fetchData() {
 
-            // toggleLoading(true);
+
             toggleError(false);
 
 
@@ -60,24 +59,28 @@ function VideoPage() {
        setFavoriteAddedMessage(true);
        
        // DIT HEBBEN WE WEGGEHAALD
-       // localStorage.setItem('favoriteOne', `https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
+       // localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults.id.videoId}/?controls=0/autoplay=1`)
        // localStorage.setItem('favoriteTwo', `https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
        // localStorage.setItem('favoriteThree', `https://www.youtube.com/embed/${videoResults[3].id.videoId}/?controls=0/autoplay=1`)
        // localStorage.setItem('favoriteFour', `https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`);
-       
+       //
        // DIT HEBBEN WE ERIN GEZET
            switch(video){
                case videoResults[0].id.videoId:
                    setFavoriteAddedMessage(video);
+                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
                    break;
                case videoResults[1].id.videoId:
                    setFavoriteAddedMessage(video);
+                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
                    break;
                case videoResults[2].id.videoId:
                    setFavoriteAddedMessage(video);
+                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
                    break;
                case videoResults[3].id.videoId:
                    setFavoriteAddedMessage(video);
+                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[3].id.videoId}/?controls=0/autoplay=1`)
                    break;
            
        }
@@ -113,7 +116,7 @@ function VideoPage() {
                     src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
                     allowFullScreen>
                     </iframe>
-                    
+
                     <button  type="submit"
                              className={styles["like-button-video-one"]}
                              // HIER HEBBEN WE EEN CALLBACK FUNCTIE VAN GEMAAKT >> FUNCTIE WORDT PAS UITGEVOERD OP EEN KLIK EN NIET DIRECT AL

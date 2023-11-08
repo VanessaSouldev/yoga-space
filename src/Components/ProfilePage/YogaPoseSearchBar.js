@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './YogaPoseSearchBar.css';
 
-function YogaPoseSearchBar({setYogaPoseHandler}) {
+function YogaPoseSearchBar({setYogaPoseHandler}, {fetchData}) {
     const [searchQuery, setSearchQuery] = useState('');
 
     function onFormSubmit(e) {e.preventDefault();
@@ -21,8 +21,10 @@ function YogaPoseSearchBar({setYogaPoseHandler}) {
                         name="search a yogapose"
                         placeholder="Search any yogapose of your choice"
                     />
-            <button type="submit">
-                Yogapose Search
+            <button
+                type="submit">
+                {/*// onClick={fetchData}>*/}
+              SEARCH
             </button>
 
         </form>

@@ -2,10 +2,10 @@ import styles from './WelcomePageandQuestionnaire.module.css';
 import React, {useContext, useEffect, useState} from "react";
 import {Link, useHistory} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
-import waters from '../../Components/assets/images/lilac-waters.jpg';
+import waters from '../../assets/images/lilac-waters.jpg';
 import AnswersInput from "../../Components/WelcomePageQuestionnaire/AnswersInput";
 import axios from "axios";
-import QuestionnaireSubmitButton from "../../Components/Buttons/WelcomePageToVideoPageButton/QuestionnaireSubmitButton";
+import Button from "../../Components/Button/Button";
 import Questions from "../../Components/WelcomePageQuestionnaire/Questions";
 
 
@@ -179,9 +179,11 @@ function WelcomePageAndQuestionnaire() {
                             stateSetter={() => setFocus('depression' && 'positvity')}
                             labelText="Depression / Yoga to uplift"/>
                         </div>
-                    <QuestionnaireSubmitButton>
+                    <Button
+                    type={"submit"}
+                    className={"questionnaire-submit-button"}>
                         Bring it on!
-                    </QuestionnaireSubmitButton>
+                    </Button>
             </form>
             <p className={styles["account-link"]}>To return to the Homepage click <Link to="/">here</Link>.</p>
         </>

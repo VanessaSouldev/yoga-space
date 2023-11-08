@@ -49,9 +49,9 @@
     -ms-flex-align: start;
     width: 538px;
     height: 289px;
-    top: 230px;
+    top: 430px;
     left: 80px;
-    margin: 50px 50px 100px 50px;
+    margin: 20px 50px 20px 50px;
     /*object-fit: cover;*/
     /*position: absolute;*/
 }
@@ -65,7 +65,7 @@
     align-content: flex-start;
     /*position: absolute;*/
     left: 30px;
-    top: 35%;
+    top: 45%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background: rgba(239, 175, 128, 0.31);
