@@ -42,7 +42,7 @@ function AuthContextProvider({children}) {
             })
             console.log(result.data)
             // DEZE HEBBEN WE UITGEZET ZODAT JE NIET AUTOMATISCH WORDT DOORGELINKT NAAR PROFILE
-            history.push('/profile');
+            history.push('/welcomepage');
         } catch (error) {
             console.error();
             toggleAuth({...auth, isAuth: false,
@@ -57,14 +57,14 @@ function AuthContextProvider({children}) {
 
         console.log(jwt);
         getUserData ( jwt.accessToken)
-        console.log('Gebruiker is ingelogd');
+        console.log('GUser is logged in');
         localStorage.setItem('token', jwt.accessToken);
 
     }
 
     function signOut() {
         toggleAuth({...auth, isAuth:false, user: null});
-        console.log('Gebruiker is uitgelogd');
+        console.log('User is logged out');
         history.push('/');
         localStorage.removeItem('token');
     }

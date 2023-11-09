@@ -32,7 +32,7 @@ function VideoPage() {
                         signal: controller.signal,
                     })
                 console.log(result)
-                setVideoResults(result.data.items)
+                setVideoResults(result.data.items.slice(0,3))
             } catch (e) {
                 console.error(e);
                 if (axios.isCancel(e)) {
@@ -107,7 +107,6 @@ function VideoPage() {
 
             {/* DEZE FUNCTIE IS AANGEPAST NAAR EEN MAP() >> PER VIDEO KRIJG JE NU OOK EEN favoriteAddedMessage   */}
             {videoResults.length > 0 && videoResults.map((video) => {
-                {console.log(video)}
                 return (
                 <section className={styles["iframe-container"]} key={video.id.videoId}>
                     <iframe
@@ -158,22 +157,31 @@ function VideoPage() {
                     {/*         onClick={handleSubmit}>*/}
                     {/*    LIKE to add to your favorites!*/}
                     {/*</button>*/}
+            {videoResults.length > 0 && videoResults.map((video) => {
+                return (
+
+                    <section className={styles["iframe-container"]} key={video.id.videoId}>
+                    <iframe
+                        width="420"
+                        height="315"
+                        className={styles["video-main"]}
+                        title={"video-main"}
+                        src={`https://www.youtube.com/embed/${video[3].id.videoId}/?controls=0/autoplay=1`}
+                        allowFullScreen>
+                    </iframe>
                     
-                    {/*<iframe*/}
-                    {/*    width="420"*/}
-                    {/*    height="315"*/}
-                    {/*    className={styles["video-main"]}*/}
-                    {/*    title={"video-main"}*/}
-                    {/*    src={`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`}*/}
-                    {/*    allowFullScreen>*/}
-                    {/*</iframe>*/}
-                    
-                    {/*<button*/}
-                    {/*    type="submit"*/}
-                    {/*    className={styles["like-button-video-main"]}*/}
-                    {/*    onClick={handleSubmit}>*/}
-                    {/*    LIKE to add to your favorites!*/}
-                    {/*</button>*/}
+                    <button
+                        type="submit"
+                        className={styles["like-button-video-main"]}
+                        onClick={() => handleSubmit(video[3].id.videoId)}>
+                        LIKE to add to your favorites!
+                    </button>
+                        {favoriteAddedMessage === video.id.videoId && <p>This video has been added to your Favorites</p>}
+                    </section>
+                )
+            })
+
+            }
 
             <p className={styles["welcome-page-link"]}>Don't see anything you like? click <Link
                 to="/welcomepage">here</Link> to try again</p>

@@ -18,12 +18,12 @@ nav {
     height: 40px;
 }
 
-nav a,
-nav a:visited {
+.link-navigation,
+.link-navigation a:visited {
     text-decoration: none;
 }
 
-nav a:hover {
+.link-navigation a:hover {
     color:  #EFAF80;
 }
 
@@ -35,10 +35,6 @@ ul {
     align-items: center;
 }
 
-/*li {*/
-/*    font-size: 14px;*/
-/*    font-weight: 600;*/
-/*}*/
 .active-link {
     text-decoration: underline;
 }

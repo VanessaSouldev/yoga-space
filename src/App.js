@@ -30,9 +30,9 @@ function App() {
             <Route path="/signin">
                 <SignIn/>
             </Route>
-            {/*<Route path="/profile">*/}
-            {/*    {isAuth ? <ProfilePage/> : <Redirect to='/'/>}*/}
-            {/*</Route>*/}
+            <Route path="/welcomepage">
+                {isAuth ? <WelcomePageAndQuestionnaire/> : <Redirect to='/'/>}
+            </Route>
             <Route path="/welcomepage">
                  <WelcomePageAndQuestionnaire/>
             </Route>

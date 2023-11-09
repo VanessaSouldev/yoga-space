@@ -8,11 +8,11 @@ import Button from "../../Components/Button/Button";
 
 function SignUp() {
 
-    const {handleSubmit, formState: { errors }, register} = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const history = useHistory();
 
-        async function onFormSubmit(data) {
+        async function handleFormSubmit(data) {
             try {
                 await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signup`, {
                     username: data.username,
@@ -23,7 +23,7 @@ function SignUp() {
                 history.push('/signin')
                 ;
             } catch (e) {
-                console.error('ERRORS',errors);
+                // console.error('ERRORS',errors);
             }
         }
 
@@ -37,7 +37,7 @@ function SignUp() {
 
                         <img className={styles["rectangle-signup"]} src={waters} alt="lilac waters"/>
 
-                        <form className={styles["signup-form"]} onSubmit={handleSubmit(onFormSubmit)}>
+                        <form onSubmit={handleSubmit(handleFormSubmit)} className={styles["signup-form"]} >
 
                             <div className={styles["form-container"]}>
                                 <label htmlFor="email"><h5>E-mail</h5></label>
@@ -90,7 +90,8 @@ function SignUp() {
                             </div>
                             <Button
                             type={"submit"}
-                            className={"register-sign-up-submit-button"}>
+                            className={"register-sign-up-submit-button"}
+                            clickHandler={handleSubmit}>
                                 <h6>Register to create your SPACE</h6>
                             </Button>
                         </form>
