@@ -59,15 +59,13 @@ h2 {
 
 h5 {
     font-size: 65px;
-    padding: 12px 0;
+    /*padding: 12px 0;*/
 
 }
 
 p {
     font-family: "italiana", sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    /*margin: 12px 0 0 20px;*/
+    font-size: 32px;
     color: #FFFFFF;
 }
 
@@ -76,7 +74,6 @@ p {
     width: 1293px;
     height: 885px;
     display: flex;
-    background: #90F2E1;
     background: linear-gradient(70deg, rgba(239, 175, 128, 0.51), rgba(144, 242, 225, 1));
     background-repeat: no-repeat;
     margin: 0;

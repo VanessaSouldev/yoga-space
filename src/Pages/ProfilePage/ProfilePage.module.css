@@ -2,7 +2,7 @@
     position: absolute;
     left: 40%;
     font-size: 80px;
-    margin: 25px 25px;
+    margin: 0 15px;
     color: rgba(239, 175, 128) ;
     font-weight: lighter;
 
@@ -15,7 +15,7 @@
     font-size: 35px;
     word-wrap: inherit;
     line-height: 50px;
-    top: 10%;
+    top: 12%;
     left: 28%;
 }
 

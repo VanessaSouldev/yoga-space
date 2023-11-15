@@ -40,7 +40,11 @@ function SignUp() {
                         <form onSubmit={handleSubmit(handleFormSubmit)} className={styles["signup-form"]} >
 
                             <div className={styles["form-container"]}>
-                                <label htmlFor="email"><h5>E-mail</h5></label>
+                                <label htmlFor="email">
+                                    <h5 className={styles["input-name"]}>
+                                        E-mail
+                                    </h5>
+                                </label>
                                 <input className={styles.input} type="email"
                                        placeholder="Your e-mail address" {...register("email", {
                                            required: {
@@ -52,7 +56,7 @@ function SignUp() {
                                 />
                                 {errors.email && <p className={styles["error-message"]}>{errors.email.message}</p>}
                                 <label htmlFor="username">
-                                    <h5>
+                                    <h5 className={styles["input-name"]}>
                                         Username
                                     </h5>
                                 </label>
@@ -72,7 +76,11 @@ function SignUp() {
                                 />
                                 {errors.username && <p className={styles["error-message"]}>{errors.username.message}</p>}
 
-                                <label htmlFor="password"><h5>Password</h5></label>
+                                <label htmlFor="password">
+                                    <h5 className={styles["input-name"]}>
+                                        Password
+                                    </h5>
+                                </label>
                                 <input className={styles.input} type="password"
                                        placeholder="Choose a password"
                                        {...register("password", {
@@ -98,7 +106,7 @@ function SignUp() {
                     </div>
                 </section>
                 <footer>
-                    <p className={styles["account-link"]}>Already have an account? You can <Link
+                    <p className={styles["account-link"]}>Already have an account? You can <Link className={styles["login-link"]}
                         to="/signin">Login</Link> here.</p>
                 </footer>
             </>

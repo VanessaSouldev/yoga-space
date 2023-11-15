@@ -185,7 +185,7 @@ function WelcomePageAndQuestionnaire() {
                         Bring it on!
                     </Button>
             </form>
-            <p className={styles["account-link"]}>To return to the Homepage click <Link to="/">here</Link>.</p>
+            <p className={styles["homepage-paragraph"]}>To return to the Homepage click <Link className={styles["homepage-link"]} to="/">here</Link>.</p>
         </>
     );
 }

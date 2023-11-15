@@ -1,4 +1,4 @@
-.video-rectangle {
+.videopage-rectangle {
     width: 1650px;
     height: 120px;
     top: 37px;
@@ -7,7 +7,7 @@
     position: absolute;
 }
 
-.video-rectangle-container {
+.videopage-rectangle-container {
     text-align: center;
     width: 1050px;
     height: 120px;
@@ -33,13 +33,24 @@
 .favorites-text-profile-page {
     display: flex;
     flex-direction: row;
-    font-size: 26px;
+    font-size: 23px;
+    font-weight: bold;
     position: absolute;
-    top: 170px;
+    top: 120px;
     left:-50%;
-    color: plum;
+
 }
 
+.link-to-profile-page-favorites {
+    color: plum;
+    text-decoration: none;
+
+}
+
+.link-to-profile-page-favorites:hover{
+    color: #eeb694;
+    text-decoration: underline;
+}
 
 
 .video-one {
@@ -47,27 +58,26 @@
     display: flex;
     flex-direction: column;
     -ms-flex-align: start;
-    width: 538px;
-    height: 289px;
-    top: 430px;
-    left: 80px;
-    margin: 20px 50px 20px 50px;
+    position: relative;
+    width: 425px;
+    height: 250px;
+    top: 165px;
+    left: 170px;
+    margin: -10px 0;
     /*object-fit: cover;*/
     /*position: absolute;*/
 }
 
 .like-button-video-one{
-    width: 110px;
+    width: 130px;
     height: fit-content;
     word-wrap: break-word;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     /*position: absolute;*/
-    left: 30px;
+    left: 40px;
     top: 45%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     background: rgba(239, 175, 128, 0.31);
     font-size: 16px;
     color: mediumpurple;
@@ -81,77 +91,18 @@
     border: 5px solid plum;
 }
 
-
-.video-two {
-    width: 538px;
-    height: 289px;
-    top: 500px;
-    left: 50px;
-    margin: 80px;
-    object-fit: cover;
-    position: absolute;
-}
-
-.like-button-video-two  {
-    width: 110px;
-    height: fit-content;
-    word-wrap: break-word;
+added-to-favorites-message-small {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
-    position: absolute;
-    left: 30px;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background: rgba(239, 175, 128, 0.31);
-    font-size: 16px;
-    color: mediumpurple;
-    margin-left: 35px;
-    padding: 12px 24px;
-    border-radius: 86px;
-    border-color: transparent;
-}
+    /*-ms-flex-align: start;*/
+    position: relative;
+    font-size: 15px;
+    width: 425px;
+    height: 250px;
+    top: 560px;
+    left: 170px;
+    margin: 50px 0;
 
-.like-button-video-two:hover {
-    border: 5px solid plum;
-}
-
-
-.video-three {
-    width: 538px;
-    height: 289px;
-    top: 800px;
-    left: 50px;
-    margin: 80px;
-    object-fit: cover;
-    position: absolute;
-    bottom: 50%;
-}
-
-.like-button-video-three    {
-    width: 110px;
-    height: fit-content;
-    word-wrap: break-word;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    position: absolute;
-    left: 30px;
-    bottom: 8%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background: rgba(239, 175, 128, 0.31);
-    font-size: 16px;
-    color: mediumpurple;
-    margin-left: 35px;
-    padding: 12px 24px;
-    border-radius: 86px;
-    border-color: transparent;
-}
-
-.like-button-video-three:hover {
-    border: 5px solid plum;
 }
 
 
@@ -171,7 +122,7 @@
     position: absolute;
     bottom: 45%;
     left: 29%;
-    width: 110px;
+    width: 130px;
     height: fit-content;
     word-wrap: break-word;
     transform: translate(-50%, -50%);
@@ -189,21 +140,22 @@
     border: 5px solid plum;
 }
 
+.added-to-favorites-message-main {
 
-a,
-a:visited,
-a:active {
-    color: plum;
-    text-decoration: none;
 }
 
-a:hover {
-    color: rgb(238, 182, 148);
-}
-
-.welcome-page-link {
+.welcome-page-link-paragraph {
     font-size: 35px;
     position: absolute;
     top: 1050px;
     left: 1100px;
+}
+
+.back-to-welcome-page {
+    color: plum;
+    text-decoration: none;
+}
+.back-to-welcome-page:hover {
+    color: rgb(238, 182, 148);
+    text-decoration: underline;
 }

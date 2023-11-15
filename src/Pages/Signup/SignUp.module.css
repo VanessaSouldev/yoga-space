@@ -17,7 +17,7 @@
 
 .rectangle-signup {
     position: absolute;
-    /*justify-content: center;*/
+    justify-content: center;
     margin: 190px 0 156px 0;
     left: 625px;
     width: 942px;
@@ -33,12 +33,12 @@
     z-index: 1;
 }
 
-h5 {
+.input-name {
     font-family: Inter, sans-serif;
-    font-size: 25px;
+    font-size: 45px;
     text-shadow: 0px 4px 4px rgba(144, 242, 225, 1), rgba(255, 255, 255, 1);
-    font-weight: 600;
-    line-height: 50px;
+    font-weight: 300;
+    line-height: 80px;
     background: linear-gradient(280.97deg, rgba(144, 242, 225, 1), rgba(255, 255, 255, 1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -46,55 +46,38 @@ h5 {
 }
 
 .input {
-    top: 500px;
-    left: 650px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
     height: 75px;
     width: 475px;
     z-index: 1;
 }
 
 
-/*.signup-button {*/
-/*    display: flex;*/
-/*    position: relative;*/
-/*    right: 30px;*/
-/*    width: 527px;*/
-/*    height: 83px;*/
-/*    margin: 96px 10px;*/
-/*    border-radius: 50px 50px 50px 50px;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    flex-shrink: 0;*/
-/*    color: rgba(92, 185, 102, 1);*/
-/*    font-family: Open Sans, sans-serif;*/
-/*    font-size: 36px;*/
-/*    font-style: normal;*/
-/*    font-weight: 600;*/
-/*    line-height: 16px; !* 44.444% *!*/
-/*    opacity: 32%;*/
-/*}*/
 
 .error-message {
     font-family: Open Sans, sans-serif;
     font-size: 15px;
-    color: #8b0000;
+    color: #d90f33;
 
 }
 
 
-a,
-a:visited,
-a:active {
+.login-link,
+.login-link:visited,
+.login-link:active {
     color: plum;
 }
 
-a:hover {
-    color: rgba(144, 242, 225, 1);
+.login-link:hover {
+    color: rgb(238, 182, 148);
+    text-decoration: underline;
 }
 
 .account-link {
     position: absolute;
     bottom: 70px;
+    margin-left: 30px;
 }
 
