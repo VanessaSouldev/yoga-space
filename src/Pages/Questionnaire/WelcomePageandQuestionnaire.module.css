@@ -73,7 +73,6 @@
     margin: 190px 880px;
 }
 .answers-container-1 {
-    /*margin-top: 10px;*/
     margin-bottom: 10px;
 }
 
@@ -81,7 +80,6 @@
     margin: 100px 880px;
 }
 .answers-container-2 {
-    /*margin-top: 10px;*/
     margin-bottom: 10px;
 }
 
@@ -89,18 +87,22 @@
     margin: 110px 880px;
 }
 .answers-container-3 {
-    /*margin-top: 10px;*/
     margin-bottom: 10px;
 }
 
-a,
-a:visited,
-a:active {
-    color: plum;
+.homepage-paragraph {
+    font-size: 32px;
+    font-weight: bold;
 }
 
-a:hover {
-    color: rgba(144, 242, 225, 1);
+.homepage-link {
+    color:plum;
+    text-decoration: none;
+}
+
+.homepage-link:hover {
+    color: rgb(238, 182, 148);
+    text-decoration: underline;
 }
 
 .account-link {

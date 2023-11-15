@@ -16,9 +16,9 @@ function VideoPage() {
     const controller = new AbortController();
     let q = "";
 
-    console.log(user, user.time)
 
     useEffect(() => {
+
         q = `yoga,${user.time}, ${user.focus}, ${user.intensity}`;
 
         async function fetchData() {
@@ -33,24 +33,25 @@ function VideoPage() {
                         signal: controller.signal,
                     })
                 console.log(result)
-                setVideoResults(result.data.items.slice(0,3));
-                setVideoResultMain(result.data.items.slice(-1));
+                setVideoResults(result.data.items.slice(0, 3));
+                setVideoResultMain(result.data.items);
+                console.log(result.data.items);
                 console.log(videoResultMain);
 
             } catch (e) {
                 console.error(e);
                 if (axios.isCancel(e)) {
-                                    console.error('Request is canceled...');
-                                } else {
-                                    console.error(e);
-                                    toggleError(true);
-                                }
-                            } finally {
-                                // toggleLoading(false);
+                    console.error('Request is canceled...');
+                } else {
+                    console.error(e);
+                    toggleError(true);
+                }
+            } finally {
+                // toggleLoading(false);
+
 
             }
         }
-
         fetchData();
 
         return function cleanup() {
@@ -59,7 +60,7 @@ function VideoPage() {
 
     }, [q, user])
 
-   function handleSubmit(video) {
+   function handleSubmit(video, videoResultMain) {
        setFavoriteAddedMessage(true);
 
 
@@ -75,15 +76,11 @@ function VideoPage() {
                case videoResults[2].id.videoId:
                    setFavoriteAddedMessage(video);
                    localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
-                   break;
-
+                break;
+               case videoResultMain[3].id.videoId:
+                   setFavoriteAddedMessage(video);
+                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`);
        }
-
-       // if (localStorage.setItem) {
-       //     setFavoriteAddedMessage(true);
-       // } else {
-       //
-       // }
    }
 
 
@@ -92,16 +89,16 @@ function VideoPage() {
 
         <>
 
-            <img className={styles["video-rectangle"]} src={waters} alt="lilac waters"/>
-            <div className={styles["video-rectangle-container"]}>
+            <img className={styles["videopage-rectangle"]} src={waters} alt="lilac waters"/>
+            <div className={styles["videopage-rectangle-container"]}>
                 <p className={styles.header}>
                     Here's your personal selection of video's for today, {user.username}!
                 </p>
-                <p className={styles["favorites-text-profile-page"]}>You can find your favorites on your:  <Link
-                    to="/profile"> Profile-page </Link> !</p>
+
+                <p className={styles["favorites-text-profile-page"]}>You can find your favorites on your <Link className={styles["link-to-profile"]} to="/profile"> profile </Link>!</p>
+
             </div>
 
-            {/* DEZE FUNCTIE IS AANGEPAST NAAR EEN MAP() >> PER VIDEO KRIJG JE NU OOK EEN favoriteAddedMessage   */}
             {videoResults.length && videoResults.map((video) => {
                 return (
                 <section className={styles["iframe-container"]} key={video.id.videoId}>
@@ -118,37 +115,37 @@ function VideoPage() {
                         LIKE to add to your favorites!
                     </button>
 
-                    {favoriteAddedMessage === video.id.videoId && <p>This video has been added to your Favorites</p>}
-                    {console.log(videoResultMain)}
+
+                    {favoriteAddedMessage === video.id.videoId && <p className={styles["added-to-favorites-message-small"]}>This video has been added to your Favorites</p>}
+                </section>
+                )
+                    })
+                    }
+            {videoResultMain && videoResultMain[3] && (
+
+                    <section className={styles["iframe-main-container"]}>
                     <iframe
                         className={styles["video-main"]}
-                        title={video.snippet.title}
-                        src={`https://www.youtube.com/embed/${videoResultMain}/?controls=0/autoplay=1`}
+                        title={videoResultMain[3].snippet.title}
+                        src={`https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`}
                         allowFullScreen>
                     </iframe>
 
                     <button
                                 type="submit"
                                 className={styles["like-button-video-main"]}
-                                onClick={() => handleSubmit(video.id.videoId)}>
+                                onClick={() => handleSubmit(videoResultMain[3].id.videoId)}>
                                 LIKE to add to your favorites!
                             </button>
 
-                    {favoriteAddedMessage === video.id.videoId && <p>This video has been added to your Favorites</p>}
-
-                </section>
-                )
-
-            })
-
-            }
-
-            <p className={styles["welcome-page-link"]}>Don't see anything you like? click <Link
+                    {favoriteAddedMessage === videoResultMain[3].id.videoId && <p className={styles["added-to-favorites-message-main"]}>This video has been added to your Favorites</p>}
+                    </section>
+        )}
+            <p className={styles["welcome-page-link-paragraph"]}>Don't see anything you like? click <Link className={styles["back-to-welcome-page"]}
                 to="/welcomepage">here</Link> to try again</p>
 
-            {/*{loading && <p>Loading...</p>}*/}
+            {/*/!*{loading && <p>Loading...</p>}*!/*/}
             {videoResults.length === 0 && error && <p>Whoops! An error occurred whilst loading your video's...</p>}
-
 
         </>
 

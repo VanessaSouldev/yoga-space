@@ -49,7 +49,7 @@ function SignIn() {
                 <form onSubmit={handleSubmit}>
                     <div className={styles["input-container"]}>
                         <label htmlFor="signin-username">
-                            <h5>
+                            <h5 className={styles["login-input"]}>
                                 Username:
                             </h5>
                             <input
@@ -62,7 +62,7 @@ function SignIn() {
                             />
                         </label>
                         <label htmlFor="signin-password">
-                            <h5>
+                            <h5 className={styles["login-input"]}>
                                 Password:
                             </h5>
                             <input
@@ -89,7 +89,7 @@ function SignIn() {
                 {/*{loading && <p>Loading...</p>}*/}
                 {/*{error === true && error && <p>Username or Password incorrect, please try again</p>}*/}
 
-                <p>Don't have an account? <Link to="/signup">Sign up</Link> first</p>
+                <p className={styles["register-link"]}>Don't have an account? <Link className={styles["sign-up-link"]} to="/signup">Sign up</Link> first</p>
             </section>
         </>
     );

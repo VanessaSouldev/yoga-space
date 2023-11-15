@@ -50,14 +50,14 @@ function Homepage() {
                         <Button
                         type={"button"}
                         clickHandler={handleClickRegister}
-                        className={"register-button"}>
+                        className={"to-register-button-homepage"}>
                             Register
                         </Button>
 
                         <Button
                         type={"button"}
                         clickHandler={handleClickSignIn}
-                        className={"sign-in-button"}>
+                        className={"to-sign-in-button-homepage"}>
                             Sign in
                         </Button>
 
