@@ -3,12 +3,15 @@ import waters from "../../assets/images/lilac-waters.jpg";
 import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
-import {Link} from "react-router-dom";
+import {Link, NavLink, Redirect} from "react-router-dom";
+import LogoutLink from "../../Components/LogoutLink/LogoutLink";
 
 
 function VideoPage() {
 
     const {user} = useContext(AuthContext);
+    const {isAuth} = useContext(AuthContext);
+    const {logout} = useContext(AuthContext);
     const [videoResults, setVideoResults] = useState([]);
     const [videoResultMain, setVideoResultMain] = useState();
     const [error, toggleError] = useState(false);
@@ -77,7 +80,7 @@ function VideoPage() {
                    setFavoriteAddedMessage(video);
                    localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
                 break;
-               case videoResultMain[3].id.videoId:
+               case videoResultMain.id.videoId:
                    setFavoriteAddedMessage(video);
                    localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`);
        }
@@ -95,7 +98,7 @@ function VideoPage() {
                     Here's your personal selection of video's for today, {user.username}!
                 </p>
 
-                <p className={styles["favorites-text-profile-page"]}>You can find your favorites on your <Link className={styles["link-to-profile"]} to="/profile"> profile </Link>!</p>
+                <p className={styles["favorites-text-profile-page"]}>You can find your favorites on your: <NavLink className={styles["link-to-profile-page-favorites"]} to="/profile">  Profile page </NavLink>!</p>
 
             </div>
 
@@ -134,7 +137,7 @@ function VideoPage() {
                     <button
                                 type="submit"
                                 className={styles["like-button-video-main"]}
-                                onClick={() => handleSubmit(videoResultMain[3].id.videoId)}>
+                                onClick={() => handleSubmit(videoResultMain.id.videoId)}>
                                 LIKE to add to your favorites!
                             </button>
 
@@ -146,7 +149,11 @@ function VideoPage() {
 
             {/*/!*{loading && <p>Loading...</p>}*!/*/}
             {videoResults.length === 0 && error && <p>Whoops! An error occurred whilst loading your video's...</p>}
-
+            {isAuth ?
+            <LogoutLink
+                clickhandler={logout}>
+                Sign out
+            </LogoutLink> : <Redirect to=" /signin"/>}
         </>
 
     );

@@ -2,10 +2,15 @@ import styles from './Homepage.module.css';
 import waters from '../../assets/images/lilac-waters.jpg';
 import Button from "../../Components/Button/Button";
 import {useHistory} from "react-router-dom";
+import React from "react";
+
+
 function Homepage() {
 
 
     const history = useHistory();
+
+
 
 
     function handleClickRegister() {
@@ -60,7 +65,6 @@ function Homepage() {
                         className={"to-sign-in-button-homepage"}>
                             Sign in
                         </Button>
-
                 </div>
             </section>
             <p className={styles["under-register-text"]}>For daily yoga video's</p>

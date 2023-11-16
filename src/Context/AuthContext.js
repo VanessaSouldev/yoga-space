@@ -65,7 +65,7 @@ function AuthContextProvider({children}) {
     function signOut() {
         toggleAuth({...auth, isAuth:false, user: null});
         console.log('User is logged out');
-        history.push('/');
+        history.push('/signin');
         localStorage.removeItem('token');
     }
 
