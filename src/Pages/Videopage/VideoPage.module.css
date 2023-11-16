@@ -36,7 +36,7 @@
     font-size: 23px;
     font-weight: bold;
     position: absolute;
-    top: 120px;
+    top: 130px;
     left:-50%;
 
 }
@@ -61,7 +61,7 @@
     position: relative;
     width: 425px;
     height: 250px;
-    top: 165px;
+    top: 175px;
     left: 170px;
     margin: -10px 0;
     /*object-fit: cover;*/
