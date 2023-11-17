@@ -7,7 +7,7 @@ import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import SignUp from './Pages/Signup/SignUp';
 import VideoPage from './Pages/Videopage/VideoPage';
 import {Switch, Route, Redirect} from 'react-router-dom';
-import Navigate from "./Components/Navigation/Navigate";
+import Navigate from "./Components/Navigation/NavBar/Navigate";
 
 import {AuthContext} from "./Context/AuthContext";
 

@@ -4,7 +4,7 @@ import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
 import {Link, NavLink, Redirect} from "react-router-dom";
-import LogoutLink from "../../Components/LogoutLink/LogoutLink";
+import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
 
 
 function VideoPage() {

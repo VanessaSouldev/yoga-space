@@ -1,19 +1,18 @@
 import styles from './WelcomePageandQuestionnaire.module.css';
 import React, {useContext, useEffect, useState} from "react";
-import {Link, Redirect, useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
 import waters from '../../assets/images/lilac-waters.jpg';
 import AnswersInput from "../../Components/WelcomePageQuestionnaire/AnswersInput";
 import axios from "axios";
 import Button from "../../Components/Button/Button";
 import Questions from "../../Components/WelcomePageQuestionnaire/Questions";
-import LogoutLink from "../../Components/LogoutLink/LogoutLink";
+import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
 
 
 function WelcomePageAndQuestionnaire() {
 
     const {user} = useContext(AuthContext);
-    const {isAuth} = useContext(AuthContext);
     const {logout} = useContext(AuthContext);
     const history = useHistory();
     const [time, setTime] = useState('');
@@ -75,6 +74,11 @@ function WelcomePageAndQuestionnaire() {
 
     return (
         <>
+            <LogoutLink
+                clickhandler={logout}>
+                Sign out
+            </LogoutLink>
+
             <div className={styles["rectangle-container"]}>
                 <img className={styles.rectangle} src={waters} alt="lilac waters"/>
                 <h4 className={styles.header}>
@@ -188,11 +192,7 @@ function WelcomePageAndQuestionnaire() {
                         Bring it on!
                     </Button>
             </form>
-            {isAuth ?
-                <LogoutLink
-                    clickhandler={logout}>
-                    Sign out
-                </LogoutLink> : <Redirect to=" /signin"/>}
+
             <p className={styles["homepage-paragraph"]}>To return to the Homepage click <Link className={styles["homepage-link"]} to="/">here</Link>.</p>
         </>
     );
