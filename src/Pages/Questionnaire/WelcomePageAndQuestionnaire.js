@@ -8,6 +8,7 @@ import axios from "axios";
 import Button from "../../Components/Button/Button";
 import Questions from "../../Components/WelcomePageQuestionnaire/Questions";
 import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
+import LinkParagraph from "../../Components/Navigation/LinkParagraph/LinkParagraph";
 
 
 function WelcomePageAndQuestionnaire() {
@@ -175,7 +176,6 @@ function WelcomePageAndQuestionnaire() {
                             nameAttribute="focus"
                             stateValue={'focus'}
                             stateSetter={() => setFocus('stress')}
-                            className={styles.answers}
                             labelText="Stress relief"/>
                         <AnswersInput
                             required={true}
@@ -183,7 +183,7 @@ function WelcomePageAndQuestionnaire() {
                             idAttribute="focus"
                             nameAttribute="focus"
                             stateValue={'focus'}
-                            stateSetter={() => setFocus('depression' && 'positvity')}
+                            stateSetter={() => setFocus('depression' && 'positivity')}
                             labelText="Depression / Yoga to uplift"/>
                         </div>
                     <Button
@@ -193,7 +193,13 @@ function WelcomePageAndQuestionnaire() {
                     </Button>
             </form>
 
-            <p className={styles["homepage-paragraph"]}>To return to the Homepage click <Link className={styles["homepage-link"]} to="/">here</Link>.</p>
+            <p className={styles["homepage-paragraph"]}>
+                To return to the Homepage click
+                <LinkParagraph
+                    path={"/"}>
+                    here
+                </LinkParagraph>
+            </p>
         </>
     );
 }

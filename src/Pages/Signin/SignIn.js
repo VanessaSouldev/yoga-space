@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
 import Button from "../../Components/Button/Button";
 import axios from "axios";
+import LinkParagraph from "../../Components/Navigation/LinkParagraph/LinkParagraph";
 
 
 function SignIn() {
@@ -12,8 +13,8 @@ function SignIn() {
     const {login} = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    // const [loading, toggleLoading] = useState(false);
-    // const [error, toggleError] = useState(false);
+    const [loading, toggleLoading] = useState(false);
+    const [error, toggleError] = useState(false);
 
 
 
@@ -27,9 +28,11 @@ function SignIn() {
 
             console.log(result.data.accessToken);
             login(result.data);
+            toggleLoading(true)
 
 
         } catch (e) {
+            toggleError(true)
 
         }
 
@@ -86,10 +89,17 @@ function SignIn() {
                     </div>
                 </form>
 
-                {/*{loading && <p>Loading...</p>}*/}
-                {/*{error === true && error && <p>Username or Password incorrect, please try again</p>}*/}
+                {loading && <p>Loading...</p>}
+                {error === true && error && <h2 className={styles["error-message-sign-in"]}>Username or Password incorrect, please try again</h2>}
 
-                <p className={styles["register-link"]}>Don't have an account? <Link className={styles["sign-up-link"]} to="/signup">Sign up</Link> first</p>
+                <p className={styles["register-link-paragraph"]}>
+                    Don't have an account?
+                    <LinkParagraph
+                        path="/signup">
+                        Sign up
+                    </LinkParagraph>
+                    first
+                </p>
             </section>
         </>
     );

@@ -1,0 +1,12 @@
+
+a {
+    color: plum;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+a:hover {
+    color: rgb(238, 182, 148);
+    text-decoration: underline;
+}
+

@@ -53,25 +53,19 @@
     left: 25%;
 }
 
-.error-message {
-    font-family: Open Sans, sans-serif;
+.error-message-sign-in {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    position: absolute;
+    margin-top: 20%;
+    left: 45%;
     font-size: 15px;
-    color: #8b0000;
-
+    color: #d90f33;
 }
 
-.sign-up-link,
-.sign-up-link:visited,
-.sign-up-link:active {
-    color: plum;
-}
 
-.sign-up-link:hover {
-    color: rgb(238, 182, 148);
-    text-decoration: underline;
-}
-
-.register-link {
+.register-link-paragraph {
     position: absolute;
     bottom: 70px;
     margin-left: 30px;

@@ -2,7 +2,7 @@
     display: flex;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     width: 994px;
-    height: 738px;
+    margin-left: 35px;
     flex-direction: column;
     flex-shrink: 0;
 }

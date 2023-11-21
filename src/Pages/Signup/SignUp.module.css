@@ -55,8 +55,7 @@
 }
 
 
-
-.error-message {
+.error-message-sign-up {
     font-family: Open Sans, sans-serif;
     font-size: 15px;
     color: #d90f33;
@@ -64,18 +63,7 @@
 }
 
 
-.login-link,
-.login-link:visited,
-.login-link:active {
-    color: plum;
-}
-
-.login-link:hover {
-    color: rgb(238, 182, 148);
-    text-decoration: underline;
-}
-
-.account-link {
+.account-link-paragraph {
     position: absolute;
     bottom: 70px;
     margin-left: 30px;

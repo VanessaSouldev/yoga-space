@@ -3,8 +3,9 @@ import waters from "../../assets/images/lilac-waters.jpg";
 import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
-import {Link, NavLink, Redirect} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
+import LinkParagraph from "../../Components/Navigation/LinkParagraph/LinkParagraph";
 
 
 function VideoPage() {
@@ -63,26 +64,31 @@ function VideoPage() {
 
     }, [q, user])
 
-   function handleSubmit(video, videoResultMain) {
+   function handleSubmit(video) {
        setFavoriteAddedMessage(true);
-
-
+        let oldData = JSON.parse(localStorage.getItem("favorites" )|| "[]");
+       console.log(oldData);
            switch(video){
                case videoResults[0].id.videoId:
                    setFavoriteAddedMessage(video);
-                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
+                   let favorite0=oldData.push(`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
+                   localStorage.setItem('favorites', favorite0)
                    break;
                case videoResults[1].id.videoId:
                    setFavoriteAddedMessage(video);
-                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
+                   let favorite1=oldData.push(`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
+                   localStorage.setItem('favorites', favorite1)
                    break;
                case videoResults[2].id.videoId:
                    setFavoriteAddedMessage(video);
-                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
+                   let favorite2=oldData.push(`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
+                   localStorage.setItem('favorites', favorite2)
                 break;
-               case videoResultMain.id.videoId:
-                   setFavoriteAddedMessage(video);
-                   localStorage.setItem('favorites', `https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`);
+               case videoResultMain[3].id.videoId:
+                   setFavoriteAddedMessage(videoResultMain[3].id.videoId);
+                   let favoriteMain=oldData.push(`https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`)
+                   localStorage.setItem('favorites', favoriteMain);
+                   console.log('test');
        }
    }
 
@@ -98,7 +104,12 @@ function VideoPage() {
                     Here's your personal selection of video's for today, {user.username}!
                 </p>
 
-                <p className={styles["favorites-text-profile-page"]}>You can find your favorites on your: <NavLink className={styles["link-to-profile-page-favorites"]} to="/profile">  Profile page </NavLink>!</p>
+                <p className={styles["favorites-text-profile-page"]}>You can find your favorites on your
+                    <LinkParagraph
+                        path="/profile">
+                        Profile page
+                    </LinkParagraph>
+                    !</p>
 
             </div>
 
@@ -119,7 +130,7 @@ function VideoPage() {
                     </button>
 
 
-                    {favoriteAddedMessage === video.id.videoId && <p className={styles["added-to-favorites-message-small"]}>This video has been added to your Favorites</p>}
+                    {favoriteAddedMessage === video.id.videoId && <h2 className={styles["added-to-favorites-message-small"]}>This video has been added to your Favorites</h2>}
                 </section>
                 )
                     })
@@ -137,17 +148,22 @@ function VideoPage() {
                     <button
                                 type="submit"
                                 className={styles["like-button-video-main"]}
-                                onClick={() => handleSubmit(videoResultMain.id.videoId)}>
+                                onClick={() => handleSubmit(videoResultMain[3].id.videoId)}>
                                 LIKE to add to your favorites!
                             </button>
 
-                    {favoriteAddedMessage === videoResultMain[3].id.videoId && <p className={styles["added-to-favorites-message-main"]}>This video has been added to your Favorites</p>}
+                    {favoriteAddedMessage === videoResultMain[3].id.videoId && <h2 className={styles["added-to-favorites-message-main"]}>This video has been added to your Favorites</h2>}
                     </section>
         )}
-            <p className={styles["welcome-page-link-paragraph"]}>Don't see anything you like? click <Link className={styles["back-to-welcome-page"]}
-                to="/welcomepage">here</Link> to try again</p>
+            <p className={styles['welcome-page-link-paragraph']}>
+               Don't see anything you like, click
+            <LinkParagraph
+                path={'/welcomepage'}>
+                here
+            </LinkParagraph>
+                to try again!
+            </p>
 
-            {/*/!*{loading && <p>Loading...</p>}*!/*/}
             {videoResults.length === 0 && error && <p>Whoops! An error occurred whilst loading your video's...</p>}
             {isAuth ?
             <LogoutLink

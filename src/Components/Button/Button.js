@@ -4,7 +4,8 @@ import './Button.css';
 function Button({  clickHandler,
                     type,
                     children,
-                    className
+                    className,
+                    disabled
                         }) {
 
 
@@ -15,7 +16,8 @@ function Button({  clickHandler,
             <button
                 type={type}
                 onClick={clickHandler}
-                className={className}>
+                className={className}
+                disabled={disabled}>
                 {children}
             </button>
         </div>

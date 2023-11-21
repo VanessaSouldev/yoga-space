@@ -5,6 +5,7 @@ import waters from "../../assets/images/lilac-waters.jpg";
 import {useForm} from 'react-hook-form';
 import {Link, useHistory} from "react-router-dom";
 import Button from "../../Components/Button/Button";
+import LinkParagraph from "../../Components/Navigation/LinkParagraph/LinkParagraph";
 
 function SignUp() {
 
@@ -23,7 +24,7 @@ function SignUp() {
                 history.push('/signin')
                 ;
             } catch (e) {
-                // console.error('ERRORS',errors);
+
             }
         }
 
@@ -54,7 +55,7 @@ function SignUp() {
                                            validate: (value) => value.includes('@') || 'Your email must contain the "@"-sign!',
                                        })}
                                 />
-                                {errors.email && <p className={styles["error-message"]}>{errors.email.message}</p>}
+                                {errors.email && <p className={styles["error-message-sign-up"]}>{errors.email.message}</p>}
                                 <label htmlFor="username">
                                     <h5 className={styles["input-name"]}>
                                         Username
@@ -74,7 +75,7 @@ function SignUp() {
                                            },
                                        })}
                                 />
-                                {errors.username && <p className={styles["error-message"]}>{errors.username.message}</p>}
+                                {errors.username && <p className={styles["error-message-sign-up"]}>{errors.username.message}</p>}
 
                                 <label htmlFor="password">
                                     <h5 className={styles["input-name"]}>
@@ -94,7 +95,7 @@ function SignUp() {
                                         },
                                 })}
                                 />
-                                {errors.password && <p className={styles["error-message"]}>{errors.password.message}</p>}
+                                {errors.password && <p className={styles["error-message-sign-up"]}>{errors.password.message}</p>}
                             </div>
                             <Button
                             type={"submit"}
@@ -106,8 +107,13 @@ function SignUp() {
                     </div>
                 </section>
                 <footer>
-                    <p className={styles["account-link"]}>Already have an account? You can <Link className={styles["login-link"]}
-                        to="/signin">Login</Link> here.</p>
+                    <p className={styles["account-link-paragraph"]}>Already have an account? You can
+                        <LinkParagraph
+                            path={"/signin"}>
+                            Login
+                        </LinkParagraph>
+                        here
+                    </p>
                 </footer>
             </>
 

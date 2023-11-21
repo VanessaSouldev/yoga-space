@@ -15,24 +15,20 @@ function Profile() {
     const [error, toggleError] = useState(false);
     const {logout} = useContext(AuthContext);
     const history = useHistory();
-    const [yogaPose, setYogaPose] = useState([]);
     const [yogaPoseVideoResults, setYogaPoseVideoResults] = useState([]);
 
-    let p = "";
-    // const favorites = (localStorage.getItem("favorites") || "[]");
-
-    useEffect(() => {
-        p = `yogapose, ${yogaPose}`;
-    })
-
-    useEffect(() => {async function fetchYogaPose() {
 
 
+
+   async function fetchYogaPose(yogaPose) {
+
+        console.log(yogaPose);
+        console.log(yogaPoseVideoResults);
         toggleError(false);
 
 
         try {
-            const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&q=${p}&key=${process.env.REACT_APP_API_KEY}`)
+            const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&q=yogapose, ${yogaPose}&key=${process.env.REACT_APP_API_KEY}`)
             console.log(result)
             setYogaPoseVideoResults(result.data.items);
             console.log(result.data.items);
@@ -43,11 +39,7 @@ function Profile() {
             toggleError(true);
             }
         }
-    if (yogaPose){
-        fetchYogaPose();
-    }
 
-},[p, yogaPose]);
 
 
 
@@ -57,7 +49,7 @@ function handleClickToQuestionnaire() {
     history.push("/welcomepage");
 }
 
-    // console.log(favorites);
+
 
     return (
 
@@ -77,7 +69,7 @@ function handleClickToQuestionnaire() {
             </heading>
 
                 <YogaPoseSearchBar
-                    setYogaPoseHandler={setYogaPose}
+                    callFunction={fetchYogaPose}
                 />
                 {error && <span className="wrong-yogapose-error">
     	            Oops! This yogapose is too difficult to explain
@@ -100,6 +92,18 @@ function handleClickToQuestionnaire() {
             })
             }
 
+
+          {/*{favorites && favorites[``]&& (*/}
+
+          {/*        <section className={styles["favorites-container"]} key={video.id.videoId}>*/}
+          {/*            <iframe*/}
+          {/*                className={styles["favorites-iframe"]}*/}
+          {/*                title={favorites.snippet.title}*/}
+          {/*                src={favorites}*/}
+          {/*                allowFullScreen>*/}
+          {/*            </iframe>*/}
+
+          {/*        </section>*/}
 
           <section className={styles["favorites-container"]}>
 
