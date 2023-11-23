@@ -20,7 +20,7 @@ function Profile() {
 
 
 
-   async function fetchYogaPose(yogaPose) {
+    async function fetchYogaPose(yogaPose) {
 
         console.log(yogaPose);
         console.log(yogaPoseVideoResults);
@@ -37,41 +37,41 @@ function Profile() {
         } catch (e) {
             console.error(e);
             toggleError(true);
-            }
         }
+    }
 
 
 
 
 
 
-function handleClickToQuestionnaire() {
-    history.push("/welcomepage");
-}
+    function handleClickToQuestionnaire() {
+        history.push("/welcomepage");
+    }
 
 
 
     return (
 
-      <>
-          <LogoutLink
-              clickhandler={logout}>
-              Sign out
-          </LogoutLink>
+        <>
+            <LogoutLink
+                clickhandler={logout}>
+                Sign out
+            </LogoutLink>
 
             <heading>
 
-            <h4 className={styles["profile-page-heading"]}>
-                Profile Page
-            </h4>
+                <h4 className={styles["profile-page-heading"]}>
+                    Profile Page
+                </h4>
                 <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username}, here you can find your favorite yoga video's and explore different yogaposes by entering it below:</p>
 
             </heading>
 
-                <YogaPoseSearchBar
-                    callFunction={fetchYogaPose}
-                />
-                {error && <span className="wrong-yogapose-error">
+            <YogaPoseSearchBar
+                callFunction={fetchYogaPose}
+            />
+            {error && <span className="wrong-yogapose-error">
     	            Oops! This yogapose is too difficult to explain
                 </span>}
 
@@ -80,51 +80,51 @@ function handleClickToQuestionnaire() {
             {yogaPoseVideoResults.length && yogaPoseVideoResults.map((video) => {
 
                 return (
-                <section className={styles["iframe-yogapose-container"]} key={video.id.videoId}>
-                <iframe
-                className={styles["yogapose-result"]}
-                title={video.snippet.title}
-                src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
-                allowFullScreen>
-                </iframe>
-                </section>
+                    <section className={styles["iframe-yogapose-container"]} key={video.id.videoId}>
+                        <iframe
+                            className={styles["yogapose-result"]}
+                            title={video.snippet.title}
+                            src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
+                            allowFullScreen>
+                        </iframe>
+                    </section>
                 )
             })
             }
 
 
-          {/*{favorites && favorites[``]&& (*/}
+            {/*{favorites && favorites[``]&& (*/}
 
-          {/*        <section className={styles["favorites-container"]} key={video.id.videoId}>*/}
-          {/*            <iframe*/}
-          {/*                className={styles["favorites-iframe"]}*/}
-          {/*                title={favorites.snippet.title}*/}
-          {/*                src={favorites}*/}
-          {/*                allowFullScreen>*/}
-          {/*            </iframe>*/}
+            {/*        <section className={styles["favorites-container"]} key={video.id.videoId}>*/}
+            {/*            <iframe*/}
+            {/*                className={styles["favorites-iframe"]}*/}
+            {/*                title={favorites.snippet.title}*/}
+            {/*                src={favorites}*/}
+            {/*                allowFullScreen>*/}
+            {/*            </iframe>*/}
 
-          {/*        </section>*/}
+            {/*        </section>*/}
 
-          <section className={styles["favorites-container"]}>
+            <section className={styles["favorites-container"]}>
 
                 <h6
                     className={styles["profile-page-favorites-heading"]}>
-                        {user.username}'s favorite yoga video's:
+                    {user.username}'s favorite yoga video's:
                 </h6>
 
 
-          </section>
+            </section>
 
             <Button
                 type={"button"}
                 className={"profile-page-to-questionnaire-button"}
                 clickHandler={handleClickToQuestionnaire}
             >
-            For your daily yoga routine, press here!
+                For your daily yoga routine, press here!
             </Button>
 
 
-</>
+        </>
 
     );
 }

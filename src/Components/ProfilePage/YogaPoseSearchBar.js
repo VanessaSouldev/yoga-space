@@ -21,18 +21,18 @@ function YogaPoseSearchBar({callFunction}) {
     return  (
         <form className="searchbar" onSubmit={onFormSubmit}>
             <header> Yogapose search </header>
-                    <input
-                        type="text"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        name="search a yogapose"
-                        placeholder="Search any yogapose of your choice"
-                    />
+            <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                name="search a yogapose"
+                placeholder="Search any yogapose of your choice"
+            />
             <Button
                 type={"submit"}
                 disabled={!searchQuery}
             >
-              SEARCH
+                SEARCH
             </Button>
 
         </form>

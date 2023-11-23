@@ -1,16 +1,16 @@
 import './Button.css';
 
 
-function Button({  clickHandler,
+function Button({
+                    clickHandler,
                     type,
                     children,
                     className,
                     disabled
-                        }) {
+                }) {
 
 
-
-    return  (
+    return (
         <div>
 
             <button
@@ -24,4 +24,5 @@ function Button({  clickHandler,
 
     );
 }
+
 export default Button;
