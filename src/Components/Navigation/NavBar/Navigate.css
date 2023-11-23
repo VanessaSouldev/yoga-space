@@ -4,14 +4,14 @@
 }
 
 .nav-header {
-    color:plum;
+    color: plum;
     width: 250px;
     margin-left: 15px;
 
 }
 
 nav {
-    color: plum ;
+    color: plum;
     width: 100%;
     display: flex;
     height: 40px;
@@ -33,7 +33,7 @@ ul {
 }
 
 .nav-links:hover {
-    color:  #EFAF80;
+    color: #EFAF80;
     text-decoration: underline;
 }
 

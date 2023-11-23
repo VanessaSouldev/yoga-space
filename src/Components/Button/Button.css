@@ -26,11 +26,12 @@
     color: #EFAF80;
     border: 5px solid plum;
 }
+
 .to-sign-in-button-homepage {
     display: flex;
     position: absolute;
     width: 213px;
-    height:48px;
+    height: 48px;
     bottom: 105px;
     right: 380px;
     padding: 21px 32px;
@@ -61,7 +62,7 @@
     right: 50%;
     width: 527px;
     height: 83px;
-    top:550px;
+    top: 550px;
     margin: 32px;
     border-radius: 50px;
     flex-direction: column;
@@ -139,7 +140,7 @@
     border: 8px solid rgba(239, 175, 128, 0.31);
 }
 
-.questionnaire-submit-button    {
+.questionnaire-submit-button {
     position: absolute;
     margin: 1px;
     left: 50%;

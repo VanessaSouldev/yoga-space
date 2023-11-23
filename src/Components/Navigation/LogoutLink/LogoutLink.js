@@ -2,23 +2,20 @@ import './LogoutLink.css';
 import {NavLink} from "react-router-dom";
 
 
-
-
-function LogoutLink({   clickhandler,
+function LogoutLink({
+                        clickhandler,
                         children,
-                    })
-                 {
+                    }) {
 
 
-
-    return  (
+    return (
         <div className="logout-link">
-                    <NavLink
-                        onClick={clickhandler}
-                        to="/signin"
-                        className="nav-logout">
-                        {children}
-                    </NavLink>
+            <NavLink
+                onClick={clickhandler}
+                to="/signin"
+                className="nav-logout">
+                {children}
+            </NavLink>
         </div>
 
     );

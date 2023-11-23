@@ -5,18 +5,18 @@ import React from "react";
 
 function LinkParagraph({
                            children,
-                            path,
-                }) {
+                           path,
+                       }) {
 
 
+    return (
 
-    return  (
-
-                <Link
-                    to={path}>
-                    {children}
-                </Link>
+        <Link
+            to={path}>
+            {children}
+        </Link>
 
     );
 }
+
 export default LinkParagraph;

@@ -1,6 +1,6 @@
 import styles from './WelcomePageandQuestionnaire.module.css';
 import React, {useContext, useEffect, useState} from "react";
-import {Link, useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
 import waters from '../../assets/images/lilac-waters.jpg';
 import AnswersInput from "../../Components/WelcomePageQuestionnaire/AnswersInput";

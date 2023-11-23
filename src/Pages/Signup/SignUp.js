@@ -3,13 +3,13 @@ import styles from "./SignUp.module.css";
 import axios from "axios";
 import waters from "../../assets/images/lilac-waters.jpg";
 import {useForm} from 'react-hook-form';
-import {Link, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import LinkParagraph from "../../Components/Navigation/LinkParagraph/LinkParagraph";
 
 function SignUp() {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { handleSubmit, formState: { errors }, register } = useForm();
 
     const history = useHistory();
 
@@ -21,8 +21,8 @@ function SignUp() {
                     password: data.password,
                 })
 
-                history.push('/signin')
-                ;
+                history.push('/signin');
+
             } catch (e) {
 
             }

@@ -1,13 +1,8 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import './Navigate.css';
-// import {AuthContext} from "../../Context/AuthContext";
 
 function Navigate() {
-
-    // const {isAuth} = useContext(AuthContext);
-    // const {logout} = useContext(AuthContext);
-
 
 
     return (
