@@ -12,7 +12,7 @@
     width: 1050px;
     height: 120px;
     top: 35px;
-    left: 575px;
+    left: 685px;
     object-fit: cover;
     position: absolute;
 }
@@ -36,22 +36,27 @@
     font-size: 23px;
     font-weight: bold;
     position: absolute;
-    top: 130px;
+    top: 145px;
     left:-50%;
-
 }
 
-.link-to-profile-page-favorites {
+.added-to-favorites-message-small {
+    display: flex;
+    position: relative;
     color: plum;
-    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    width: 425px;
+    top: 82px;
+    left: 170px;
+    margin: 5px 0;
 
 }
 
-.link-to-profile-page-favorites:hover{
-    color: #eeb694;
-    text-decoration: underline;
+.iframe-container {
+    width: 500px;
+    height: 300px;
 }
-
 
 .video-one {
 
@@ -61,11 +66,10 @@
     position: relative;
     width: 425px;
     height: 250px;
-    top: 175px;
+    top: 200px;
     left: 170px;
-    margin: -10px 0;
-    /*object-fit: cover;*/
-    /*position: absolute;*/
+    /*margin: -10px 0;*/
+
 }
 
 .like-button-video-one{
@@ -75,13 +79,12 @@
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    /*position: absolute;*/
-    left: 40px;
-    top: 45%;
+    left: 20px;
+    top: 50%;
     background: rgba(239, 175, 128, 0.31);
     font-size: 16px;
     color: mediumpurple;
-    margin-left: 35px;
+    margin-left: 20px;
     padding: 12px 24px;
     border-radius: 86px;
     border-color: transparent;
@@ -89,20 +92,6 @@
 
 .like-button-video-one:hover {
     border: 5px solid plum;
-}
-
-added-to-favorites-message-small {
-    display: flex;
-    flex-direction: column;
-    /*-ms-flex-align: start;*/
-    position: relative;
-    font-size: 15px;
-    width: 425px;
-    height: 250px;
-    top: 560px;
-    left: 170px;
-    margin: 50px 0;
-
 }
 
 
@@ -149,13 +138,4 @@ added-to-favorites-message-small {
     position: absolute;
     top: 1050px;
     left: 1100px;
-}
-
-.back-to-welcome-page {
-    color: plum;
-    text-decoration: none;
-}
-.back-to-welcome-page:hover {
-    color: rgb(238, 182, 148);
-    text-decoration: underline;
 }

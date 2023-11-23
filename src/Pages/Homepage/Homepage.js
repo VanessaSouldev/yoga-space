@@ -20,10 +20,15 @@ function Homepage() {
 
     function handleClickSignIn() {
         history.push("/signin");
+
     }
+
 
     return (
         <>
+
+
+
             <section>
                 <div className={styles["rectangles-headers-container"]}>
                     <div className={styles["yoga-space-container"]}>

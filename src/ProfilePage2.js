@@ -11,7 +11,7 @@
 //
 //     const {user} = useContext(AuthContext);
 //     const history = useHistory();
-//     let favorites = (localStorage.getItem("favorites") || "[]");
+//     let favorites = (("favorites") || "[]");
 //     // const [videoResultsYogaPose, setVideoResultsYogaPose] = useState([]);
 //     const [yogaPose, setYogaPose] = useState(['']);
 //     // const [error, toggleError] = useState(false);

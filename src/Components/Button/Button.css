@@ -22,7 +22,7 @@
     color: #FFFFFF;
 }
 
-.register-button:hover {
+.to-register-button-homepage:hover {
     color: #EFAF80;
     border: 5px solid plum;
 }
@@ -50,7 +50,7 @@
     color: #FFFFFF;
 }
 
-.sign-in-button:hover {
+.to-sign-in-button-homepage:hover {
     color: #EFAF80;
     border: 5px solid plum;
 }
@@ -102,6 +102,7 @@
     flex-shrink: 0;
     border: 2px solid #90F2E1;
     border-radius: 16px;
+    cursor: pointer;
     background: linear-gradient(180deg, rgba(239, 175, 128, 0.31) 0%, #90F2E1 100%);
 }
 

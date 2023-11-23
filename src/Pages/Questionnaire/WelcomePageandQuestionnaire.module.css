@@ -93,16 +93,7 @@
 .homepage-paragraph {
     font-size: 32px;
     font-weight: bold;
-}
-
-.homepage-link {
-    color:plum;
-    text-decoration: none;
-}
-
-.homepage-link:hover {
-    color: rgb(238, 182, 148);
-    text-decoration: underline;
+    margin-left: 30px;
 }
 
 .account-link {

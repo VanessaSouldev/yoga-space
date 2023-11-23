@@ -13,6 +13,7 @@
     width: 1050px;
     text-align: center;
     font-size: 35px;
+    font-weight: 600;
     word-wrap: inherit;
     line-height: 50px;
     top: 12%;
@@ -31,32 +32,20 @@
 }
 
 
-.yogapose-video-one {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*-ms-flex-align: start;*/
-    top: 450px;
-    left: 1050px;
-    /*margin: 50px 50px 100px 50px;*/
-    object-fit: cover;
-    position: absolute;
-}
+.yogapose-result {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-align: center;
+    position: relative;
+    width: 325px;
+    height: 200px;
+    top: 350px;
+    left: 127%;
+    margin: 10px;
 
-.yogapose-video-two {
-    top: 650px;
-    left: 1050px;
-    object-fit: cover;
-    position: absolute;
 }
 
 
-
-.yogapose-video-three {
-    top: 850px;
-    left: 1050px;
-    object-fit: cover;
-    position: absolute;
-}
 .profile-page-favorites-heading{
     position: absolute;
     /*left: 1%;*/
