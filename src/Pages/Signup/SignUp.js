@@ -33,6 +33,20 @@ function SignUp() {
             <>
 
                 <h4 className={styles["register-header"]}>At your own time in your own space</h4>
+                <footer className={styles.benefits}>
+                    9 Benefits of Yoga
+                    <ol className={styles["benefits-of-yoga-list"]}>
+                        <li>Yoga improves strength, balance and flexibility.</li>
+                        <li>Yoga helps with back pain relief.</li>
+                        <li>Yoga can ease arthritis symptoms.</li>
+                        <li>Yoga benefits heart health.</li>
+                        <li>Yoga relaxes you, to help you sleep better.</li>
+                        <li>Yoga can mean more energy and brighter moods.</li>
+                        <li>Yoga helps you manage stress.</li>
+                        <li>Yoga connects you with your body and your breathing.</li>
+                        <li>Yoga promotes better self-care.</li>
+                    </ol>
+                </footer>
                 <section id={styles["sign-up-form inner-content-container"]}>
                     <div className={styles["input-container"]}>
 
