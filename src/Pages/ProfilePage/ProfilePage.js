@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from "react";
+import React, {useState, useContext} from "react";
 import {AuthContext} from "../../Context/AuthContext";
 import styles from "./ProfilePage.module.css";
 import Button from "../../Components/Button/Button";

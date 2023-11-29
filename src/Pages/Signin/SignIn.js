@@ -1,7 +1,6 @@
 import styles from './SignIn.module.css';
 import waters from '../../assets/images/lilac-waters.jpg';
 import React, {useContext, useState} from 'react';
-import {Link} from 'react-router-dom';
 import {AuthContext} from "../../Context/AuthContext";
 import Button from "../../Components/Button/Button";
 import axios from "axios";
@@ -46,6 +45,19 @@ function SignIn() {
                     sign in to enter your space
                 </h4>
             </header>
+            <footer className={styles["physical-benefits"]}>
+                Physical benefits of yoga
+                <ul className={styles["physical-benefits-list"]}>
+                    <li>increased flexibility.</li>
+                    <li>increased muscle strength and tone.</li>
+                    <li>improved respiration, energy and vitality.</li>
+                    <li>maintaining a balanced metabolism.</li>
+                    <li>weight reduction.</li>
+                    <li>cardio and circulatory health.</li>
+                    <li>improved athletic performance.</li>
+                    <li>protection from injury.</li>
+                </ul>
+            </footer>
 
             <section>
                 <img className={styles["rectangle-center"]} src={waters} alt="lilac waters"/>
