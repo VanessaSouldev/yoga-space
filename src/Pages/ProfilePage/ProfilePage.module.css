@@ -45,6 +45,16 @@
 
 }
 
+.wrong-yogapose-error   {
+    position: absolute;
+    margin-left: 42%;
+    font-size: 22px;
+    font-weight: 600;
+    color: plum;
+    align-items: center;
+    top: 380px;
+}
+
 
 .profile-page-favorites-heading{
     position: absolute;

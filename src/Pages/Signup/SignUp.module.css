@@ -17,7 +17,6 @@
     position: absolute;
     top: 280px;
     right: 80px;
-    justify-content: center;
     font-family: 'Just Me Again Down Here', cursive;
     color: #FFFFFF;
     font-size: 32px;
@@ -26,6 +25,7 @@
 
 .benefits-of-yoga-list {
     display: flex;
+    text-align: left;
     flex-direction: column;
     list-style: -moz-ethiopic-numeric;
     margin-left: 20px;

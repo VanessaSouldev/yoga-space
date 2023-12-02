@@ -45,7 +45,7 @@ function SignIn() {
                     sign in to enter your space
                 </h4>
             </header>
-            <footer className={styles["physical-benefits"]}>
+            <h3 className={styles["physical-benefits"]}>
                 Physical benefits of yoga
                 <ul className={styles["physical-benefits-list"]}>
                     <li>increased flexibility.</li>
@@ -57,7 +57,7 @@ function SignIn() {
                     <li>improved athletic performance.</li>
                     <li>protection from injury.</li>
                 </ul>
-            </footer>
+            </h3>
 
             <section>
                 <img className={styles["rectangle-center"]} src={waters} alt="lilac waters"/>

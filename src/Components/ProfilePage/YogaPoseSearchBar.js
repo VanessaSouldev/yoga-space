@@ -30,12 +30,11 @@ function YogaPoseSearchBar({callFunction}) {
             />
             <Button
                 type={"submit"}
-                disabled={!searchQuery}
+                disabled={searchQuery === ''}
             >
-
                 SEARCH
             </Button>
-            {!searchQuery ? <h1>{searchQuery} is aan de beurt</h1> : <p>Er is nog niemand gekozen.</p>}
+            {searchQuery === '' && <p className="error-input-yogapose">Please enter a yogapose to view video's</p>}
         </form>
 
     );
