@@ -8,7 +8,6 @@ import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
 import axios from "axios";
 
 
-
 function Profile() {
 
     const {user} = useContext(AuthContext);
@@ -16,8 +15,8 @@ function Profile() {
     const {logout} = useContext(AuthContext);
     const history = useHistory();
     const [yogaPoseVideoResults, setYogaPoseVideoResults] = useState([]);
-
-
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    console.log(favorites);
 
 
     async function fetchYogaPose(yogaPose) {
@@ -28,8 +27,8 @@ function Profile() {
 
 
         try {
-            const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&q=yogapose, ${yogaPose}&key=${process.env.REACT_APP_API_KEY}`)
-            console.log(result)
+            const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&q=yogapose, ${yogaPose}&key=${process.env.REACT_APP_API_KEY}`);
+            console.log(result);
             setYogaPoseVideoResults(result.data.items);
             console.log(result.data.items);
 
@@ -41,11 +40,9 @@ function Profile() {
     }
 
 
-
     function handleClickToQuestionnaire() {
         history.push("/welcomepage");
     }
-
 
 
     return (
@@ -56,25 +53,22 @@ function Profile() {
                 Sign out
             </LogoutLink>
 
-            <header>
-
-                <h4 className={styles["profile-page-heading"]}>
-                    Profile Page
-                </h4>
-                <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username}, here you can find your favorite yoga video's and explore different yogaposes by entering it below:</p>
-
+            <header className={styles["profile-page-header"]}>
+                Profile Page
             </header>
+            <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username}, here you
+                can find your favorite yoga video's and explore different yogaposes by entering it below:</p>
+
 
             <YogaPoseSearchBar
                 callFunction={fetchYogaPose}
             />
             {error && <p className={styles["wrong-yogapose-error"]}>
-    	            Oops! this yogapose got us in a [&](knot)
-                </p>}
+                Oops! this yogapose got us in a [&](knot)
+            </p>}
 
 
-
-            {yogaPoseVideoResults.length && yogaPoseVideoResults.map((video) => {
+            {yogaPoseVideoResults.length > 0 && yogaPoseVideoResults.map((video) => {
 
                 return (
                     <section className={styles["iframe-yogapose-container"]} key={video.id.videoId}>
@@ -85,32 +79,30 @@ function Profile() {
                             allowFullScreen>
                         </iframe>
                     </section>
-                )
+                );
             })
             }
 
+            <h6
+                className={styles["profile-page-favorites-heading"]}>
+                {user.username}'s favorite yoga video's:
+            </h6>
 
-            {/*{favorites && favorites[``]&& (*/}
+            {favorites.length > 0 && favorites.map((favorite) => {
 
-            {/*        <section className={styles["favorites-container"]} key={video.id.videoId}>*/}
-            {/*            <iframe*/}
-            {/*                className={styles["favorites-iframe"]}*/}
-            {/*                title={favorites.snippet.title}*/}
-            {/*                src={favorites}*/}
-            {/*                allowFullScreen>*/}
-            {/*            </iframe>*/}
+                return (
+                    <section className={styles["favorites-container"]} key={favorite}>
+                        <iframe
+                            className={styles["favorites-iframe"]}
+                            title={favorite[favorites]}
+                            src={`https://www.youtube.com/embed/${favorite[favorites]}/?controls=0/autoplay=1`}
+                            allowFullScreen>
+                        </iframe>
+                    </section>
 
-            {/*        </section>*/}
-
-            <section className={styles["favorites-container"]}>
-
-                <h6
-                    className={styles["profile-page-favorites-heading"]}>
-                    {user.username}'s favorite yoga video's:
-                </h6>
-
-
-            </section>
+                );
+            })
+            }
 
             <Button
                 type={"button"}

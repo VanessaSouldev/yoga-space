@@ -6,15 +6,17 @@ function YogaPoseSearchBar({callFunction}) {
 
 
     const [searchQuery, setSearchQuery] = useState('');
+    const [error, setError] = useState(false);
 
-    function onFormSubmit(e) {e.preventDefault();
-
-
+    function onFormSubmit(e) {
+        e.preventDefault();
 
         console.log('submitted');
 
-
         callFunction(searchQuery);
+        if (!searchQuery) {
+            setError(true);
+        }
     }
 
 
@@ -30,11 +32,11 @@ function YogaPoseSearchBar({callFunction}) {
             />
             <Button
                 type={"submit"}
-                disabled={searchQuery === ''}
-            >
+                // disabled={searchQuery === ''}
+                >
                 SEARCH
             </Button>
-            {searchQuery === '' && <p className="error-input-yogapose">Please enter a yogapose to view video's</p>}
+            {searchQuery === '' && error === true && <p className="error-input-yogapose">Please enter a yogapose to view video's for a specific pose</p>}
         </form>
 
     );

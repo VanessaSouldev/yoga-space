@@ -17,8 +17,15 @@ function VideoPage() {
     const [videoResultMain, setVideoResultMain] = useState();
     const [error, toggleError] = useState(false);
     const [favoriteAddedMessage, setFavoriteAddedMessage] = useState(false);
+    const [favorites, setFavorites] = useState([]);
     const controller = new AbortController();
     let q = "";
+
+
+    useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }, [favorites]);
+
 
 
     useEffect(() => {
@@ -64,34 +71,36 @@ function VideoPage() {
 
     }, [q, user])
 
-   function handleSubmit(video) {
-       setFavoriteAddedMessage(true);
+    function handleSubmit(video) {
+        setFavoriteAddedMessage(true);
         let oldData = JSON.parse(localStorage.getItem("favorites" )|| "[]");
-       console.log(oldData);
-           switch(video){
-               case videoResults[0].id.videoId:
-                   setFavoriteAddedMessage(video);
-                   let favorite0=oldData.push(`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
-                   localStorage.setItem('favorites', favorite0)
-                   break;
-               case videoResults[1].id.videoId:
-                   setFavoriteAddedMessage(video);
-                   let favorite1=oldData.push(`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
-                   localStorage.setItem('favorites', favorite1)
-                   break;
-               case videoResults[2].id.videoId:
-                   setFavoriteAddedMessage(video);
-                   let favorite2=oldData.push(`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
-                   localStorage.setItem('favorites', favorite2)
+        let newData = [...oldData];
+        console.log(newData)
+        switch(video){
+            case videoResults[0].id.videoId:
+                setFavoriteAddedMessage(video);
+                newData.push(`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
+                localStorage.setItem('favorites', JSON.stringify(newData))
                 break;
-               case videoResultMain[3].id.videoId:
-                   setFavoriteAddedMessage(videoResultMain[3].id.videoId);
-                   let favoriteMain=oldData.push(`https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`)
-                   localStorage.setItem('favorites', favoriteMain);
-                   console.log('test');
-       }
-   }
-
+            case videoResults[1].id.videoId:
+                setFavoriteAddedMessage(video);
+                newData.push(`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
+                localStorage.setItem('favorites', JSON.stringify(newData))
+                break;
+            case videoResults[2].id.videoId:
+                setFavoriteAddedMessage(video);
+                newData.push(`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
+                localStorage.setItem('favorites', JSON.stringify(newData))
+                break;
+            case videoResultMain[3].id.videoId:
+                setFavoriteAddedMessage(videoResultMain[3].id.videoId);
+                newData.push(`https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`)
+                localStorage.setItem('favorites', JSON.stringify(newData))
+                break;
+            default:
+                console.log('default')
+        }
+    }
 
     return (
 
@@ -115,16 +124,16 @@ function VideoPage() {
 
             {videoResults.length && videoResults.map((video) => {
                 return (
-                <section className={styles["iframe-container"]} key={video.id.videoId}>
+                <section className={styles["iframe-container-videos-small"]} key={video.id.videoId}>
                     <iframe
-                    className={styles["video-one"]}
+                    className={styles["videos-small"]}
                     title={video.snippet.title}
                     src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
                     allowFullScreen>
                     </iframe>
 
                     <button  type="submit"
-                             className={styles["like-button-video-one"]}
+                             className={styles["like-button-videos-small"]}
                              onClick={() => handleSubmit(video.id.videoId)}>
                         LIKE to add to your favorites!
                     </button>

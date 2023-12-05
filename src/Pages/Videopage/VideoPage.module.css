@@ -53,12 +53,12 @@
 
 }
 
-.iframe-container {
+.iframe-container-videos-small {
     width: 500px;
     height: 300px;
 }
 
-.video-one {
+.videos-small {
 
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@
 
 }
 
-.like-button-video-one{
+.like-button-videos-small {
     width: 130px;
     height: fit-content;
     word-wrap: break-word;
@@ -90,7 +90,7 @@
     border-color: transparent;
 }
 
-.like-button-video-one:hover {
+.like-button-videos-small:hover {
     border: 5px solid plum;
 }
 
@@ -130,6 +130,16 @@
 }
 
 .added-to-favorites-message-main {
+
+    isplay: flex;
+    position: absolute;
+    color: plum;
+    font-size: 15px;
+    font-weight: 600;
+    width: 425px;
+    top: 182px;
+    left: 770px;
+    margin: 5px 0;
 
 }
 

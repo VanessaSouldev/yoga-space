@@ -69,12 +69,14 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: rgba(92, 185, 102, 1);
+    color:#FFF;
     font-family: Open Sans, sans-serif;
     font-size: 36px;
     font-style: normal;
     line-height: 26px; /* 44.444% */
-    opacity: 52%;
+    opacity: 60%;
+    border: 2px solid #90F2E1;
+    background: radial-gradient(rgba(239, 175, 128, 0.31) 0%, #90F2E1 100%);
     cursor: pointer;
 }
 
@@ -89,7 +91,7 @@
     align-items: center;
     justify-content: center;
     width: 527px;
-    height: 82px;
+    height: 83px;
     margin: 32px;
     right: 10%;
     top: 175px;
@@ -98,13 +100,13 @@
     text-align: center;
     font-size: 36px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 16px; /* 44.444% */
+    line-height: 26px; /* 44.444% */
     flex-shrink: 0;
     border: 2px solid #90F2E1;
-    border-radius: 16px;
+    opacity: 60%;
+    border-radius: 50px;
     cursor: pointer;
-    background: linear-gradient(180deg, rgba(239, 175, 128, 0.31) 0%, #90F2E1 100%);
+    background: radial-gradient(rgba(239, 175, 128, 0.31) 0%, #90F2E1 100%);
 }
 
 .account-sign-in-submit-button:hover {
@@ -120,7 +122,7 @@
     width: 527px;
     height: 102px;
     margin: 20px 10px;
-    left: 40%;
+    left: 39%;
     top: 87%;
     position: absolute;
     color: #FFF;
@@ -130,8 +132,8 @@
     font-weight: 600;
     line-height: 34px; /* 44.444% */
     flex-shrink: 0;
-    border: 2px solid #EFAF80;
-    border-radius: 18px;
+    border: 2px solid rgba(239, 175, 128, 0.31);
+    border-radius: 50px;
     background: rgba(239, 175, 128, 0.31);
 }
 

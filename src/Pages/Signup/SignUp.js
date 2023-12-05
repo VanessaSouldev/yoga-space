@@ -61,7 +61,7 @@ function SignUp() {
                                     </h5>
                                 </label>
                                 <input className={styles.input} type="email"
-                                       placeholder="Your e-mail address" {...register("email", {
+                                       placeholder="   Your e-mail address" {...register("email", {
                                            required: {
                                                value: true,
                                                message: "Please enter your email address",
@@ -78,7 +78,7 @@ function SignUp() {
                                 <input className={styles.input}
                                        type="text"
                                        id="input-username"
-                                       placeholder="Please choose a username"  {...register("username", {
+                                       placeholder="   Please choose a username"  {...register("username", {
                                            required: {
                                                value: true,
                                                message: "Please fill in a username to continue",
@@ -97,7 +97,7 @@ function SignUp() {
                                     </h5>
                                 </label>
                                 <input className={styles.input} type="password"
-                                       placeholder="Choose a password"
+                                       placeholder="   Choose a password"
                                        {...register("password", {
                                         required: {
                                         value: true,
