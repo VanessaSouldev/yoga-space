@@ -26,10 +26,11 @@
 .error-input-yogapose {
     position: absolute;
     margin-left: 42%;
+    font-size: 22px;
+    font-weight: 600;
+    color: plum;
+    align-items: center;
     top: 380px;
-    font-family: Open Sans, sans-serif;
-    font-size: 15px;
-    color: #d90f33;
 }
 
 .searchbar button {

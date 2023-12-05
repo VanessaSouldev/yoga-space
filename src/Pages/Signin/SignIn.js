@@ -73,7 +73,7 @@ function SignIn() {
                                 onChange={(e) => setUsername(e.target.value)}
                                 value={username}
                                 className={styles.username}
-                                placeholder="Enter your username"
+                                placeholder="    Enter your username"
                             />
                         </label>
                         <label htmlFor="signin-password">
@@ -87,6 +87,7 @@ function SignIn() {
                                 onChange={(e) => setPassword(e.target.value)}
                                 value={password}
                                 className={styles.password}
+                                placeholder="    Enter your password"
                             />
 
                         </label>

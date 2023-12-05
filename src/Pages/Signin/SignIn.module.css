@@ -63,14 +63,16 @@
 
 .username {
     height: 10%;
-    width: 30%;
+    width: 35%;
     left: 25%;
+    border-radius: 8px;
 }
 
 .password {
     height: 10%;
-    width: 30%;
+    width: 35%;
     left: 25%;
+    border-radius: 8px;
 }
 
 .error-message-sign-in {
