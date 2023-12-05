@@ -42,9 +42,6 @@ function Profile() {
 
 
 
-
-
-
     function handleClickToQuestionnaire() {
         history.push("/welcomepage");
     }
@@ -59,21 +56,21 @@ function Profile() {
                 Sign out
             </LogoutLink>
 
-            <heading>
+            <header>
 
                 <h4 className={styles["profile-page-heading"]}>
                     Profile Page
                 </h4>
                 <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username}, here you can find your favorite yoga video's and explore different yogaposes by entering it below:</p>
 
-            </heading>
+            </header>
 
             <YogaPoseSearchBar
                 callFunction={fetchYogaPose}
             />
-            {error && <span className="wrong-yogapose-error">
-    	            Oops! This yogapose is too difficult to explain
-                </span>}
+            {error && <p className={styles["wrong-yogapose-error"]}>
+    	            Oops! this yogapose got us in a [&](knot)
+                </p>}
 
 
 

@@ -39,6 +39,14 @@
 
 .easy-way-to-move {
     text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+    opacity: 0.75;
+    background: conic-gradient(from 180deg at 50% 50.00%, #F0EDFA 0deg, #E8E4F9 290.6250071525574deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: luminosity;
+    z-index: 1;
 }
 
 

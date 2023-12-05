@@ -33,7 +33,7 @@ function SignUp() {
             <>
 
                 <h4 className={styles["register-header"]}>At your own time in your own space</h4>
-                <footer className={styles.benefits}>
+                <h3 className={styles.benefits}>
                     9 Benefits of Yoga
                     <ol className={styles["benefits-of-yoga-list"]}>
                         <li>Yoga improves strength, balance and flexibility.</li>
@@ -46,7 +46,7 @@ function SignUp() {
                         <li>Yoga connects you with your body and your breathing.</li>
                         <li>Yoga promotes better self-care.</li>
                     </ol>
-                </footer>
+                </h3>
                 <section id={styles["sign-up-form inner-content-container"]}>
                     <div className={styles["input-container"]}>
 
