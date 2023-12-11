@@ -20,28 +20,23 @@
     left: 28%;
 }
 
-.error-message-yogapose-search {
-    position: absolute;
-    height: 50px;
-    width: 500px;
-    top: 35%;
-    left: 39%;
-    font-size: large;
-    margin: 25px 25px;
-
-}
-
+/*.iframe-container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    !*justify-content: center;*!*/
+/*    align-items: center;*/
+/*    !*left: 50%;*!*/
+/*    border: 3px dashed royalblue;*/
+/*}*/
 
 .yogapose-result {
-    display: flex;
-    flex-direction: column;
-    -ms-flex-align: center;
     position: relative;
     width: 325px;
     height: 200px;
     top: 370px;
     left: 127%;
     margin: 10px;
+
 
 }
 
@@ -52,9 +47,8 @@
     font-weight: 600;
     color: plum;
     align-items: center;
-    top: 380px;
+    top: 480px;
 }
-
 
 .profile-page-favorites-heading{
     position: absolute;
@@ -67,11 +61,20 @@
 
 }
 
+/*.iframe-container-favorites {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    border: 3px dashed red;*/
+
+/*}*/
 .favorites-iframe {
-    position: absolute;
-    left: 35px;
-    top: 320px;
-    margin: 30px;
+    width: 325px;
+    height: 200px;
+    /*top: 370px;*/
+    /*left: 127%;*/
+    margin: 10px 60px;
+
 }
 
 

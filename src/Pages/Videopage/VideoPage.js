@@ -74,31 +74,39 @@ function VideoPage() {
     function handleSubmit(video) {
         setFavoriteAddedMessage(true);
         let oldData = JSON.parse(localStorage.getItem("favorites" )|| "[]");
-        let newData = [...oldData];
+        let newData =  [...oldData];
         console.log(newData)
-        switch(video){
+
+        switch(video) {
             case videoResults[0].id.videoId:
                 setFavoriteAddedMessage(video);
-                newData.push(`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
-                localStorage.setItem('favorites', JSON.stringify(newData))
+               if (!newData.includes(`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)) {
+                   newData.push(`https://www.youtube.com/embed/${videoResults[0].id.videoId}/?controls=0/autoplay=1`)
+                   localStorage.setItem('favorites', JSON.stringify(newData))
+               }
                 break;
             case videoResults[1].id.videoId:
                 setFavoriteAddedMessage(video);
-                newData.push(`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
-                localStorage.setItem('favorites', JSON.stringify(newData))
+                if (!newData.includes(`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)) {
+                    newData.push(`https://www.youtube.com/embed/${videoResults[1].id.videoId}/?controls=0/autoplay=1`)
+                    localStorage.setItem('favorites', JSON.stringify(newData))
+                }
                 break;
             case videoResults[2].id.videoId:
                 setFavoriteAddedMessage(video);
-                newData.push(`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
-                localStorage.setItem('favorites', JSON.stringify(newData))
+                if (!newData.includes(`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)) {
+                    newData.push(`https://www.youtube.com/embed/${videoResults[2].id.videoId}/?controls=0/autoplay=1`)
+                    localStorage.setItem('favorites', JSON.stringify(newData))
+                }
                 break;
             case videoResultMain[3].id.videoId:
                 setFavoriteAddedMessage(videoResultMain[3].id.videoId);
-                newData.push(`https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`)
-                localStorage.setItem('favorites', JSON.stringify(newData))
+                if (!newData.includes(`https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`)) {
+                    newData.push(`https://www.youtube.com/embed/${videoResultMain[3].id.videoId}/?controls=0/autoplay=1`)
+                    localStorage.setItem('favorites', JSON.stringify(newData))
+                }
                 break;
             default:
-                console.log('default')
         }
     }
 
@@ -122,7 +130,7 @@ function VideoPage() {
 
             </div>
 
-            {videoResults.length && videoResults.map((video) => {
+            {videoResults.length > 0 && videoResults.map((video) => {
                 return (
                 <section className={styles["iframe-container-videos-small"]} key={video.id.videoId}>
                     <iframe
@@ -173,7 +181,7 @@ function VideoPage() {
                 to try again!
             </p>
 
-            {videoResults.length === 0 && error && <p>Whoops! An error occurred whilst loading your video's...</p>}
+            {error && <h2 className={styles["error-yoga-videos"]}>Whoops! An error occurred whilst loading your video's...</h2>}
             {isAuth ?
             <LogoutLink
                 clickhandler={logout}>
