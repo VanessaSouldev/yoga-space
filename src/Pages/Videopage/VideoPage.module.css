@@ -30,6 +30,17 @@
     -webkit-text-fill-color: transparent;
 }
 
+.error-yoga-videos {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    position: absolute;
+    margin-top: 20%;
+    left: 45%;
+    font-size: 15px;
+    color: #d90f33;
+}
+
 .favorites-text-profile-page {
     display: flex;
     flex-direction: row;

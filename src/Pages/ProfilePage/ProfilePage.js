@@ -12,14 +12,14 @@ function Profile() {
 
     const {user} = useContext(AuthContext);
     const [error, toggleError] = useState(false);
+    // const [errorFavorites, toggleErrorfavorites] = useState(false);
     const {logout} = useContext(AuthContext);
     const history = useHistory();
     const [yogaPoseVideoResults, setYogaPoseVideoResults] = useState([]);
     const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-    console.log(favorites);
 
 
-    async function fetchYogaPose(yogaPose) {
+async function fetchYogaPose(yogaPose) {
 
         console.log(yogaPose);
         console.log(yogaPoseVideoResults);
@@ -71,13 +71,15 @@ function Profile() {
             {yogaPoseVideoResults.length > 0 && yogaPoseVideoResults.map((video) => {
 
                 return (
-                    <section className={styles["iframe-yogapose-container"]} key={video.id.videoId}>
+                    <section  key={video.id.videoId}>
+                        <div className={styles["iframe-container"]}>
                         <iframe
                             className={styles["yogapose-result"]}
                             title={video.snippet.title}
                             src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
                             allowFullScreen>
                         </iframe>
+                        </div>
                     </section>
                 );
             })
@@ -87,17 +89,21 @@ function Profile() {
                 className={styles["profile-page-favorites-heading"]}>
                 {user.username}'s favorite yoga video's:
             </h6>
-
+            {/*{errorFavorites && favorites[''] && <p className={styles["favorites-error"]}>*/}
+            {/*    You have no favorites yet*/}
+            {/*</p>}*/}
             {favorites.length > 0 && favorites.map((favorite) => {
-
+                console.log(favorite);
                 return (
-                    <section className={styles["favorites-container"]} key={favorite}>
+                    <section className={styles["iframe-container-favorites"]} key={favorite}>
+
                         <iframe
                             className={styles["favorites-iframe"]}
-                            title={favorite[favorites]}
-                            src={`https://www.youtube.com/embed/${favorite[favorites]}/?controls=0/autoplay=1`}
+                            title={"favorite"}
+                            src={favorite}
                             allowFullScreen>
                         </iframe>
+
                     </section>
 
                 );
