@@ -71,15 +71,13 @@ async function fetchYogaPose(yogaPose) {
             {yogaPoseVideoResults.length > 0 && yogaPoseVideoResults.map((video) => {
 
                 return (
-                    <section  key={video.id.videoId}>
-                        <div className={styles["iframe-container"]}>
+                    <section  className={styles["iframe-container"]} key={video.id.videoId}>
                         <iframe
                             className={styles["yogapose-result"]}
                             title={video.snippet.title}
                             src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
                             allowFullScreen>
                         </iframe>
-                        </div>
                     </section>
                 );
             })
@@ -96,7 +94,6 @@ async function fetchYogaPose(yogaPose) {
                 console.log(favorite);
                 return (
                     <section className={styles["iframe-container-favorites"]} key={favorite}>
-
                         <iframe
                             className={styles["favorites-iframe"]}
                             title={"favorite"}
