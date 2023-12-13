@@ -8,16 +8,16 @@ import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
 import axios from "axios";
 
 
+
+
 function Profile() {
 
     const {user} = useContext(AuthContext);
     const [error, toggleError] = useState(false);
-    // const [errorFavorites, toggleErrorfavorites] = useState(false);
     const {logout} = useContext(AuthContext);
     const history = useHistory();
     const [yogaPoseVideoResults, setYogaPoseVideoResults] = useState([]);
     const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-
 
 async function fetchYogaPose(yogaPose) {
 
@@ -40,6 +40,7 @@ async function fetchYogaPose(yogaPose) {
     }
 
 
+
     function handleClickToQuestionnaire() {
         history.push("/welcomepage");
     }
@@ -48,76 +49,89 @@ async function fetchYogaPose(yogaPose) {
     return (
 
         <>
-            <LogoutLink
-                clickhandler={logout}>
-                Sign out
-            </LogoutLink>
+            <div className={styles["outer-container-profile"]}>
 
-            <header className={styles["profile-page-header"]}>
-                Profile Page
-            </header>
-            <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username}, here you
-                can find your favorite yoga video's and explore different yogaposes by entering it below:</p>
+                <LogoutLink
+                    clickhandler={logout}>
+                    Sign out
+                </LogoutLink>
 
-
-            <YogaPoseSearchBar
-                callFunction={fetchYogaPose}
-            />
-            {error && <p className={styles["wrong-yogapose-error"]}>
-                Oops! this yogapose got us in a [&](knot)
-            </p>}
+                <div className={styles["container-favorites"]}>
+                    <h6
+                        className={styles["profile-page-favorites-heading"]}>
+                        You can add video's to your favorites by liking any video from your daily video's page. {user.username}'s favorite yoga video's :
+                    </h6>
 
 
-            {yogaPoseVideoResults.length > 0 && yogaPoseVideoResults.map((video) => {
+                    {/*// FAVORITES LINKS*/}
 
-                return (
-                    <section  className={styles["iframe-container"]} key={video.id.videoId}>
-                        <iframe
-                            className={styles["yogapose-result"]}
-                            title={video.snippet.title}
-                            src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
-                            allowFullScreen>
-                        </iframe>
-                    </section>
-                );
-            })
-            }
+                    {favorites.length > 0 && favorites.map((favorite) => {
+                        console.log(favorite);
+                        return (
+                            <section key={favorite}>
+                                <iframe
+                                    className={styles["favorites-iframe"]}
+                                    title={"favorite"}
+                                    src={favorite}
+                                    allowFullScreen>
+                                </iframe>
+                            </section>
 
-            <h6
-                className={styles["profile-page-favorites-heading"]}>
-                {user.username}'s favorite yoga video's:
-            </h6>
-            {/*{errorFavorites && favorites[''] && <p className={styles["favorites-error"]}>*/}
-            {/*    You have no favorites yet*/}
-            {/*</p>}*/}
-            {favorites.length > 0 && favorites.map((favorite) => {
-                console.log(favorite);
-                return (
-                    <section className={styles["iframe-container-favorites"]} key={favorite}>
-                        <iframe
-                            className={styles["favorites-iframe"]}
-                            title={"favorite"}
-                            src={favorite}
-                            allowFullScreen>
-                        </iframe>
-
-                    </section>
-
-                );
-            })
-            }
-
-            <Button
-                type={"button"}
-                className={"profile-page-to-questionnaire-button"}
-                clickHandler={handleClickToQuestionnaire}
-            >
-                For your daily yoga routine, press here!
-            </Button>
+                        );
+                    })
+                    }
+                </div>
 
 
+                <div className={styles["container-center"]}>
+                    <header className={styles["profile-page-header"]}>
+                        Profile Page
+                    </header>
+                    <p className={styles["profile-page-welcome-paragraph"]}>Welcome to your profile {user.username},
+                        here you can find your favorite yoga video's and explore different yogaposes by entering it
+                        below:</p>
+
+
+                    <YogaPoseSearchBar
+                        callFunction={fetchYogaPose}
+                    />
+                    {error && (
+                        <p className={styles["wrong-yogapose-error"]}>
+                            Oops! this yogapose got us in a [&](knot)
+                        </p>)}
+
+
+                    {/*// SEARCH BAR RESULTS*/}
+
+
+                    {yogaPoseVideoResults.length > 0 && yogaPoseVideoResults.map((video) => {
+
+                        return (
+
+                            <section key={video.id.videoId}>
+                                <iframe
+                                    className={styles["yogapose-result"]}
+                                    title={video.snippet.title}
+                                    src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
+                                    allowFullScreen>
+                                </iframe>
+                            </section>
+                        );
+                    })
+                    }
+                </div>
+
+                {/*// Links boven 'favorite yoga video's'*/}
+
+                <Button
+                    type={"button"}
+                    className={"profile-page-to-questionnaire-button"}
+                    clickHandler={handleClickToQuestionnaire}
+                >
+                    For your daily yoga routine, press here!
+                </Button>
+            </div>
         </>
-
     );
 }
 

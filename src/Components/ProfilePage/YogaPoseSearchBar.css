@@ -1,6 +1,6 @@
 .searchbar header {
     position: absolute;
-    left: 43%;
+    left: 40%;
     font-size: 50px;
     margin: 28px 25px;
     color: plum;
@@ -17,27 +17,24 @@
     width: 500px;
     border: plum;
     top: 25%;
-    left: 39%;
+    left: 37%;
     font-size: large;
     margin: 25px 25px;
 
 }
 
 .error-input-yogapose {
-    position: absolute;
-    margin-left: 39%;
+    width: fit-content;
     font-size: 22px;
     font-weight: 600;
     color: #2f61d0;
-    align-items: center;
-    top: 380px;
 }
 
 .searchbar button {
     display: flex;
     position: absolute;
     top: 335px;
-    right: 830px;
+    right: 880px;
     padding: 21px 32px;
     align-items: center;
     border: none;
