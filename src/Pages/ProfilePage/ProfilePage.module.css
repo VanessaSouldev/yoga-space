@@ -20,14 +20,14 @@
     left: 28%;
 }
 
-/*.iframe-container {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    !*justify-content: center;*!*/
-/*    align-items: center;*/
-/*    !*left: 50%;*!*/
-/*    border: 3px dashed royalblue;*/
-/*}*/
+.iframe-container {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    /*left: 50%;*/
+    border: 3px dashed royalblue;
+}
 
 .yogapose-result {
     position: relative;
@@ -36,8 +36,6 @@
     top: 370px;
     left: 127%;
     margin: 10px;
-
-
 }
 
 .wrong-yogapose-error   {
@@ -61,13 +59,13 @@
 
 }
 
-/*.iframe-container-favorites {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    border: 3px dashed red;*/
+.iframe-container-favorites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px dashed red;
 
-/*}*/
+}
 .favorites-iframe {
     width: 325px;
     height: 200px;
