@@ -1,45 +1,74 @@
+.outer-container-profile {
+    display: flex;
+    width: 100vw;
+    height: 1100px;
+
+}
+
+.container-favorites {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    justify-content: left;
+    align-self: flex-start;
+    margin-top: 180px;
+}
+
+
+.profile-page-favorites-heading{
+    font-size: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+
+.favorites-iframe {
+    width: 325px;
+    height: 200px;
+    margin: 10px 150px;
+
+}
+
+
+.container-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:1000px;
+    height: 1100px;
+}
+
 .profile-page-header {
-    position: absolute;
-    left: 43%;
-    font-size: 80px;
-    /*margin: 0 15px;*/
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 60px;
     color:plum ;
     font-weight: 250;
 
 }
 
 .profile-page-welcome-paragraph {
-    position: absolute;
     width: 1050px;
     text-align: center;
+    justify-content: center;
     font-size: 35px;
     font-weight: 600;
     word-wrap: inherit;
     line-height: 50px;
-    top: 12%;
-    left: 28%;
-}
-
-.iframe-container {
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/
-    align-items: center;
-    /*left: 50%;*/
-    border: 3px dashed royalblue;
+    margin-bottom: 175px;
 }
 
 .yogapose-result {
-    position: relative;
     width: 325px;
     height: 200px;
-    top: 370px;
-    left: 127%;
     margin: 10px;
 }
 
 .wrong-yogapose-error   {
-    position: absolute;
+    /*position: absolute;*/
     margin-left: 42%;
     font-size: 22px;
     font-weight: 600;
@@ -47,32 +76,3 @@
     align-items: center;
     top: 480px;
 }
-
-.profile-page-favorites-heading{
-    position: absolute;
-    /*left: 1%;*/
-    top: 22%;
-    margin: 10px 25px;
-    font-size: 35px;
-    color: plum;
-    font-weight: normal;
-
-}
-
-.iframe-container-favorites {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 3px dashed red;
-
-}
-.favorites-iframe {
-    width: 325px;
-    height: 200px;
-    /*top: 370px;*/
-    /*left: 127%;*/
-    margin: 10px 60px;
-
-}
-
-

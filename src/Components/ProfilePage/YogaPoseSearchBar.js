@@ -36,7 +36,7 @@ function YogaPoseSearchBar({callFunction}) {
                 >
                 SEARCH
             </Button>
-            {searchQuery === '' && error === true && callFunction && <p className="error-input-yogapose">Please enter a yogapose to view video's for a specific pose</p>}
+            {searchQuery === '' && error === true && callFunction && <p className="error-input-yogapose">Please enter a yogapose above to view video's for a specific pose</p>}
         </form>
 
     );
