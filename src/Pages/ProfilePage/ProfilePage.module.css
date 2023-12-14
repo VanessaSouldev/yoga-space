@@ -8,7 +8,7 @@
 .container-favorites {
     display: flex;
     flex-direction: column;
-    width: 650px;
+    width: 680px;
     justify-content: left;
     align-self: flex-start;
     margin-top: 180px;
@@ -18,7 +18,8 @@
 .profile-page-favorites-heading{
     font-size: 25px;
     text-align: center;
-    color: #FFFFFF;
+    margin-left: 20px;
+    color: plum;
     font-weight: normal;
 }
 
@@ -72,7 +73,7 @@
     margin-left: 42%;
     font-size: 22px;
     font-weight: 600;
-    color: plum;
+    color: #b926b9;
     align-items: center;
     top: 480px;
 }

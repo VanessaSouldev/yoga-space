@@ -54,7 +54,7 @@
 .added-to-favorites-message-small {
     display: flex;
     position: relative;
-    color: plum;
+    color: #b926b9;
     font-size: 15px;
     font-weight: 600;
     width: 425px;
@@ -144,7 +144,7 @@
 
     isplay: flex;
     position: absolute;
-    color: plum;
+    color: #b926b9;
     font-size: 15px;
     font-weight: 600;
     width: 425px;
