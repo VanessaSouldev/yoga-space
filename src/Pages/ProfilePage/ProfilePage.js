@@ -8,8 +8,6 @@ import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
 import axios from "axios";
 
 
-
-
 function Profile() {
 
     const {user} = useContext(AuthContext);
@@ -19,11 +17,10 @@ function Profile() {
     const [yogaPoseVideoResults, setYogaPoseVideoResults] = useState([]);
     const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
 
-async function fetchYogaPose(yogaPose) {
+    async function fetchYogaPose(yogaPose) {
 
         console.log(yogaPose);
         console.log(yogaPoseVideoResults);
-        toggleError(false);
 
 
         try {
@@ -38,7 +35,6 @@ async function fetchYogaPose(yogaPose) {
             toggleError(true);
         }
     }
-
 
 
     function handleClickToQuestionnaire() {
@@ -57,13 +53,11 @@ async function fetchYogaPose(yogaPose) {
                 </LogoutLink>
 
                 <div className={styles["container-favorites"]}>
-                    <h6
+                    {favorites.length === 0 && (<h6
                         className={styles["profile-page-favorites-heading"]}>
-                        You can add video's to your favorites by liking any video from your daily video's page. {user.username}'s favorite yoga video's :
-                    </h6>
-
-
-                    {/*// FAVORITES LINKS*/}
+                        Add video's to your favorites by liking any video from your daily video's
+                        page.</h6>)} {favorites.length > 0 && (<h6 className={styles["profile-page-favorites-heading"]}> {user.username}'s favorite yoga video's :
+                    </h6>)}
 
                     {favorites.length > 0 && favorites.map((favorite) => {
                         console.log(favorite);
@@ -76,12 +70,10 @@ async function fetchYogaPose(yogaPose) {
                                     allowFullScreen>
                                 </iframe>
                             </section>
-
                         );
                     })
                     }
                 </div>
-
 
                 <div className={styles["container-center"]}>
                     <header className={styles["profile-page-header"]}>

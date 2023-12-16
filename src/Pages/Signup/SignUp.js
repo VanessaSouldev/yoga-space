@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "./SignUp.module.css";
 import axios from "axios";
 import waters from "../../assets/images/lilac-waters.jpg";
@@ -9,6 +9,8 @@ import LinkParagraph from "../../Components/Navigation/LinkParagraph/LinkParagra
 
 function SignUp() {
 
+    const [loading, toggleLoading] = useState(false);
+    const [error, toggleError] = useState(false);
     const { handleSubmit, formState: { errors }, register } = useForm();
 
     const history = useHistory();
@@ -22,8 +24,10 @@ function SignUp() {
                 })
 
                 history.push('/signin');
+                toggleLoading(true)
 
             } catch (e) {
+                toggleError(true)
 
             }
         }
@@ -118,6 +122,8 @@ function SignUp() {
                                 <h6>Register to create your SPACE</h6>
                             </Button>
                         </form>
+                        {loading && <p>Loading...</p>}
+                        {error === true && error && <h2 className={styles["error-message-sign-up"]}>Something went wrong signing you up, please try again</h2>}
                     </div>
                 </section>
                 <footer>
