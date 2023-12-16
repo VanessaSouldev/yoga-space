@@ -11,8 +11,6 @@ function Homepage() {
     const history = useHistory();
 
 
-
-
     function handleClickRegister() {
         history.push("/signup");
 
@@ -26,9 +24,6 @@ function Homepage() {
 
     return (
         <>
-
-
-
             <section>
                 <div className={styles["rectangles-headers-container"]}>
                     <div className={styles["yoga-space-container"]}>

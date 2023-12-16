@@ -43,7 +43,6 @@ function AuthContextProvider({children}) {
                 }, status: 'done'
             });
             console.log(result.data);
-            // DEZE HEBBEN WE UITGEZET ZODAT JE NIET AUTOMATISCH WORDT DOORGELINKT NAAR PROFILE
             history.push('/profile');
         } catch (error) {
             console.error();

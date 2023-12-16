@@ -40,6 +40,9 @@
     font-size: 15px;
     color: #d90f33;
 }
+.error-back-to-welcome-page-link {
+    text-decoration: underline;
+}
 
 .favorites-text-profile-page {
     display: flex;

@@ -32,7 +32,6 @@ function YogaPoseSearchBar({callFunction}) {
             />
             <Button
                 type={"submit"}
-                // disabled={searchQuery === ''}
                 >
                 SEARCH
             </Button>

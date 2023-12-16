@@ -92,6 +92,7 @@ function SignIn() {
 
                         </label>
                         <Button
+                            type={'submit'}
                             clickHandler={handleSubmit}
                             className={"account-sign-in-submit-button"}
                             >

@@ -3,7 +3,7 @@ import waters from "../../assets/images/lilac-waters.jpg";
 import React, {useState, useEffect, useContext} from "react";
 import axios from "axios";
 import {AuthContext} from "../../Context/AuthContext";
-import {Redirect} from "react-router-dom";
+import {NavLink, Redirect, useHistory} from "react-router-dom";
 import LogoutLink from "../../Components/Navigation/LogoutLink/LogoutLink";
 import LinkParagraph from "../../Components/Navigation/LinkParagraph/LinkParagraph";
 
@@ -13,6 +13,7 @@ function VideoPage() {
     const {user} = useContext(AuthContext);
     const {isAuth} = useContext(AuthContext);
     const {logout} = useContext(AuthContext);
+    const history = useHistory();
     const [videoResults, setVideoResults] = useState([]);
     const [videoResultMain, setVideoResultMain] = useState();
     const [error, toggleError] = useState(false);
@@ -53,6 +54,8 @@ function VideoPage() {
                 console.error(e);
                 if (axios.isCancel(e)) {
                     console.error('Request is canceled...');
+                    history.push('/welcomepage');
+
                 } else {
                     console.error(e);
                     toggleError(true);
@@ -181,7 +184,7 @@ function VideoPage() {
                 to try again!
             </p>
 
-            {error && <h2 className={styles["error-yoga-videos"]}>Whoops! An error occurred whilst loading your video's...</h2>}
+            {error && <h2 className={styles["error-yoga-videos"]}>Whoops! An error occurred whilst loading your video's, please <NavLink to="/welcomepage" className={styles["error-back-to-welcome-page-link"]}>try again...</NavLink></h2>}
             {isAuth ?
             <LogoutLink
                 clickhandler={logout}>
