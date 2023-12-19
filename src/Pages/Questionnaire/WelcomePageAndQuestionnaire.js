@@ -80,6 +80,8 @@ function WelcomePageAndQuestionnaire() {
                 Sign out
             </LogoutLink>
 
+            <div className={styles["outer-container-questionnaire"]}>
+                <div className={styles["inner-container-center-questionnaire "]}>
             <div className={styles["rectangle-container"]}>
                 <img className={styles.rectangle} src={waters} alt="lilac waters"/>
                 <h4 className={styles.header}>
@@ -200,6 +202,8 @@ function WelcomePageAndQuestionnaire() {
                     here
                 </LinkParagraph>
             </p>
+            </div>
+                </div>
         </>
     );
 }
