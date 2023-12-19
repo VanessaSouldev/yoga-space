@@ -1,3 +1,10 @@
+.button-container {
+    display: flex;
+    width: 100vw;
+    height: 1100px;
+}
+
+
 .to-register-button-homepage {
     display: flex;
     position: absolute;
@@ -143,17 +150,15 @@
 }
 
 .questionnaire-submit-button {
-    position: absolute;
-    margin: 1px;
-    left: 50%;
-    top: 90%;
     width: 600px;
+    height: 100px;
+    margin-top: 200px;
+    margin-left: 1200px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background: rgba(239, 175, 128, 0.31);
     font-size: 36px;
     color: mediumpurple;
-    padding: 12px 24px;
     border-radius: 86px;
     border-color: transparent;
 }

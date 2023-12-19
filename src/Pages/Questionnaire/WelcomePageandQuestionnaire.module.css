@@ -1,3 +1,11 @@
+.outer-container-questionnaire {
+    display: flex;
+    width: 100vw;
+    height: 1100px;
+}
+
+
+
 .rectangle {
     display: flex;
     width: 950px;
