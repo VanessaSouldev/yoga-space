@@ -42,7 +42,7 @@ function AuthContextProvider({children}) {
                     focus: result.data.time
                 }, status: 'done'
             });
-            console.log(result.data);
+
             history.push('/profile');
         } catch (error) {
             console.error();
@@ -57,21 +57,17 @@ function AuthContextProvider({children}) {
 
     function signIn(jwt) {
 
-        console.log(jwt);
         getUserData(jwt.accessToken);
-        console.log('GUser is logged in');
         localStorage.setItem('token', jwt.accessToken);
 
     }
 
     function signOut() {
         toggleAuth({...auth, isAuth: false, user: null});
-        console.log('User is logged out');
         history.push('/signin');
         localStorage.removeItem('token');
     }
 
-    console.log();
 
     const data = {
         isAuth: auth.isAuth,

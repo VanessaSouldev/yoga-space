@@ -2,16 +2,11 @@ import './Button.css';
 
 
 function Button({
-                    clickHandler,
-                    type,
-                    children,
-                    className,
-                    disabled
+                    clickHandler, type, children, className, disabled
                 }) {
 
 
-    return (
-        <div>
+    return (<div>
 
             <button
                 type={type}

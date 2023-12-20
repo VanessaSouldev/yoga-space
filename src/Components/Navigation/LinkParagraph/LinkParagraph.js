@@ -4,8 +4,7 @@ import React from "react";
 
 
 function LinkParagraph({
-                           children,
-                           path,
+                           children, path,
                        }) {
 
 

@@ -11,7 +11,6 @@ function YogaPoseSearchBar({callFunction}) {
     function onFormSubmit(e) {
         e.preventDefault();
 
-        console.log('submitted');
 
         callFunction(searchQuery);
         if (!searchQuery) {
@@ -20,9 +19,8 @@ function YogaPoseSearchBar({callFunction}) {
     }
 
 
-    return  (
-        <form className="searchbar" onSubmit={onFormSubmit}>
-            <header> Yogapose search </header>
+    return (<form className="searchbar" onSubmit={onFormSubmit}>
+            <header> Yogapose search</header>
             <input
                 type="text"
                 value={searchQuery}
@@ -32,12 +30,15 @@ function YogaPoseSearchBar({callFunction}) {
             />
             <Button
                 type={"submit"}
-                >
+            >
                 SEARCH
             </Button>
-            {searchQuery === '' && error === true && callFunction && <p className="error-input-yogapose">Please enter a yogapose above to view video's for a specific pose</p>}
+            {searchQuery === '' && error === true && callFunction &&
+                <p className="error-input-yogapose">Please enter a yogapose above to view video's for a specific
+                    pose</p>}
         </form>
 
     );
 }
+
 export default YogaPoseSearchBar;

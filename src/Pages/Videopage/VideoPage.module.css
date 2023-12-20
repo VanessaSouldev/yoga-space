@@ -40,6 +40,7 @@
     font-size: 15px;
     color: #d90f33;
 }
+
 .error-back-to-welcome-page-link {
     text-decoration: underline;
 }
@@ -51,7 +52,7 @@
     font-weight: bold;
     position: absolute;
     top: 145px;
-    left:-50%;
+    left: -50%;
 }
 
 .added-to-favorites-message-small {
@@ -64,7 +65,6 @@
     top: 82px;
     left: 170px;
     margin: 5px 0;
-
 }
 
 .iframe-container-videos-small {
@@ -73,7 +73,6 @@
 }
 
 .videos-small {
-
     display: flex;
     flex-direction: column;
     -ms-flex-align: start;
@@ -82,8 +81,6 @@
     height: 250px;
     top: 200px;
     left: 170px;
-    /*margin: -10px 0;*/
-
 }
 
 .like-button-videos-small {
@@ -107,7 +104,6 @@
 .like-button-videos-small:hover {
     border: 5px solid plum;
 }
-
 
 .video-main {
     width: 1338px;
@@ -144,8 +140,7 @@
 }
 
 .added-to-favorites-message-main {
-
-    isplay: flex;
+    display: flex;
     position: absolute;
     color: #b926b9;
     font-size: 15px;
@@ -154,7 +149,6 @@
     top: 182px;
     left: 770px;
     margin: 5px 0;
-
 }
 
 .welcome-page-link-paragraph {

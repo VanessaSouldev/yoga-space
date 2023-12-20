@@ -5,8 +5,7 @@ import './Navigate.css';
 function Navigate() {
 
 
-    return (
-        <nav>
+    return (<nav>
             <div className="nav-container">
                 <h4 className="nav-header">Space navigation</h4>
                 <ul>
@@ -17,8 +16,7 @@ function Navigate() {
                 </ul>
 
             </div>
-        </nav>
-    );
+        </nav>);
 }
 
 export default Navigate;

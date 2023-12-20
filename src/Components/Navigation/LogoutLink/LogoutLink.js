@@ -3,13 +3,11 @@ import {NavLink} from "react-router-dom";
 
 
 function LogoutLink({
-                        clickhandler,
-                        children,
+                        clickhandler, children,
                     }) {
 
 
-    return (
-        <div className="logout-link">
+    return (<div className="logout-link">
             <NavLink
                 onClick={clickhandler}
                 to="/signin"
