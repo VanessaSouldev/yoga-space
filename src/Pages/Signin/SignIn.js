@@ -18,7 +18,8 @@ function SignIn() {
 
 
     async function handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault(toggleLoading(true));
+
         try {
             const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`, {
                 username: username,
@@ -27,11 +28,13 @@ function SignIn() {
 
             console.log(result.data.accessToken);
             login(result.data);
-            toggleLoading(true)
+
+
 
 
         } catch (e) {
             toggleError(true)
+            toggleLoading(false);
 
         }
 

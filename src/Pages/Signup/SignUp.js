@@ -16,6 +16,11 @@ function SignUp() {
     const history = useHistory();
 
         async function handleFormSubmit(data) {
+
+            toggleLoading(true)
+
+
+
             try {
                 await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signup`, {
                     username: data.username,
@@ -24,10 +29,11 @@ function SignUp() {
                 })
 
                 history.push('/signin');
-                toggleLoading(true)
+
 
             } catch (e) {
                 toggleError(true)
+                toggleLoading(false)
 
             }
         }

@@ -31,7 +31,6 @@
 
 }
 
-
 .container-center {
     display: flex;
     flex-direction: column;
@@ -48,6 +47,7 @@
     font-size: 60px;
     color:plum ;
     font-weight: 250;
+    margin-bottom: 8px;
 
 }
 
@@ -59,7 +59,7 @@
     font-weight: 600;
     word-wrap: inherit;
     line-height: 50px;
-    margin-bottom: 175px;
+    margin-bottom: 130px;
 }
 
 .yogapose-result {
