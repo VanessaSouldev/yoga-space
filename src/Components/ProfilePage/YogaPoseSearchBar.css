@@ -6,7 +6,7 @@
     color: plum;
     font-weight: lighter;
     text-align: center;
-    top: 19%;
+    top: 16%;
 
 }
 
@@ -16,7 +16,7 @@
     height: 50px;
     width: 500px;
     border: plum;
-    top: 25%;
+    top: 22%;
     left: 37%;
     font-size: large;
     margin: 25px 25px;
@@ -33,7 +33,7 @@
 .searchbar button {
     display: flex;
     position: absolute;
-    top: 335px;
+    top: 25%;
     right: 880px;
     padding: 21px 32px;
     align-items: center;

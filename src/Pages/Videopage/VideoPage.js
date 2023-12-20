@@ -17,8 +17,9 @@ function VideoPage() {
     const [videoResults, setVideoResults] = useState([]);
     const [videoResultMain, setVideoResultMain] = useState();
     const [error, toggleError] = useState(false);
+    const[loading, toggleLoading] = useState(false);
     const [favoriteAddedMessage, setFavoriteAddedMessage] = useState(false);
-    const [favorites, setFavorites] = useState([]);
+    const [favorites] = useState([]);
     const controller = new AbortController();
     let q = "";
 
@@ -37,6 +38,7 @@ function VideoPage() {
 
 
             toggleError(false);
+            toggleLoading(true);
 
 
             try {
@@ -61,7 +63,7 @@ function VideoPage() {
                     toggleError(true);
                 }
             } finally {
-                // toggleLoading(false);
+                toggleLoading(false);
 
 
             }
@@ -183,7 +185,7 @@ function VideoPage() {
             </LinkParagraph>
                 to try again!
             </p>
-
+            {loading && <p>Loading...</p>}
             {error && <h2 className={styles["error-yoga-videos"]}>Whoops! An error occurred whilst loading your video's, please <NavLink to="/welcomepage" className={styles["error-back-to-welcome-page-link"]}>try again...</NavLink></h2>}
             {isAuth ?
             <LogoutLink
