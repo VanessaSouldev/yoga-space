@@ -6,10 +6,8 @@
     flex-direction: row;
     font-family: Inter, sans-serif;
     position: relative;
-    /*bottom: 52px;*/
     font-size: 30px;
     color: sandybrown;
     font-weight: 600;
-    /*margin-left: 20px;*/
     margin: 0 10% 0 5%;
 }

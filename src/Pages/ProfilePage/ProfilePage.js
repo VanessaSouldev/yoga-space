@@ -19,15 +19,10 @@ function Profile() {
 
     async function fetchYogaPose(yogaPose) {
 
-        console.log(yogaPose);
-        console.log(yogaPoseVideoResults);
-
 
         try {
             const result = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=3&q=yogapose, ${yogaPose}&key=${process.env.REACT_APP_API_KEY}`);
-            console.log(result);
             setYogaPoseVideoResults(result.data.items);
-            console.log(result.data.items);
 
 
         } catch (e) {
@@ -56,23 +51,20 @@ function Profile() {
                     {favorites.length === 0 && (<h6
                         className={styles["profile-page-favorites-heading"]}>
                         Add video's to your favorites by liking any video from your daily video's
-                        page.</h6>)} {favorites.length > 0 && (<h6 className={styles["profile-page-favorites-heading"]}> {user.username}'s favorite yoga video's :
+                        page.</h6>)} {favorites.length > 0 && (
+                    <h6 className={styles["profile-page-favorites-heading"]}> {user.username}'s favorite yoga video's :
                     </h6>)}
 
                     {favorites.length > 0 && favorites.map((favorite) => {
-                        console.log(favorite);
-                        return (
-                            <section key={favorite}>
-                                <iframe
-                                    className={styles["favorites-iframe"]}
-                                    title={"favorite"}
-                                    src={favorite}
-                                    allowFullScreen>
-                                </iframe>
-                            </section>
-                        );
-                    })
-                    }
+                        return (<section key={favorite}>
+                            <iframe
+                                className={styles["favorites-iframe"]}
+                                title={"favorite"}
+                                src={favorite}
+                                allowFullScreen>
+                            </iframe>
+                        </section>);
+                    })}
                 </div>
 
                 <div className={styles["container-center"]}>
@@ -87,13 +79,9 @@ function Profile() {
                     <YogaPoseSearchBar
                         callFunction={fetchYogaPose}
                     />
-                    {error && (
-                        <p className={styles["wrong-yogapose-error"]}>
-                            Oops! this yogapose got us in a [&](knot)
-                        </p>)}
-
-
-                    {/*// SEARCH BAR RESULTS*/}
+                    {error && (<p className={styles["wrong-yogapose-error"]}>
+                        Oops! this yogapose got us in a [&](knot)
+                    </p>)}
 
 
                     {yogaPoseVideoResults.length > 0 && yogaPoseVideoResults.map((video) => {
@@ -107,24 +95,18 @@ function Profile() {
                                     src={`https://www.youtube.com/embed/${video.id.videoId}/?controls=0/autoplay=1`}
                                     allowFullScreen>
                                 </iframe>
-                            </section>
-                        );
-                    })
-                    }
+                            </section>);
+                    })}
                 </div>
-
-                {/*// Links boven 'favorite yoga video's'*/}
 
                 <Button
                     type={"button"}
                     className={"profile-page-to-questionnaire-button"}
-                    clickHandler={handleClickToQuestionnaire}
-                >
+                    clickHandler={handleClickToQuestionnaire}>
                     For your daily yoga routine, press here!
                 </Button>
             </div>
-        </>
-    );
+        </>);
 }
 
 export default Profile;

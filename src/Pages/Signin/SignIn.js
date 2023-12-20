@@ -16,24 +16,18 @@ function SignIn() {
     const [error, toggleError] = useState(false);
 
 
-
     async function handleSubmit(e) {
         e.preventDefault(toggleLoading(true));
 
         try {
             const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`, {
-                username: username,
-                password: password,
-            })
-
-            console.log(result.data.accessToken);
+                username: username, password: password,
+            });
             login(result.data);
 
 
-
-
         } catch (e) {
-            toggleError(true)
+            toggleError(true);
             toggleLoading(false);
 
         }
@@ -98,7 +92,7 @@ function SignIn() {
                             type={'submit'}
                             clickHandler={handleSubmit}
                             className={"account-sign-in-submit-button"}
-                            >
+                        >
                             <h6>
                                 Click here to enter your yoga SPACE
                             </h6>
@@ -107,7 +101,9 @@ function SignIn() {
                 </form>
 
                 {loading && <p>Loading...</p>}
-                {error === true && error && <h2 className={styles["error-message-sign-in"]}>Username or Password incorrect, please try again</h2>}
+                {error === true && error &&
+                    <h2 className={styles["error-message-sign-in"]}>Username or Password incorrect, please try
+                        again</h2>}
 
                 <p className={styles["register-link-paragraph"]}>
                     Don't have an account?
@@ -118,8 +114,7 @@ function SignIn() {
                     first
                 </p>
             </section>
-        </>
-    );
+        </>);
 }
 
 export default SignIn;

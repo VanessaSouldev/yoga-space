@@ -24,7 +24,6 @@
     -webkit-text-fill-color: #FFFFFF;
 }
 
-
 .easy-way-to-move-container {
     display: flex;
     width: 582px;
@@ -36,10 +35,9 @@
     right: 90px;
 }
 
-
 .easy-way-to-move {
     -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
-    color: #FFFFFF ;
+    color: #FFFFFF;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     opacity: 60%;
     background: conic-gradient(from 180deg at 50% 50.00%, #F0EDFA 0deg, #E8E4F9 290.6250071525574deg);
@@ -49,7 +47,6 @@
     z-index: 1;
 }
 
-
 .rectangle-small-container {
     display: flex;
     justify-content: flex-end;
@@ -57,7 +54,6 @@
     top: 550px;
     right: 55px;
 }
-
 
 .rectangle-small {
     width: 950px;

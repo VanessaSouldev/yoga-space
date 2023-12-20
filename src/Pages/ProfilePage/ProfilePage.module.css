@@ -2,7 +2,6 @@
     display: flex;
     width: 100vw;
     height: 1100px;
-
 }
 
 .container-favorites {
@@ -14,8 +13,7 @@
     margin-top: 180px;
 }
 
-
-.profile-page-favorites-heading{
+.profile-page-favorites-heading {
     font-size: 25px;
     text-align: center;
     margin-right: 50px;
@@ -23,12 +21,10 @@
     font-weight: normal;
 }
 
-
 .favorites-iframe {
     width: 325px;
     height: 200px;
     margin: 10px 150px;
-
 }
 
 .container-center {
@@ -36,7 +32,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width:1000px;
+    width: 1000px;
     height: 1100px;
 }
 
@@ -45,10 +41,9 @@
     text-align: center;
     align-items: center;
     font-size: 60px;
-    color:plum ;
+    color: plum;
     font-weight: 250;
     margin-bottom: 8px;
-
 }
 
 .profile-page-welcome-paragraph {
@@ -68,7 +63,7 @@
     margin: 10px;
 }
 
-.wrong-yogapose-error   {
+.wrong-yogapose-error {
     /*position: absolute;*/
     margin-left: 42%;
     font-size: 22px;

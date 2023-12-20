@@ -25,7 +25,6 @@ h1 {
     z-index: 1;
 }
 
-
 h3 {
     font-family: 'Just Me Again Down Here', cursive;
     font-weight: 400;
@@ -48,11 +47,8 @@ h2 {
     color: #FFFFFF;
 }
 
-
 h5 {
     font-size: 65px;
-    /*padding: 12px 0;*/
-
 }
 
 p {
@@ -60,16 +56,12 @@ p {
     color: #FFFFFF;
 }
 
-
 .background {
     width: 1293px;
     height: 885px;
     display: flex;
-    background: linear-gradient(70deg, rgba(239, 175, 128, 0.51), rgba(144, 242, 225, 1));
-    background-repeat: no-repeat;
+    background: fixed, no-repeat, linear-gradient(70deg, rgba(239, 175, 128, 0.51), rgba(144, 242, 225, 1));
     margin: 0;
-    background-attachment: fixed;
-
 }
 
 .inner-content-container {

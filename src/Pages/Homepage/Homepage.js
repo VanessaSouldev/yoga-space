@@ -22,8 +22,7 @@ function Homepage() {
     }
 
 
-    return (
-        <>
+    return (<>
             <section>
                 <div className={styles["rectangles-headers-container"]}>
                     <div className={styles["yoga-space-container"]}>
@@ -52,19 +51,19 @@ function Homepage() {
             <section>
                 <div className={styles["inner-content-container sign-up-or-in"]}>
 
-                        <Button
+                    <Button
                         type={"button"}
                         clickHandler={handleClickRegister}
                         className={"to-register-button-homepage"}>
-                            Register
-                        </Button>
+                        Register
+                    </Button>
 
-                        <Button
+                    <Button
                         type={"button"}
                         clickHandler={handleClickSignIn}
                         className={"to-sign-in-button-homepage"}>
-                            Sign in
-                        </Button>
+                        Sign in
+                    </Button>
                 </div>
             </section>
             <p className={styles["under-register-text"]}>For daily yoga video's</p>

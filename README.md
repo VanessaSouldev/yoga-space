@@ -1,4 +1,4 @@
-# Yoga Space applicatie eindopdrachtbeschrijving 
+# Yoga Space applicatie eindopdracht frontend beschrijving 
 
 ## Inleiding
 
@@ -72,25 +72,34 @@ Voor de type.fit quotes API is geen API key nodig voor YouTube is de API Key: AI
     browser te bekijken.
 2.  De applicatie opent nu in je browser op de homepage,
     waar je kunt inloggen of registreren op de Yoga Space applicatie.
+
+
 3.  Je zult eerst een eigen account aan moeten maken door op de "Register" knop te drukken, hierna kom je vanzelf op de login-pagina
     terecht, waar je met je gekozen gebruikersnaam en wachtwoord kunt inloggen.
-
      ![Registration.jpg](src%2Fassets%2Fimages%2FRegistration.jpg)
-4. Als je bent ingelogd word je door het systeem naar de profielpagina doorgezet, waar je specifieke yogapose video's kunt opzoeken via de zoekbalk of via de onderste button naar je gepersonaliseerde dagelijkse yogavideo's verder kan gaan. 
+4. Als je bent ingelogd word je door het systeem naar de profielpagina doorgezet, waar je specifieke yogapose video's kunt opzoeken via de zoekbalk of via de onderste button naar je gepersonaliseerde dagelijkse yogavideo's verder kan gaan. Voor degenen die onbekend zijn met yoga, dit zijn een paar leuke om op te zoeken: 
 
+* BREATH OF FIRE
+* HAPPY BABY
+* SCORPION
+* NOSTRIL BREATHING
+* DOWNWARD DOG
+* COBBLER'S POSE
+* LION'S BREATH
+* WARRIOR I, II, III
+* PIGEON'S POSE
+* MOUNTAIN POSE
      ![Profile page.jpg](src%2Fassets%2Fimages%2FProfile%20page.jpg)
 5.  Wanneer je ervoor kiest naar je dagelijkse yogavideo's te gaan door op de button onderaaan de profielpagina (hierboven) te drukken. Kom je op de vragen/welkomstpagina terecht.
-
       ![Questionnaire.jpg](src%2Fassets%2Fimages%2FQuestionnaire.jpg)
 6.  Door de vragen op de vragen/welkomstpagina in te vullen, zul je gepresenteerd worden met de voor jou geselecteerde video's die je
 individueel kunt afspelen door op de "play button" te drukken van de betreffende video.
-
      ![Daily video's page.jpg](src%2Fassets%2Fimages%2FDaily%20video%27s%20page.jpg)
 7.  Je kunt je gekozen video, als je deze laat afspelen, vergroten, door op het fullscreen icoon rechtsonder in de video te drukken.
 
+
 8.  Naast de video's op de videopagina bevinden zich buttons waarmee je de video's kunt toevoegen aan je favorieten, deze kun je dan weer
 terugvinden op je profielpagina.
-
      ![Favorites Profile page.jpg](src%2Fassets%2Fimages%2FFavorites%20Profile%20page.jpg)
 
 

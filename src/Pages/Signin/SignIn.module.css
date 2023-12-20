@@ -29,8 +29,6 @@
     flex-direction: column;
     list-style: circle;
     margin-left: 20px;
-
-
 }
 
 .rectangle-center {
@@ -85,7 +83,6 @@
     font-size: 15px;
     color: #d90f33;
 }
-
 
 .register-link-paragraph {
     position: absolute;

@@ -2,15 +2,11 @@ import React from 'react';
 import './Questions.css';
 
 
-
-
-
 function Questions({
-                          children
-                          }) {
+                       children
+                   }) {
 
-    return  (
-        <>
+    return (<>
             <p className="questions">
                 {children}
             </p>
@@ -19,4 +15,5 @@ function Questions({
 
     );
 }
+
 export default Questions;

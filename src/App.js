@@ -13,12 +13,10 @@ import {AuthContext} from "./Context/AuthContext";
 
 function App() {
 
-
     const {isAuth} = useContext(AuthContext);
 
     return (<span>
 <Navigate/>
-
         <Switch>
             <Route exact path="/">
                 <Homepage/>
@@ -30,7 +28,7 @@ function App() {
                 <SignIn/>
             </Route>
             <Route path="/profile">
-                {isAuth ? <ProfilePage/> : <Redirect to='/'/>}
+                {isAuth ? <ProfilePage/> : <Redirect to="/"/>}
             </Route>
             <Route path="/welcomepage">
                  <WelcomePageAndQuestionnaire/>
@@ -39,7 +37,6 @@ function App() {
                 <VideoPage/>
             </Route>
         </Switch>
-
         </span>);
 }
 

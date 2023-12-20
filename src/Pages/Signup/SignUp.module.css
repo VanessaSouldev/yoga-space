@@ -13,6 +13,7 @@
     line-height: normal;
     z-index: 1;
 }
+
 .benefits {
     position: absolute;
     top: 280px;
@@ -29,8 +30,6 @@
     flex-direction: column;
     list-style: -moz-ethiopic-numeric;
     margin-left: 20px;
-
-
 }
 
 .rectangle-signup {
@@ -73,14 +72,11 @@
     z-index: 1;
 }
 
-
 .error-message-sign-up {
     font-family: Open Sans, sans-serif;
     font-size: 15px;
     color: #d90f33;
-
 }
-
 
 .account-link-paragraph {
     position: absolute;
