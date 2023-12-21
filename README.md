@@ -17,7 +17,7 @@ Er wordt gebruik gemaakt van de door Novi Hogeschool beschikbaar gestelde backen
 
 Verder wordt er gebruik gemaakt van data-requests naar de YouTube API en type.fit quotes API.
 
-Voor de type.fit quotes API is geen API key nodig voor YouTube is de API Key: AIzaSyBLWOuDnCiz7zLrXfZIhmcoBUA9V3MRbF4
+Voor de type.fit quotes API is geen API key nodig voor YouTube kun je de API Key vinden in het bijgevoegde txt.bestand.
 
 
 
@@ -56,7 +56,7 @@ Voor de type.fit quotes API is geen API key nodig voor YouTube is de API Key: AI
     npm install
 
 8.  De IDE zal vragen of je de dependencies wil installeren. Installeer ook de dependencies.
-9.  Maak nu een eigen .env bestand aan en vul deze met de variabele-naam zoals beschreven in de env.dist map en de API Key die hierboven wordt aangegeven.
+9.  Maak nu een eigen .env bestand aan en vul deze met de variabele-naam zoals beschreven in de env.dist map en de API Key die je in bijgevoegd txt. bestand terug kunt vinden.
 10.  In de terminal maak je een build d.m.v. gebruik van het commando run npm build, vervolgens kun je het commando npm start gebruiken om de applicatie te starten.
 11. Mac gebruikers zouden de foutmelding: Error: EACCES: permission denied, access '/usr/local/lib/node_modules' kunnen krijgen. Voer dan het volgende commando uit:
 
